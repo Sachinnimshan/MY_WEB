@@ -486,3 +486,13 @@
     font-size: 15px;
     
 }
+
+.form-errors{
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+    margin-top: 2px;
+}

@@ -3,15 +3,13 @@ import './page.css';
 import {VscLocation} from 'react-icons/vsc';
 import {AiOutlineMail} from 'react-icons/ai';
 import {FcPhoneAndroid} from 'react-icons/fc';
-import Swal from 'sweetalert2';
-import axios from 'axios';
 import ContactForm from './ContactForm';
 import validate from './ValidateInfo';
 
 
 function Contact(){
   
-  const {handleChange, values, handleSubmit, errors}= ContactForm(validate);
+  const {handleChange, values, handleSubmit, errors} = ContactForm(validate);
 
   return (
     <div className='p-2 contact-section'>
@@ -36,8 +34,9 @@ function Contact(){
             name = "username"
             value={values.username}
             onChange={handleChange}/>
+            {errors.username && <p className='form-errors'>{errors.username}</p>}
         </div>
-        {errors.username && <p>{errors.username}</p>}
+        
         <div className="form-group p-3">
           <label for="exampleInputPassword1" className='label-fonts'>Email Address</label>
           <input 
@@ -48,8 +47,9 @@ function Contact(){
            name="email"
            value={values.email}
            onChange={handleChange}/>
+           {errors.email && <p className='form-errors'>{errors.email}</p>}
         </div>
-        {errors.email && <p>{errors.email}</p>}
+        
         <div className="form-group p-3">
           <label for="exampleInputEmail1" className='label-fonts'>Message</label>
           <textarea 
@@ -61,8 +61,9 @@ function Contact(){
             name="message"
             value={values.message}
             onChange={handleChange}/>
+            {errors.message && <p className='form-errors'>{errors.message}</p>}
         </div>
-        {errors.message && <p>{errors.message}</p>}
+        
         <div className="form-group p-3">
         <button type="submit" className="submit-btn">Submit</button>
         </div>
