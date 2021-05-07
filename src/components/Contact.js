@@ -5,27 +5,14 @@ import {AiOutlineMail} from 'react-icons/ai';
 import {FcPhoneAndroid} from 'react-icons/fc';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import ContactForm from './ContactForm';
+import validate from './ValidateInfo';
 
 
- class Contact extends Component{
-  state = {
-    username: '',
-    email: '',
-    message: ''
-  }
+function Contact(){
+  
+  const {handleChange, values, handleSubmit, errors}= ContactForm(validate);
 
-  handleInput=(e)=>{
-    const {value, name} = e.target;
-    this.setState({[name]:value});
-  }
-
-  onSubmitHandler = async(e)=>{
-    e.preventDefault();
-    const res = await axios.post("/contact",this.state);
-    console.log(res);
-  }
-
-render(){
   return (
     <div className='p-2 contact-section'>
     <div className='section-title'>
@@ -37,7 +24,7 @@ render(){
      <div ><img className='contact-image' src='/Images/contact.jpg'/></div>
 
      <div className='contact-form'>
-       <form onSubmit={this.onSubmitHandler}>
+       <form onSubmit={handleSubmit}>
         <div className="form-group p-3">
           <label for="exampleInputEmail1" className='label-fonts'>Name</label>
           <input 
@@ -47,9 +34,10 @@ render(){
             aria-describedby="emailHelp"
             placeholder="Enter Your Name"
             name = "username"
-            value={this.state.username}
-            onChange={this.handleInput}/>
+            value={values.username}
+            onChange={handleChange}/>
         </div>
+        {errors.username && <p>{errors.username}</p>}
         <div className="form-group p-3">
           <label for="exampleInputPassword1" className='label-fonts'>Email Address</label>
           <input 
@@ -58,9 +46,10 @@ render(){
            id="email" 
            placeholder="Enter YourEmail"
            name="email"
-           value={this.state.email}
-           onChange={this.handleInput}/>
+           value={values.email}
+           onChange={handleChange}/>
         </div>
+        {errors.email && <p>{errors.email}</p>}
         <div className="form-group p-3">
           <label for="exampleInputEmail1" className='label-fonts'>Message</label>
           <textarea 
@@ -70,9 +59,10 @@ render(){
             aria-describedby="emailHelp"
             placeholder="Enter Your Message"
             name="message"
-            value={this.state.message}
-            onChange={this.handleInput}/>
+            value={values.message}
+            onChange={handleChange}/>
         </div>
+        {errors.message && <p>{errors.message}</p>}
         <div className="form-group p-3">
         <button type="submit" className="submit-btn">Submit</button>
         </div>
@@ -96,9 +86,6 @@ render(){
     </div>
 </div>
   )
-}
-  
-
 }
 
 export default Contact;
