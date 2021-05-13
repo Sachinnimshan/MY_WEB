@@ -14,12 +14,16 @@ import {AiFillTwitterCircle} from 'react-icons/ai';
 import {IoLogoWhatsapp} from 'react-icons/io';
 import {SiTwitter} from 'react-icons/si';
 
+import {FaBars} from 'react-icons/fa';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 import About from './components/About';
 import Clients from './components/Clients';
+
+import Bounce from 'react-reveal/Bounce';
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -41,11 +45,12 @@ function App() {
 
     return (
     <div>
-        <nav className="navbar navbar-expand-lg navbar-custom py-4 navbar-shadow fixed-top">
+      <Bounce top>
+        <nav className="navbar navbar-expand-lg navbar-custom py-3 navbar-shadow fixed-top">
           <div className="container-fluid">
           <a href='#'><img src='/Images/site-logo.png' className="navbar-brand ml-5 logo"/></a>
-           <button className="navbar-toggler toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <FaBars className=' toggle-btn'/>
             </button>
              <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -80,17 +85,18 @@ function App() {
                 <FaYoutube className='youtube-icon'/>
                 </div> 
          </nav>
+         </Bounce>
 
          <IoIosArrowDropupCircle className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
-        <div id="home"><Home/></div>
-        <div id='services'><Services/></div>
-        <div id='technology'><Technology/></div>
-        <div id='clients'><Clients/></div>
-        <div id='about'><About/></div>
-        <div id='contact' ><Contact/></div>
+        <section id="home"><Home/></section>
+        <section id='services'><Services/></section>
+        <section id='technology'><Technology/></section>
+        <section id='clients'><Clients/></section>
+        <section id='about'><About/></section>
+        <section id='contact' ><Contact/></section>
 
 
-        <div id='footer' className='footer-container mt-5'>
+        <section id='footer' className='footer-container mt-5'>
             <div>
                 <a href="#"><img src='/Images/footer-logo.png' className='w-75 p-3'/></a>
             </div>
@@ -140,7 +146,7 @@ function App() {
                 <FaYoutube className='social-media-icon'/>
                 </div>            
               </div>
-          </div>
+          </section>
 
           <div className='p-3 copyright-div'>
              <span>

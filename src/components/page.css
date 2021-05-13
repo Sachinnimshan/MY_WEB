@@ -50,7 +50,8 @@
 }
 
 .toggle-btn{
-    border-color: #3E4051;
+    color: gray;
+    font-size: 2rem;
 }
 
 .home-screen{
@@ -280,6 +281,7 @@
     background-color: transparent;
     color: lightgrey;
     font-family: 'Roboto';
+    
 }
 
 .about-cards-container > div:hover{

@@ -1,5 +1,6 @@
 import React from 'react';
 import './page.css';
+import Fade from 'react-reveal/Fade';
 
 function Services() {
     return (
@@ -10,7 +11,7 @@ function Services() {
             </div>
           
         <div className='d-flex flex-wrap justify-content-center services-card'>
-
+        <Fade right>
         <div className="card" style={{width: "24rem"}}>
         <img src="/Images/icon-01.png" style={{width: "6rem"}} alt="..."/>
         <div className="card-body">
@@ -19,7 +20,9 @@ function Services() {
         <a href="#" className="btn btn-primary">More Info</a>
         </div>
         </div>
+        </Fade>
 
+        <Fade right>
         <div className="card" style={{width: "24rem"}}>
         <img src="/Images/icon-02.png" style={{width: "6rem"}} alt="..."/>
         <div className="card-body">
@@ -28,7 +31,9 @@ function Services() {
         <a href="#" className="btn btn-primary">More Info</a>
         </div>
         </div>
+        </Fade>
 
+        <Fade right>
         <div className="card card-bg" style={{width: "24rem"}}>
         <img src="/Images/icon-03.png" style={{width: "6rem"}} alt="..."/>
         <div className="card-body">
@@ -37,7 +42,9 @@ function Services() {
         <a href="#" className="btn btn-primary">More Info</a>
         </div>
         </div>
+        </Fade>
 
+        <Fade left>
         <div className="card" style={{width: "24rem"}}>
         <img src="/Images/icon-04.png" style={{width: "6rem"}} alt="..."/>
         <div className="card-body">
@@ -46,7 +53,9 @@ function Services() {
         <a href="#" className="btn btn-primary">More Info</a>
         </div>
         </div>
+        </Fade>
 
+        <Fade left>
         <div className="card" style={{width: "24rem"}}>
         <img src="/Images/icon-05.png" style={{width: "6rem"}} alt="..."/>
         <div className="card-body">
@@ -55,7 +64,9 @@ function Services() {
         <a href="#" className="btn btn-primary">More Info</a>
         </div>
         </div>
+        </Fade>
 
+        <Fade left>
         <div className="card " style={{width: "24rem"}}>
         <img src="/Images/icon-06.png" style={{width: "6rem"}} alt="..."/>
         <div className="card-body">
@@ -64,6 +75,7 @@ function Services() {
         <a href="#" className="btn btn-primary">More Info</a>
         </div>
         </div>
+        </Fade>
       </div>
             
         </div>

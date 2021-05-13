@@ -1,5 +1,6 @@
 import React from 'react';
 import './page.css';
+import Fade from 'react-reveal/Fade';
 
 function About() {
     return (

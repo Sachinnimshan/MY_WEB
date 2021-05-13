@@ -19,16 +19,42 @@ const ContactForm=(validate)=> {
         });
     }
 
+    const resetForm=()=>{
+        setvalues({username: '', email: '', message: ''});
+    }
+
     const handleSubmit= async(e)=>{
         e.preventDefault();
         seterrors(validate(values));
         if(errors.username && errors.email && errors.message){
             swal("Oops", "Someting Went Wrong", "error");
-        }else{
-            await axios.post("http://127.0.0.1:8000/api/contact", values);
+        }
+        if(values.username === ''){
+            swal("Oops", "Fields Are Required", "warning");
+        }
+        if(values.email === ''){
+            swal("Oops", "Fields Are Required", "warning");
+        }
+        if(values.message === ''){
+            swal("Oops", "Fields Are Required", "warning");
+        }
+        else{
+            await axios({
+                method: "POST", 
+                url:'/api/email/sendemail', 
+                data:  values
+              }).then((response)=>{
+                if (response.data.status === 'success'){
+                    alert("Message Sent."); 
+                    resetForm()
+                }else if(response.data.status === 'fail'){
+                    alert("Message failed to send.")
+                }
+              });
             swal("Good job!", "Thank You For Your Support", "success");
         }
     }
+
     return {handleChange, values, handleSubmit, errors} ;
 }
 
