@@ -46,7 +46,7 @@ const ContactForm=(validate)=> {
               }).then((response)=>{
                 if (response.data.status === 'success'){
                     alert("Message Sent."); 
-                    resetForm()
+                    resetForm();
                 }else if(response.data.status === 'fail'){
                     alert("Message failed to send.")
                 }

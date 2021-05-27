@@ -9,10 +9,7 @@ import Services from './components/Services';
 import Technology from './components/Technology';
 import Contact from './components/Contact';
 
-import {FaFacebook,FaYoutube,FaFacebookF} from 'react-icons/fa';
-import {AiFillTwitterCircle} from 'react-icons/ai';
-import {IoLogoWhatsapp} from 'react-icons/io';
-import {SiTwitter} from 'react-icons/si';
+
 
 import {FaBars} from 'react-icons/fa';
 
@@ -22,6 +19,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import About from './components/About';
 import Clients from './components/Clients';
+
+import {Avatar} from '@material-ui/core';
 
 import Bounce from 'react-reveal/Bounce';
 
@@ -45,113 +44,32 @@ function App() {
 
     return (
     <div>
+      <div className='header-container'>
       <Bounce top>
-        <nav className="navbar navbar-expand-lg navbar-custom py-3 navbar-shadow fixed-top">
-          <div className="container-fluid">
-          <a href='#'><img src='/Images/site-logo.png' className="navbar-brand ml-5 logo"/></a>
-           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <FaBars className=' toggle-btn'/>
-            </button>
-             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link header-links active" aria-current="page" href="#">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link header-links" href="#services">Services</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link header-links" href="#technology" >Technology</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link header-links" href="#clients" >Clients</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link  header-links" href="#about" >About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link header-links" href="#contact" >Contact</a>
-              </li>
-            </ul>   
-           </div>
-          </div>
-
-          <div className='top-hotline'><span>HOTLINE : (+94) 475788946</span></div>
-
-          <div className='top-social-icons'>
-                <FaFacebookF className='fb-icon'/>
-                <SiTwitter className='twitter-icon'/>
-                <IoLogoWhatsapp className='whatsapp-icon'/>
-                <FaYoutube className='youtube-icon'/>
-                </div> 
-         </nav>
-         </Bounce>
-
+        <div><a href='#'><img src='/Images/signature.png'/></a></div>
+        <div className='navbar-container'>
+          <div><ul className='nav-item-container'>
+            <li className='nav-item'><a href='#'>Home</a></li>
+            <li className='nav-item'><a href='#about'>About</a></li>
+            <li className='nav-item'><a href='#services'>Services</a></li>
+            <li className='nav-item'><a href='#portfolio'>Portfolio</a></li>
+            <li className='nav-item'><a href='#projects'>Projects</a></li>
+            <li className='nav-item'><a href='#contact'>Contact</a></li>
+          </ul></div>
+        </div>
+        </Bounce>
+      </div>
+      
          <IoIosArrowDropupCircle className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
         <section id="home"><Home/></section>
+        <section id='about'><About/></section>
         <section id='services'><Services/></section>
         <section id='technology'><Technology/></section>
         <section id='clients'><Clients/></section>
-        <section id='about'><About/></section>
         <section id='contact' ><Contact/></section>
 
 
-        <section id='footer' className='footer-container mt-5'>
-            <div>
-                <a href="#"><img src='/Images/footer-logo.png' className='w-75 p-3'/></a>
-            </div>
-
-            <div className='footer-column'>
-                <div className='mb-2'><span className='footer-title'>ABOUT</span></div>
-                <div>
-                  <ul className = 'navbar-nav me-auto mb-2 mb-lg-0'>
-                    <li className='nav-item'>
-                      <a className="nav-link text-light header-links" href="#services">Our Services</a>
-                      </li>
-                      <li className='nav-item'>
-                      <a className="nav-link text-light header-links" href="#technology">Our Technology</a>
-                      </li>
-                      <li className='nav-item'>
-                      <a className="nav-link text-light header-links" href="#services">Our Team</a>
-                      </li>
-                  </ul>
-                </div>
-            </div>
-
-            <div className='footer-column'>
-                <div className='mb-2'><span className='footer-title'>OPENING HOURS</span></div>
-                <div>
-                  <ul className = 'navbar-nav me-auto mb-2 mb-lg-0'>
-                    <li className='nav-item'>
-                      <span className='text-light'>Mon - Thu: 9.30 - 21.00</span>
-                      </li>
-                      <li className='nav-item'>
-                      <span className='text-light'>Fri: 10.00 - 17.00</span>
-                      </li>
-                      <li className='nav-item'>
-                      <span className='text-light'>Sun: 10.00 - 16.00</span>
-                      </li>
-                  </ul>
-                </div>
-            </div>
-
-              <div className='social-media-container'>
-                <div className='mb-2'>
-                    <span className='footer-title'>FIND US ON</span>
-                </div>
-                <div>
-                <FaFacebook className='social-media-icon'/>
-                <AiFillTwitterCircle className='social-media-icon'/>
-                <IoLogoWhatsapp className='social-media-icon'/>
-                <FaYoutube className='social-media-icon'/>
-                </div>            
-              </div>
-          </section>
-
-          <div className='p-3 copyright-div'>
-             <span>
-               Copyright © 2021 Sachin Nimshan All Right Reserved</span>
-          </div>
+       
 
       </div>
        

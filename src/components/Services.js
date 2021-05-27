@@ -6,8 +6,10 @@ function Services() {
     return (
         <div className='p-2'>
             <div className='section-title'>
+            <Fade top cascade>
             <h1>Our Services</h1>
             <span>Photocopying is widely used in the business, education, and government sectors</span>
+            </Fade>
             </div>
           
         <div className='d-flex flex-wrap justify-content-center services-card'>

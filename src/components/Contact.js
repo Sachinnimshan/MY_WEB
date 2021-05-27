@@ -5,7 +5,9 @@ import {AiOutlineMail} from 'react-icons/ai';
 import {FcPhoneAndroid} from 'react-icons/fc';
 import ContactForm from './ContactForm';
 import validate from './ValidateInfo';
-
+import Fade from 'react-reveal/Fade';
+import {Spinner} from 'react-bootstrap';
+import Bounce from 'react-reveal/Bounce';
 
 function Contact(){
   
@@ -14,8 +16,10 @@ function Contact(){
   return (
     <div className='p-2 contact-section'>
     <div className='section-title'>
+    <Fade top cascade>
       <h1>Contact</h1>
       <span>If you still have any questions, Leave us a Message</span>
+      </Fade>
       </div>
 
      <div className='contact-container'>
