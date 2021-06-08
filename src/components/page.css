@@ -34,9 +34,11 @@
 .home-screen{
     display: flex;
     background-color: #FFFFFF;
-    padding: 8rem;
+    height: 100vh;
+    padding: 5.5rem;
     opacity: 0.9;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     overflow: visible;
@@ -68,8 +70,6 @@
     border-radius: 1rem;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     padding: 3rem 3rem;
@@ -103,6 +103,7 @@
 }
 .navbar-container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: start;
     margin-right: 2rem;
@@ -166,153 +167,8 @@
     font-size: 20px;
 }
 
-.services-card > div {
-    margin: 0.5rem;
-    text-align: center;
-    background-color: #ECF2FD;
-    border: none;
-    border-radius: 5px;
-}
-
-
-.services-card > div > img {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-top: 1.5rem;
-  transition: all 0.75s ease;
-}
-
-.services-card > div > img:hover{
-    transform: scale(1.1);
-    transform: rotate(360deg);
-    transition: all 0.3s ease-in-out 0s;
-}
-
-
-.technology-card > div{
-    margin: 2rem;
-}
-
-.technology-card > div{
-    border-radius: 10px;
-    width: 33rem;
-    border: none;
-}
-
-.technology-card > div > img {
-    height: 18rem;
-    transition: all 0.2s ease;
-    border-radius: 10px;
-    opacity: 0.85;
-}
-
-.technology-card > div > img:hover{
-    transform: scale(1.1);
-    opacity: 1;
-    
-}
-
-.technology-card > div > div {
-    margin-top: 1rem; 
-}
-
-
-.technology-card > div > div > h5{
-    color: #147FD9;
-    font-size: 1.5rem;
-    
-}
-
-.technology-card > div > div > p{
-    color: #686E7D;
-    font-size: 18px;
-    text-align: justify;
-    font-family: 'Roboto';
-}
 
 /*****************************************************************/
-.container{
-    background: linear-gradient(-100deg, white 50%, deeppink 50%);
-    margin: 5%;
-}
-
-
-
-
-/****************************************************************/
-
-.about-us-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    height: auto;
-    position: relative;
-    text-align: center;
-}
-
-
-
-.about-info{
-    background-color: black;
-    opacity: 0.9;
-    width: 90%;
-    height: auto;
-    border-radius: 10px;
-    margin: 2rem;
-}
-
-.about-info > div > h1{
-    color: white;
-    font-family: "Open sans";
-    margin-top: 1rem;
-}
-
-.about-info > p{
-    font-size: 20px;
-    color: white;
-    font-family: "Lato";
-    padding: 10px;
-    margin-top: 1rem;
-}
-
-.about-cards-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.about-cards-container > div {
-    width: 16rem;
-    height: auto;
-    margin: 10px;
-    border: none;
-    margin-bottom: 2rem;
-    background-color: transparent;
-    color: lightgrey;
-    font-family: 'Roboto';
-    
-}
-
-.about-cards-container > div:hover{
-    color: white;
-}
-
-.about-cards-container > div > img {
-    width: auto;
-    height: 15rem;
-    opacity: 1;
-    border: 2px solid #ECF2FD;
-    border-radius: 10px;
-}
-
-
-/****************************************************/
 
 .contact-card{
     border: none;
@@ -421,4 +277,11 @@
     font-family: 'Roboto';
     letter-spacing: 1px;
     margin-top: 2px;
+}
+
+.footer-container{
+    height: 3rem;
+    background-color: black;
+    opacity: 0.8;
+    margin-top: 2rem;
 }

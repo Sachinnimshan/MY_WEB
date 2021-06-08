@@ -15,11 +15,10 @@ function Home() {
       <Fade bottom>
         <div className="home-screen" style={{backgroundImage: "url('/Images/homeview1.jpg')", backgroundSize: 'cover'}}>
           <div className='home-center-info'>
-          <Zoom bottom cascade>
           <div><Flip top><h1>HI, I'm Sachin</h1></Flip></div>
           <div><p>Software Developer / Free Lancer</p></div>
           <div><Button variant="outlined" color="primary" size='large'>Read More</Button></div>\
-          </Zoom>
+      
           <div className='top-social-icons'>
                 <FaFacebookF className='social-media-icon'/>
                 <SiTwitter className='social-media-icon'/>
