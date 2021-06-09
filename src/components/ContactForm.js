@@ -39,19 +39,17 @@ const ContactForm=(validate)=> {
             swal("Oops", "Fields Are Required", "warning");
         }
         else{
-            await axios({
-                method: "POST", 
-                url:'/api/email/sendemail', 
-                data:  values
-              }).then((response)=>{
-                if (response.data.status === 'success'){
-                    alert("Message Sent."); 
-                    resetForm();
-                }else if(response.data.status === 'fail'){
-                    alert("Message failed to send.")
-                }
-              });
-            swal("Good job!", "Thank You For Your Support", "success");
+            try{
+                await axios({
+                    method: "POST", 
+                    url:'/api/email/sendemail', 
+                    data:  values
+                  });
+                  swal("Good job!", "Thank You For Your Support", "success");
+            }catch(error){
+                swal("Ooops!", "Something Went Wrong", "error");
+            }
+        resetForm();
         }
     }
 

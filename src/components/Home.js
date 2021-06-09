@@ -7,7 +7,7 @@ import {Button} from '@material-ui/core';
 
 import {FaFacebook,FaYoutube,FaFacebookF} from 'react-icons/fa';
 import {AiFillTwitterCircle} from 'react-icons/ai';
-import {IoLogoWhatsapp} from 'react-icons/io';
+import {IoLogoInstagram} from 'react-icons/io';
 import {SiTwitter} from 'react-icons/si';
 
 function Home() {
@@ -20,10 +20,10 @@ function Home() {
           <div><Button variant="outlined" color="primary" size='large'>Read More</Button></div>\
       
           <div className='top-social-icons'>
-                <FaFacebookF className='social-media-icon'/>
-                <SiTwitter className='social-media-icon'/>
-                <IoLogoWhatsapp className='social-media-icon'/>
-                <FaYoutube className='social-media-icon'/>
+                <a href='https://www.youtube.com/sachinnimshan'><FaYoutube className='social-media-icon'/></a>
+                <a href='https://www.instagram.com/sachin_nimshan.06/'><IoLogoInstagram className='social-media-icon'/></a>
+                <a href='https://www.facebook.com/sachin.nimshan/'><FaFacebookF className='social-media-icon'/></a>
+                <a href='https://twitter.com/SachinNimshan'><SiTwitter className='social-media-icon'/></a>
           </div>
           </div>
           <div><img src='/Images/banner.png'/></div>
