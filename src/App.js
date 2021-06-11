@@ -40,7 +40,7 @@ function App() {
     <div>
       <div className='header-container'>
       <Bounce top>
-        <div><a href='#'><img src='/Images/signature.png'/></a></div>
+        <div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div>
         <div className='navbar-container'>
           <div><ul className='nav-item-container'>
             <li className='nav-item'><a href='#'>Home</a></li>

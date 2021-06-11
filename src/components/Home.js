@@ -12,7 +12,6 @@ import {SiTwitter} from 'react-icons/si';
 
 function Home() {
     return (
-      <Fade bottom>
         <div className="home-screen" style={{backgroundImage: "url('/Images/homeview1.jpg')", backgroundSize: 'cover'}}>
           <div className='home-center-info'>
           <div><Flip top><h1>HI, I'm Sachin</h1></Flip></div>
@@ -28,7 +27,6 @@ function Home() {
           </div>
           <div><img src='/Images/banner.png'/></div>
         </div>
-        </Fade>
     )
 }
 
