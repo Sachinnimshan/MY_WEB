@@ -18,7 +18,7 @@ function Contact(){
     <div className='section-title'>
     <Fade top cascade>
       <h1>Contact</h1>
-      <span>If you still have any questions, Leave us a Message</span>
+      <span>Leave Me A Message</span>
       </Fade>
       </div>
 

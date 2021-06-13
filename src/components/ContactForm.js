@@ -40,11 +40,7 @@ const ContactForm=(validate)=> {
         }
         else{
             try{
-                await axios({
-                    method: "POST", 
-                    url:'/api/email/sendemail', 
-                    data:  values
-                  });
+                await axios.post('/email/sendemail', values);
                   swal("Good job!", "Thank You For Your Support", "success");
             }catch(error){
                 swal("Ooops!", "Something Went Wrong", "error");
