@@ -25,7 +25,7 @@ function Home() {
                 <a href='https://twitter.com/SachinNimshan'><SiTwitter className='social-media-icon'/></a>
           </div>
           </div>
-          <div style={{marginTop: '2rem'}}><img src='/Images/banner.png'/></div>
+          <div><img src='/Images/banner.png'/></div>
         </div>
     )
 }

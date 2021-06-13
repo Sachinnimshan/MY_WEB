@@ -52,7 +52,9 @@ function App() {
           </ul></div>
         </div>
         </Bounce>
+        
       </div>
+      <div className='top-divider'></div>
       
          <IoIosArrowDropupCircle className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
         <section id="home"><Home/></section>
