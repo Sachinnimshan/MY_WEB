@@ -44,7 +44,8 @@ function App() {
         <div className='navbar-container'>
           <div><ul className='nav-item-container'>
             <li className='nav-item'><a href='#'>Home</a></li>
-            {/* <li className='nav-item'><a href='#about'>About</a></li>
+            <li className='nav-item'><a href='#about'>About</a></li>
+            {/*
             <li className='nav-item'><a href='#services'>Services</a></li>
             <li className='nav-item'><a href='#portfolio'>Portfolio</a></li>
             <li className='nav-item'><a href='#projects'>Projects</a></li> */}

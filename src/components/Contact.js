@@ -81,10 +81,10 @@ function Contact(){
         <div><VscLocation className='contact-icon-address'/><h3>Address :</h3></div>
         <span>No 1/8, Hakmana Road, Walasmulla</span></li> */}
       <li className="list-group-item">
-        <div><AiOutlineMail className='contact-icon-email'/><h3>Email :</h3></div>
+        <div><AiOutlineMail className='contact-icon-email'/><h5>Email :</h5></div>
       <span>sachinnimshan@gmail.com</span></li>
       <li className="list-group-item">
-        <div><FcPhoneAndroid className='contact-icon-phone'/><h3>Phone :</h3></div>
+        <div><FcPhoneAndroid className='contact-icon-phone'/><h5>Phone :</h5></div>
       <span>(+94)779012655</span></li>
       </ul>
     </div>
