@@ -4,8 +4,9 @@ import Flip from 'react-reveal/Flip';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import {Button} from '@material-ui/core';
-import {IoLogoInstagram, IoLogoFacebook, IoLogoTwitter, IoLogoYoutube} from 'react-icons/io';
-import {SiTwitter} from 'react-icons/si';
+import {IoLogoInstagram} from 'react-icons/io';
+import {FiTwitter} from 'react-icons/fi';
+import {AiOutlineFacebook, AiOutlineYoutube} from 'react-icons/ai';
 
 function Home() {
     return (
@@ -17,10 +18,10 @@ function Home() {
           <div><button className='home-btn'>Download My CV</button></div>
       
           <div className='top-social-icons'>
-                <a href='https://www.youtube.com/sachinnimshan'><IoLogoYoutube className='social-media-icon'/></a>
+                <a href='https://www.youtube.com/sachinnimshan'><AiOutlineYoutube className='social-media-icon'/></a>
                 <a href='https://www.instagram.com/sachin_nimshan.06/'><IoLogoInstagram className='social-media-icon'/></a>
-                <a href='https://www.facebook.com/sachin.nimshan/'><IoLogoFacebook className='social-media-icon'/></a>
-                <a href='https://twitter.com/SachinNimshan'><IoLogoTwitter className='social-media-icon'/></a>
+                <a href='https://www.facebook.com/sachin.nimshan/'><AiOutlineFacebook className='social-media-icon'/></a>
+                <a href='https://twitter.com/SachinNimshan'><FiTwitter className='social-media-icon'/></a>
           </div>
           </div>
           <div><img src='/Images/banner.png'/></div>

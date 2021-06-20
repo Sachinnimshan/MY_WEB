@@ -83,7 +83,13 @@
 .social-media-icon{
     color: #7952B3;
     font-size: 2rem;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
+}
+
+.social-media-icon:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.5);
 }
 /*********************************************************************/
 
@@ -147,6 +153,7 @@
     list-style-type: none;
 }
 
+
 .nav-item-container > li > a{
     font-size: 17px;
     text-decoration: none;
@@ -167,9 +174,15 @@
     width: 200px;
     color: white;
     border-radius: 5px;
+    font-size: 16px;
     border: none;
     letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
     margin: 1rem 1rem;
+}
+
+.home-btn:hover{
+    opacity: 0.9;
 }
 
 
