@@ -14,7 +14,7 @@ function Contact(){
   const {handleChange, values, handleSubmit, errors} = ContactForm(validate);
 
   return (
-    <div className='p-2 contact-section'>
+    <div className='contact-section'>
     <div className='section-title'>
     <Fade top cascade>
       <h1>Contact</h1>
