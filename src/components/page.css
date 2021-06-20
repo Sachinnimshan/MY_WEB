@@ -8,13 +8,14 @@
     width: 100%;
     bottom: 20px;
     align-items: center;
-    height: 20px;
+    height: 3rem;
     justify-content: center;
     z-index: 1000;
     cursor: pointer;
     animation: fadeIn 0.3s;
     transition: opacity 0.4s;
     opacity: 0.5;
+    color: #7952B3;
   }
   
   .scrollTop:hover{
@@ -30,6 +31,7 @@
     }
   }
 
+  
 .site-logo{
     width: 450px;
 }
@@ -86,14 +88,13 @@
 /*********************************************************************/
 
 .header-container{
-    height: 4.5rem;
+    height: 5rem;
     display: flex;
     width: 100%;
     background-color: #FFFFFF;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    top: 0;
     z-index: 1;
 }
 .navbar-container{
@@ -112,6 +113,9 @@
     .site-logo{
         width: 385px;
     }
+    .home-screen{
+        height: auto;
+    }
     .header-container{
         display: flex;
         justify-content: center;
@@ -126,7 +130,7 @@
         flex-direction: row; */
     }
     .home-center-info{
-        padding: 3rem 3rem;
+        padding: 2rem 2rem;
     }
     
 }
@@ -138,17 +142,17 @@
 }
 
 .nav-item{
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
     cursor: pointer;
     list-style-type: none;
 }
 
 .nav-item-container > li > a{
-    font-size: 16px;
+    font-size: 17px;
     text-decoration: none;
     font-weight: 500;
     color: #595959;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 
@@ -251,7 +255,6 @@
 .contact-icon-address{
     color: red;
     font-size: 2rem;
-    margin-right: 1rem;
 }
 
 .contact-icon-email{

@@ -3,7 +3,7 @@ import './components/page.css';
 import './App.css';
 
 
-import {IoIosArrowDropupCircle} from 'react-icons/io';
+import {BiMouse} from 'react-icons/bi';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -44,8 +44,7 @@ function App() {
         <div className='navbar-container'>
           <div><ul className='nav-item-container'>
             <li className='nav-item'><a href='#'>Home</a></li>
-            <li className='nav-item'><a href='#about'>About</a></li>
-            {/*
+            {/* <li className='nav-item'><a href='#about'>About</a></li>
             <li className='nav-item'><a href='#services'>Services</a></li>
             <li className='nav-item'><a href='#portfolio'>Portfolio</a></li>
             <li className='nav-item'><a href='#projects'>Projects</a></li> */}
@@ -55,9 +54,9 @@ function App() {
         </Bounce>
         
       </div>
-
+     
       
-         <IoIosArrowDropupCircle className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
+         <BiMouse className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
         <section id="home"><Home/></section>
         <section id='contact' ><Contact/></section>
         <section><Footer/></section>
