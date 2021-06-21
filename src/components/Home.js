@@ -15,7 +15,7 @@ function Home() {
           <div><Flip top><h1>HI, I'm Sachin</h1></Flip></div>
           <div><p>Software Developer / Free Lancer</p></div>
           <div><span>High Level Experience in Web Design & Development</span></div>
-          <div><button className='home-btn'>Download My CV</button></div>
+          
       
           <div className='top-social-icons'>
                 <a href='https://www.youtube.com/sachinnimshan'><AiOutlineYoutube className='social-media-icon'/></a>
@@ -23,6 +23,7 @@ function Home() {
                 <a href='https://www.facebook.com/sachin.nimshan/'><AiOutlineFacebook className='social-media-icon'/></a>
                 <a href='https://twitter.com/SachinNimshan'><FiTwitter className='social-media-icon'/></a>
           </div>
+          <div><button className='home-btn'>Download My CV</button></div>
           </div>
           <div><img src='/Images/banner.png'/></div>
         </div>

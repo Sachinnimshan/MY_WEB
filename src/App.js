@@ -40,7 +40,7 @@ function App() {
     <div>
       <div className='header-container'>
       <Bounce top>
-        <div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div>
+      <div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div>
         <div className='navbar-container'>
           <div><ul className='nav-item-container'>
             <li className='nav-item'><a href='#'>Home</a></li>
@@ -49,23 +49,17 @@ function App() {
             <li className='nav-item'><a href='#portfolio'>Portfolio</a></li>
             <li className='nav-item'><a href='#projects'>Projects</a></li> */}
             <li className='nav-item'><a href='#contact'>Contact</a></li>
-          </ul></div>
+          </ul>
+         </div>
         </div>
-        </Bounce>
-        
+       </Bounce>
       </div>
      
-      
-         <BiMouse className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
+        <BiMouse className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
         <section id="home"><Home/></section>
-        <section id='contact' ><Contact/></section>
+        <section id='contact'><Contact/></section>
         <section><Footer/></section>
-
-
-       
-
       </div>
-       
     )
 }
 

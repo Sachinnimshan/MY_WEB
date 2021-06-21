@@ -37,7 +37,7 @@
 }
 .home-screen{
     display: flex;
-    background-color: #FFFFFF;
+    background: linear-gradient(160deg, white 50%, #7952B3);
     height: 550px;
     opacity: 0.95;
     flex-wrap: wrap;
@@ -184,11 +184,6 @@
 .home-btn:hover{
     opacity: 0.9;
 }
-
-
-
-
-
 
 
 
