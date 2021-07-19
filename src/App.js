@@ -7,19 +7,24 @@ import {BiMouse} from 'react-icons/bi';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
-
-
-import {FaBars} from 'react-icons/fa';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
-
 import Bounce from 'react-reveal/Bounce';
+import Services from './components/Services';
+import About from './components/About';
+import {FaBars} from 'react-icons/fa';
+import {CgClose} from 'react-icons/cg';
+import {FaArrowCircleRight} from 'react-icons/fa';
+import Slide from 'react-reveal/Slide';
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
+  const [menu, setmenu] = useState(false);
+
+  const showMenu=()=> setmenu(!menu);
+  const closeMenu=()=> setmenu(false);
+
+  
 
    const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400){
@@ -39,24 +44,36 @@ function App() {
     return (
     <div>
       <div className='header-container'>
-      <Bounce top>
       <div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div>
+        
+        <div><FaBars onClick={showMenu} className='menu-icon'/></div>
+      <Slide right>
+        <div className={menu ? 'nav-menu active' : 'nav-menu'}>
+        <Slide right>
         <div className='navbar-container'>
-          <div><ul className='nav-item-container'>
+          <ul className='nav-item-container'>
+            <li className='container menu-header'>
+            <div className='close-menu-container'>
+              <div className='menu-title'>Hello' You are Welcome</div>
+              <div><FaArrowCircleRight onClick={closeMenu} className='close-menu'/></div>
+            </div>
+            </li>
             <li className='nav-item'><a href='#'>Home</a></li>
-            {/* <li className='nav-item'><a href='#about'>About</a></li>
-            <li className='nav-item'><a href='#services'>Services</a></li>
-            <li className='nav-item'><a href='#portfolio'>Portfolio</a></li>
-            <li className='nav-item'><a href='#projects'>Projects</a></li> */}
+            <li className='nav-item'><a href='#about'>About</a></li>
             <li className='nav-item'><a href='#contact'>Contact</a></li>
           </ul>
-         </div>
         </div>
-       </Bounce>
+      </Slide>
+        </div>
+      </Slide>
+        
       </div>
+      
+        
      
         <BiMouse className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
         <section id="home"><Home/></section>
+        <section id="about"><About/></section>
         <section id='contact'><Contact/></section>
         <section><Footer/></section>
       </div>

@@ -1,13 +1,15 @@
 import React, { Component} from 'react';
 import './page.css';
 import {VscLocation} from 'react-icons/vsc';
-import {AiOutlineMail} from 'react-icons/ai';
+import {AiOutlineFacebook, AiOutlineMail, AiOutlineYoutube} from 'react-icons/ai';
 import {FcPhoneAndroid} from 'react-icons/fc';
 import ContactForm from './ContactForm';
 import validate from './ValidateInfo';
 import Fade from 'react-reveal/Fade';
 import {Spinner} from 'react-bootstrap';
 import Bounce from 'react-reveal/Bounce';
+import { IoLogoInstagram } from 'react-icons/io';
+import { FiTwitter } from 'react-icons/fi';
 
 function Contact(){
   
@@ -23,7 +25,18 @@ function Contact(){
       </div>
 
      <div className='contact-container'>
-     <div ><img className='contact-image' src='/Images/contact.jpg'/></div>
+     <div ><img className='contact-image' src='/Images/contact.jpg'/>
+     <div className='social-media-container'>
+      <div><h5>Follow Me On Social Media</h5></div>
+      <div>
+      <a href='https://www.youtube.com/sachinnimshan'><AiOutlineYoutube className='social-media-icon'/></a>
+                <a href='https://www.instagram.com/sachin_nimshan.06/'><IoLogoInstagram className='social-media-icon'/></a>
+                <a href='https://www.facebook.com/sachin.nimshan/'><AiOutlineFacebook className='social-media-icon'/></a>
+                <a href='https://twitter.com/SachinNimshan'><FiTwitter className='social-media-icon'/></a>
+      </div>
+
+    </div>
+     </div>
 
      <div className='contact-form'>
        <form onSubmit={handleSubmit}>
@@ -47,7 +60,7 @@ function Contact(){
            type="text"
            className="form-control" 
            id="email" 
-           placeholder="Enter YourEmail"
+           placeholder="Enter Your Email"
            name="email"
            value={values.email}
            onChange={handleChange}/>
@@ -75,6 +88,7 @@ function Contact(){
       </div>
 
 
+     
       <div className="contact-card" style={{width: "18rem"}}>
       <ul className="list-group">
       {/* <li className="list-group-item">
@@ -88,6 +102,7 @@ function Contact(){
       <span>(+94)779012655</span></li>
       </ul>
     </div>
+
     </div>
 </div>
   )

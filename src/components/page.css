@@ -33,11 +33,17 @@
 
   
 .site-logo{
-    width: 450px;
+    width: auto;
+
 }
+
+
+
+
+
 .home-screen{
     display: flex;
-    background: linear-gradient(160deg, white 50%, #7952B3);
+    background: linear-gradient(150deg, white 60%, #7952B3);
     height: 550px;
     opacity: 0.95;
     flex-wrap: wrap;
@@ -76,15 +82,16 @@
 
 .top-social-icons{
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     margin: 1rem 1rem;
 }
 
 .social-media-icon{
     color: #7952B3;
-    font-size: 2rem;
+    font-size: 2.5rem;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .social-media-icon:hover{
@@ -100,40 +107,84 @@
     background-color: #FFFFFF;
     align-items: center;
     justify-content: space-between;
-    position: relative;
     z-index: 1;
-}
-.navbar-container{
-    display: flex;
-    margin-right: 2rem;
+    
 }
 
-.top-divider{
-    height: 1rem;
-    width: 100%;
-    background-color: #93D600;
+.menu-icon{
+    font-size: 2rem;
+    display: block;
+    color: #434E41;
+    margin-right: 1rem;
+    cursor: pointer;
 }
+
+.close-menu-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+
+.close-menu{
+    color: lightgray;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.close-menu:hover{
+    color: white;
+}
+
+.menu-header{
+    list-style-type: none;
+}
+
+.menu-title{
+    color: lightgray;
+    font-size: 1.1rem;
+}
+
+.nav-menu{
+        width: auto;
+        height: 100vh;
+        background-color: #1E2A3A;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        flex-direction: column;
+    }
+    
+    .nav-menu.active{
+        display: block;
+    }
 
 @media screen and (max-width: 700px){
 
-    .site-logo{
-        width: 385px;
+    .nav-menu{
+        width: 100%;
+        height: auto;
     }
+    
+    .site-logo{
+        width: 300px;
+    }
+
     .home-screen{
         height: auto;
+        padding-top: 10rem;
     }
     .header-container{
         display: flex;
-        justify-content: center;
-    }
-    .navbar-container{
-        display: none;
-        /* display: flex;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: row; */
+        opacity: 0.96;
+        position: fixed;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        justify-content: space-between;
     }
     .home-center-info{
         padding: 2rem 2rem;
@@ -141,30 +192,37 @@
     
 }
 
-.nav-item-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav-item{
+    padding: 1.5rem 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    list-style-type: none;
 }
 
-.nav-item{
-    padding: 1.5rem;
-    cursor: pointer;
-    list-style-type: none;
+.nav-item:hover{
+    background-color: #7952B3;
+}
+
+.nav-item-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 
 .nav-item-container > li > a{
-    font-size: 17px;
+    font-size: 20px;
+    text-align: center;
     text-decoration: none;
     font-weight: 500;
-    color: #595959;
+    color: white;
     letter-spacing: 1.5px;
 }
 
 
 .nav-item-container > li > a:hover{
-    color: #7952B3;
+    color: white;
 }
 
 
@@ -185,6 +243,51 @@
     opacity: 0.9;
 }
 
+/********************************************************************/
+
+.about-container{
+    width: 100%;
+}
+
+.about-over{
+    background-color: #111821;
+    opacity: 0.9;
+}
+
+.about-description{
+    color: lightgray;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 2rem;
+}
+
+.skill-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.pro-lang{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pro-icons{
+    font-size: 6rem;
+    color: lightgray;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.pro-icons:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+
+/*********************************************************************/
 
 
 
@@ -194,23 +297,109 @@
 
 .section-title{
     text-align: center;
-    padding: 0.5rem;
-    margin-top: 5rem;
+    padding: 1rem;
+    padding-top: 3.5rem;
     margin-bottom: 2rem;
 }
 
 .section-title > h1{
     color: #7952B3;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 2px;
 }
 
 .section-title > span{
     color: #716E7D;
-    font-size: 20px;
+    font-size: 18px;
 }
 
+
+.services-container{
+    height: auto;
+}
+
+
+.services-over{
+    background: #111821;
+    opacity: 0.85;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+.services-section{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.services-section > h1{
+    font-weight: 500;
+    margin-top: 1rem;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.services-section > span{
+    font-weight: 500;
+    margin-top: 1rem;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: lightgray;
+}
+
+.services-card-container{
+    color: lightgray;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.service-icons{
+    font-size: 3rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.service-icons:hover{
+    transform: scale(1.1);
+    color: white;
+    transform: rotateY(360deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-card{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 18rem;
+    border-radius: 5px;
+    flex-direction: column;
+    height: 20rem;
+    padding: 0.25rem;
+}
+
+.service-card > h4{
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.service-card:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.breaker{
+    border: 2px solid lightgray;
+    width: 100%;
+}
 
 /*****************************************************************/
 
@@ -225,8 +414,6 @@
     font-weight: 500;
     letter-spacing: 1px;
 }
-
-
 
 .contact-container{
     display: flex;
@@ -307,6 +494,20 @@
     
 }
 
+.social-media-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.social-media-container > div > h5{
+    font-size: 20px;
+    color: #686E7D;
+}
+
+
 /************************************************************/
 
 
@@ -334,3 +535,4 @@
     font-size: 14px;
     letter-spacing: 1px;
 }
+
