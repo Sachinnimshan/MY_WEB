@@ -58,9 +58,9 @@ function App() {
               <div><FaArrowCircleRight onClick={closeMenu} className='close-menu'/></div>
             </div>
             </li>
-            <li className='nav-item'><a href='#'>Home</a></li>
-            <li className='nav-item'><a href='#about'>About</a></li>
-            <li className='nav-item'><a href='#contact'>Contact</a></li>
+            <li className='nav-item' onClick={closeMenu}><a href='#'>Home</a></li>
+            <li className='nav-item' onClick={closeMenu}><a href='#about'>About</a></li>
+            <li className='nav-item' onClick={closeMenu}><a href='#contact'>Contact</a></li>
           </ul>
         </div>
       </Slide>
