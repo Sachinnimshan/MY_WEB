@@ -6,7 +6,7 @@
 .scrollTop {
     position: fixed; 
     width: 100%;
-    bottom: 20px;
+    bottom: 10px;
     align-items: center;
     height: 3rem;
     justify-content: center;
@@ -46,6 +46,7 @@
     background: linear-gradient(150deg, white 60%, #7952B3);
     height: 550px;
     opacity: 0.95;
+    margin-top: 4.5rem;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
@@ -103,11 +104,14 @@
 .header-container{
     height: 5rem;
     display: flex;
+    opacity: 0.9;
     width: 100%;
     background-color: #FFFFFF;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+    top: 0;
+    position: fixed;
     
 }
 
@@ -164,7 +168,12 @@
         display: block;
     }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
+
+    .home-screen{
+        margin-top: 0;
+    }
+
 
     .nav-menu{
         width: 100%;
