@@ -16,6 +16,8 @@ import {FaBars} from 'react-icons/fa';
 import {CgClose} from 'react-icons/cg';
 import {FaArrowCircleRight} from 'react-icons/fa';
 import Slide from 'react-reveal/Slide';
+import Projects from './components/Projects';
+import {GoThreeBars} from 'react-icons/go';
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -46,7 +48,7 @@ function App() {
       <div className='header-container'>
       <div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div>
         
-        <div><FaBars onClick={showMenu} className='menu-icon'/></div>
+        <div><GoThreeBars onClick={showMenu} className='menu-icon'/></div>
       <Slide right>
         <div className={menu ? 'nav-menu active' : 'nav-menu'}>
         <Slide right>
@@ -60,6 +62,7 @@ function App() {
             </li>
             <li className='nav-item' onClick={closeMenu}><a href='#'>Home</a></li>
             <li className='nav-item' onClick={closeMenu}><a href='#about'>About</a></li>
+            <li className='nav-item' onClick={closeMenu}><a href='#services'>Services</a></li>
             <li className='nav-item' onClick={closeMenu}><a href='#contact'>Contact</a></li>
           </ul>
         </div>
@@ -74,6 +77,7 @@ function App() {
         <BiMouse className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
         <section id="home"><Home/></section>
         <section id="about"><About/></section>
+        <section id="services"><Services/></section>
         <section id='contact'><Contact/></section>
         <section><Footer/></section>
       </div>

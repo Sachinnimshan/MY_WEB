@@ -109,6 +109,7 @@
     background-color: #FFFFFF;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
     top: 0;
     position: fixed;
@@ -116,7 +117,7 @@
 }
 
 .menu-icon{
-    font-size: 2rem;
+    font-size: 3rem;
     display: block;
     color: #434E41;
     margin-right: 1rem;
@@ -323,14 +324,34 @@
     font-size: 18px;
 }
 
+.section-title1{
+    text-align: center;
+    padding: 1rem;
+    padding-top: 5.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-title1 > h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.section-title1 > span{
+    color: white;
+    font-size: 18px;
+}
+
+
 
 .services-container{
     height: auto;
+    background: linear-gradient(180deg, white 65%, #7952B3);
 }
 
 
 .services-over{
-    background: #111821;
     opacity: 0.85;
     height: auto;
     display: flex;
@@ -362,7 +383,7 @@
 }
 
 .services-card-container{
-    color: lightgray;
+    color: white;
     margin-bottom: 2.5rem;
     width: 100%;
     display: flex;
@@ -388,11 +409,14 @@
     text-align: center;
     display: flex;
     align-items: center;
+    border: 2px solid white;
     width: 18rem;
     border-radius: 5px;
     flex-direction: column;
-    height: 20rem;
-    padding: 0.25rem;
+    height: 10rem;
+    padding: 1rem 1rem;
+    background-color: #111821;
+    transition: all 0.3s ease-in-out;
 }
 
 .service-card > h4{
@@ -403,6 +427,7 @@
 .service-card:hover{
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .breaker{
