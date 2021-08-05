@@ -16,8 +16,9 @@ function Contact(){
   const {handleChange, values, handleSubmit, errors} = ContactForm(validate);
 
   return (
-    <div className='contact-section'>
-    <div className='section-title'>
+    <div className='contact-section' style={{backgroundImage: 'url(/Images/contactus.jpg)', backgroundSize: 'cover'}}>
+    <div className='contact-over'>
+    <div className='section-title1'>
     <Fade top cascade>
       <h1>Contact</h1>
       <span>Leave Me A Message</span>
@@ -25,14 +26,14 @@ function Contact(){
       </div>
 
      <div className='contact-container'>
-     <div ><img className='contact-image' src='/Images/contact.jpg'/>
+     <div ><img className='contact-image' src='/Images/contact1.png'/>
      <div className='social-media-container'>
       <div><h5>Follow Me On Social Media</h5></div>
       <div>
-      <a href='https://www.youtube.com/sachinnimshan'><AiOutlineYoutube className='social-media-icon'/></a>
-                <a href='https://www.instagram.com/sachin_nimshan.06/'><IoLogoInstagram className='social-media-icon'/></a>
-                <a href='https://www.facebook.com/sachin.nimshan/'><AiOutlineFacebook className='social-media-icon'/></a>
-                <a href='https://twitter.com/SachinNimshan'><FiTwitter className='social-media-icon'/></a>
+      <a href='https://www.youtube.com/sachinnimshan'><AiOutlineYoutube className='social-media-icon1'/></a>
+                <a href='https://www.instagram.com/sachin_nimshan.06/'><IoLogoInstagram className='social-media-icon1'/></a>
+                <a href='https://www.facebook.com/sachin.nimshan/'><AiOutlineFacebook className='social-media-icon1'/></a>
+                <a href='https://twitter.com/SachinNimshan'><FiTwitter className='social-media-icon1'/></a>
       </div>
 
     </div>
@@ -91,9 +92,6 @@ function Contact(){
      
       <div className="contact-card" style={{width: "18rem"}}>
       <ul className="list-group">
-      {/* <li className="list-group-item">
-        <div><VscLocation className='contact-icon-address'/><h3>Address :</h3></div>
-        <span>No 1/8, Hakmana Road, Walasmulla</span></li> */}
       <li className="list-group-item">
         <div><AiOutlineMail className='contact-icon-email'/><h5>Email :</h5></div>
       <span>sachinnimshan@gmail.com</span></li>
@@ -103,6 +101,7 @@ function Contact(){
       </ul>
     </div>
 
+    </div>
     </div>
 </div>
   )

@@ -14,7 +14,7 @@ import Services from './components/Services';
 import About from './components/About';
 import {FaBars} from 'react-icons/fa';
 import {CgClose} from 'react-icons/cg';
-import {FaArrowCircleRight} from 'react-icons/fa';
+import {IoMdCloseCircle} from 'react-icons/io';
 import Slide from 'react-reveal/Slide';
 import Projects from './components/Projects';
 import {GoThreeBars} from 'react-icons/go';
@@ -57,7 +57,7 @@ function App() {
             <li className='container menu-header'>
             <div className='close-menu-container'>
               <div className='menu-title'>Hello' You are Welcome</div>
-              <div><FaArrowCircleRight onClick={closeMenu} className='close-menu'/></div>
+              <div><IoMdCloseCircle onClick={closeMenu} className='close-menu'/></div>
             </div>
             </li>
             <li className='nav-item' onClick={closeMenu}><a href='#'>Home</a></li>
@@ -69,11 +69,7 @@ function App() {
       </Slide>
         </div>
       </Slide>
-        
       </div>
-      
-        
-     
         <BiMouse className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
         <section id="home"><Home/></section>
         <section id="about"><About/></section>

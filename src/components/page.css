@@ -99,6 +99,19 @@
     transition: all 0.2s ease-in-out;
     transform: scale(1.5);
 }
+
+.social-media-icon1{
+    color: lightgray;
+    font-size: 2.5rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.social-media-icon1:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.5);
+}
 /*********************************************************************/
 
 .header-container{
@@ -222,7 +235,7 @@
 
 
 .nav-item-container > li > a{
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     text-decoration: none;
     font-weight: 500;
@@ -347,6 +360,7 @@
 
 .services-container{
     height: auto;
+    padding-bottom: 3rem;
 }
 
 
@@ -413,7 +427,7 @@
 }
 
 .service-card:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -425,14 +439,23 @@
 
 /*****************************************************************/
 
+.contact-section{
+    background-color: #242A32;
+}
+
+.contact-over{
+    opacity: 0.8;
+    background-color: #111821;
+}
 .contact-card{
     border: none;
+    background-color: transparent;
 }
 
 .label-fonts{
     font-size: 16px;
     margin-bottom: 0.5rem;
-    color: gray;
+    color: lightgray;
     font-weight: 500;
     letter-spacing: 1px;
 }
@@ -443,6 +466,7 @@
     justify-content: space-evenly;
     gap: 1rem;
     margin: 1rem 1rem;
+    padding-bottom: 4rem;
 }
 
 
@@ -487,7 +511,7 @@
 
 
 .contact-image{
-    width: 16rem;
+    width: 18rem;
 
 }
 
@@ -496,13 +520,14 @@
     padding: 10px;
     border-radius: 5px;
     width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
 .submit-btn{
     width: 100%;
     height: 3rem;
-    background-color: #FF5100;
+    background-color: #9373C2;
     border: none;
     border-radius: 5px;
     color: white;
@@ -526,7 +551,7 @@
 
 .social-media-container > div > h5{
     font-size: 20px;
-    color: #686E7D;
+    color: white;
 }
 
 
@@ -544,17 +569,16 @@
 
 .footer-container{
     height: 4rem;
-    background-color: black;
+    background-color: white;
     opacity: 0.8;
-    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .footer-container > div {
-    color: lightgray;
-    font-size: 14px;
+    color: #5E5D63;
+    font-size: 18px;
     letter-spacing: 1px;
 }
 
