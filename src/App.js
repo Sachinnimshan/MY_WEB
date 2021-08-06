@@ -63,6 +63,7 @@ function App() {
             <li className='nav-item' onClick={closeMenu}><a href='#'>Home</a></li>
             <li className='nav-item' onClick={closeMenu}><a href='#about'>About</a></li>
             <li className='nav-item' onClick={closeMenu}><a href='#services'>Services</a></li>
+            <li className='nav-item' onClick={closeMenu}><a href='#projects'>Projects</a></li>
             <li className='nav-item' onClick={closeMenu}><a href='#contact'>Contact</a></li>
           </ul>
         </div>
@@ -74,6 +75,8 @@ function App() {
         <section id="home"><Home/></section>
         <section id="about"><About/></section>
         <section id="services"><Services/></section>
+        <div className='container-fluid page-break'></div>
+        <section id="projects"><Projects/></section>
         <section id='contact'><Contact/></section>
         <section><Footer/></section>
       </div>

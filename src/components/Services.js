@@ -13,28 +13,28 @@ function Services() {
             </div>
             <div className='services-card-container'>
                 
-                <div className='service-card'>
-                    <div className='service-icons'><img src='/Images/web.png'/></div>
+               <div className='service-card'>
+               <Fade bottom> <div className='service-icons'><img src='/Images/web.png'/></div>
                     <h4>WEB DEVELOPMENT</h4>
-                    <div className='breaker'></div>
+                    <div className='breaker'></div></Fade>
                 </div>
                 
                 <div className='service-card'>
-                    <div className='service-icons'><img src='/Images/desktop.png'/></div>
+                    <Fade bottom><div className='service-icons'><img src='/Images/desktop.png'/></div>
                     <h4>DESKTOP APP DEVELOPMENT</h4>
-                    <div className='breaker'></div>
+                    <div className='breaker'></div></Fade>
                 </div>
                 
                 <div className='service-card'>
-                    <div className='service-icons'><img src='/Images/phone.png'/></div>
+                    <Fade bottom><div className='service-icons'><img src='/Images/phone.png'/></div>
                     <h4>MOBILE APP DEVELOPMENT</h4>
-                    <div className='breaker'></div>
+                    <div className='breaker'></div></Fade>
                 </div>
                 
                 <div className='service-card'>
-                    <div className='service-icons'><img src='/Images/ux.png'/></div>
+                    <Fade bottom><div className='service-icons'><img src='/Images/ux.png'/></div>
                     <h4>UI / UX DESIGN</h4>
-                    <div className='breaker'></div>
+                    <div className='breaker'></div></Fade>
                 </div>
             </div>
         </div>

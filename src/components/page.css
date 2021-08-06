@@ -432,12 +432,50 @@
     cursor: pointer;
 }
 
+.page-break{
+    width: 100%;
+    border: 0.5px solid lightgray;
+}
+
 .breaker{
     border: 2px solid #414047;
     width: 100%;
 }
 
 /*****************************************************************/
+
+.project-section{
+    padding-bottom: 5rem;
+}
+.project-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.project-card{
+    width: 30rem;
+    border-radius: 2rem;
+    transition: all ease-in-out 0.3s;
+}
+
+.project-card:hover{
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+@media screen and (max-width: 800px){
+    .project-card{
+        width: 90%;
+    }
+}
+
+
+
+/****************************************************************/
 
 .contact-section{
     background-color: #242A32;
