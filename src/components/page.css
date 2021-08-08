@@ -558,6 +558,9 @@
 }
 
 @media screen and (max-width: 800px){
+    .pro-card-container{
+        margin-bottom: 1rem;
+    }
     .project-card{
         width: 90%;
     }
@@ -566,8 +569,6 @@
         width: 80%;
     }
 }
-
-
 
 /****************************************************************/
 

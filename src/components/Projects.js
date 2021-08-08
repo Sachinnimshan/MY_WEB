@@ -41,7 +41,7 @@ function Projects() {
     </div>
 
    
-    <div><Slide right><img className='pro-image' src='/Images/serve.png'/></Slide></div>
+    <div style={{textAlign: 'center'}}><Slide right><img className='pro-image' src='/Images/serve.png'/></Slide></div>
     
 
     </div>
