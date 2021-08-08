@@ -26,7 +26,7 @@ function Contact(){
       </div>
 
      <div className='contact-container'>
-     <div ><img className='contact-image' src='/Images/contact1.png'/>
+     <div style={{textAlign: 'center'}}><img className='contact-image' src='/Images/contact1.png'/>
      <div className='social-media-container'>
       <div><h5>Follow Me On Social Media</h5></div>
       <div>

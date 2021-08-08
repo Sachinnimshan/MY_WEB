@@ -13,7 +13,7 @@ function Services() {
             </div>
             
             <div className='service-card-main-container'>
-                <div><img style={{width: '30rem'}} src='/Images/bg1.png'/></div>
+                <div style={{textAlign: 'center'}}><img className='serve-img' src='/Images/bg1.png'/></div>
 
             <div className='services-card-container'>
                 

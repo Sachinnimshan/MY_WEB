@@ -455,6 +455,10 @@
     justify-content: center;
 }
 
+.serve-img{
+    width: 30rem;
+}
+
 .service-icons{
     cursor: pointer;
     margin-bottom: 1rem;
@@ -498,6 +502,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .serve-img{
+        width: 90%;
     }
 
 }
