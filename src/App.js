@@ -47,6 +47,15 @@ function App() {
     <div>
       <div className='header-container'>
       <div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div>
+      <div className='menu-container'>
+          <ul className='menu-item-container'>
+            <li className='menu-item'><a href='#'>Home</a></li>
+            <li className='menu-item'><a href='#about'>About</a></li>
+            <li className='menu-item'><a href='#services'>Services</a></li>
+            <li className='menu-item'><a href='#projects'>Projects</a></li>
+            <li className='menu-item'><a href='#contact'>Contact</a></li>
+          </ul>
+        </div>
         
         <div><GoThreeBars onClick={showMenu} className='menu-icon'/></div>
       <Slide right>
