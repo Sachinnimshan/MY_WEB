@@ -1,9 +1,7 @@
 import { Button } from 'react-bootstrap';
 import React from 'react';
-import ReactPlayer from "react-player";
-import Fade from 'react-reveal/Fade';
 import './page.css';
-import Pulse from 'react-reveal/Pulse';
+import {Pulse, Fade, Slide} from 'react-reveal';
 
 
 function Projects() {
@@ -17,12 +15,14 @@ function Projects() {
     </div>
         
     <div className='project-container'>
+    
+    <div className='pro-card-container'>
 
-    <Pulse><div className="card project-card">
+    <div className="card project-card">
     <img className="card-img-top" src="/Images/p1.jpg" alt="Card image cap"/>
     <div className="card-body">
-    <h5 className="card-title">Amazon Clone</h5>
-    <p className="card-text">
+    <h5 className="pro-title">Amazon Clone</h5>
+    <p className="pro-text">
       MERN Stack | E-Commerce Website
     </p>
     </div>
@@ -35,7 +35,14 @@ function Projects() {
     </a>
     </div>
     </div>
-    </Pulse>
+
+    
+
+    </div>
+
+   
+    <div><Slide right><img className='pro-image' src='/Images/serve.png'/></Slide></div>
+    
 
     </div>
     </div>

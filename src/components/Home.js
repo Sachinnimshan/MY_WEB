@@ -1,8 +1,6 @@
 import React from 'react';
 import './page.css';
-import Flip from 'react-reveal/Flip';
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
+import {Flip,Slide} from 'react-reveal';
 import {Button} from '@material-ui/core';
 import {IoLogoInstagram} from 'react-icons/io';
 import {FiTwitter} from 'react-icons/fi';
@@ -11,7 +9,7 @@ import {AiOutlineFacebook, AiOutlineYoutube, AiFillGithub} from 'react-icons/ai'
 function Home() {
     return (
         <div className="home-screen" >
-          <div className='home-center-info'>
+          <Slide left><div className='home-center-info'>
           <div><Flip top><h1>HI, I'm Sachin</h1></Flip></div>
           <div><p>Software Developer / Free Lancer</p></div>
           <div><span>High Level Experience in Web Design & Development</span></div>
@@ -27,7 +25,8 @@ function Home() {
           </div>
           <div><button className='home-btn'>Download My CV</button></div>
           </div>
-          <div><img className='home-img' src='/Images/bg1.png'/></div>
+          </Slide>
+          <Slide right><div><img className='home-img' src='/Images/pro.png'/></div></Slide>
         </div>
     )
 }

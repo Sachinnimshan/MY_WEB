@@ -46,15 +46,15 @@ function App() {
     return (
     <div>
       <div className='header-container'>
-      <div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div>
+      <Slide top><div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div></Slide>
       <div className='menu-container'>
-          <ul className='menu-item-container'>
+          <Slide top><ul className='menu-item-container'>
             <li className='menu-item'><a href='#'>Home</a></li>
             <li className='menu-item'><a href='#about'>About</a></li>
             <li className='menu-item'><a href='#services'>Services</a></li>
             <li className='menu-item'><a href='#projects'>Projects</a></li>
             <li className='menu-item'><a href='#contact'>Contact</a></li>
-          </ul>
+          </ul></Slide>
         </div>
         
         <div><GoThreeBars onClick={showMenu} className='menu-icon'/></div>
