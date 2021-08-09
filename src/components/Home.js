@@ -9,7 +9,7 @@ import {AiOutlineFacebook, AiOutlineYoutube, AiFillGithub} from 'react-icons/ai'
 function Home() {
     return (
         <div className="home-screen">
-          <Slide left><div className='home-center-info'>
+          <Slide left><div className='home-center-info' >
           <div><Flip top><h1>HI, I'm Sachin</h1></Flip></div>
           <div><p>Software Developer / Free Lancer</p></div>
           <div><span>High Level Experience in Web Design & Development</span></div>
@@ -26,7 +26,8 @@ function Home() {
           <div><button className='home-btn'>Download My CV</button></div>
           </div>
           </Slide>
-          <Slide right><div><img className='home-img' src='/Images/pro.png'/></div></Slide>
+          <div className='home-banner' style={{backgroundImage: 'url(/Images/unnamed.png)', backgroundSize: 'cover'}}>
+            <div><img className='home-img' src='/Images/banner.png'/></div></div>
         </div>
     )
 }

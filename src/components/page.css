@@ -44,7 +44,7 @@
 .home-screen{
     display: flex;
     height: 90vh;
-    background-color: #fff;
+    background-color: #E6F4F9;
     opacity: 0.95;
     margin-top: 4rem;
     flex-wrap: wrap;
@@ -56,6 +56,7 @@
 
 .home-img{
     width: auto;
+    margin-top: 1rem;
 }
 
 
@@ -76,8 +77,10 @@
 
 .home-center-info {
     opacity: 0.85;
-    width: auto;
-    border-radius: 1rem;
+    position: relative;
+    height: 512px;
+    width: 512px;
+    justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -115,15 +118,22 @@
     transition: all 0.2s ease-in-out;
     transform: scale(1.5);
 }
+
+.home-banner{
+    width: 512px;
+    height: 512px;
+    display: flex;
+    justify-content: center;
+}
 /*********************************************************************/
 
 .header-container{
     height: 5rem;
     display: flex;
-    opacity: 0.9;
     width: 100%;
-    background-color: white;
+    background-color: #fff;
     align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     justify-content: space-between;
     z-index: 1;
     top: 0;
@@ -163,8 +173,8 @@
     text-decoration: none;
 }
 
-.menu-item > a:hover{
-    color: #7952B3;
+.menu-item:hover{
+    color: #4F6AFF;
 }
 
 .menu-icon{
@@ -258,6 +268,10 @@
     .home-center-info{
         padding: 2rem 2rem;
     }
+
+    .home-banner{
+        width: 90%;
+    }
     
 }
 
@@ -297,7 +311,7 @@
 
 
 .home-btn{
-    background-color: #7952B3;
+    background-color: #4F6AFF;
     height: 3rem;
     width: 200px;
     color: white;
