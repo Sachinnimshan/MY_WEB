@@ -80,11 +80,10 @@ function App() {
         </div>
       </Slide>
       </div>
-        <BiMouse className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
+        <div><img className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}} src='/Images/top.png'/></div>
         <section id="home"><Home/></section>
         <section id="about"><About/></section>
         <section id="services"><Services/></section>
-        <div className='container-fluid page-break'></div>
         <section id="projects"><Projects/></section>
         <section id='contact'><Contact/></section>
         <section><Footer/></section>

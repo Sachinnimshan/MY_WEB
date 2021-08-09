@@ -8,7 +8,7 @@ import {AiOutlineFacebook, AiOutlineYoutube, AiFillGithub} from 'react-icons/ai'
 
 function Home() {
     return (
-        <div className="home-screen" >
+        <div className="home-screen">
           <Slide left><div className='home-center-info'>
           <div><Flip top><h1>HI, I'm Sachin</h1></Flip></div>
           <div><p>Software Developer / Free Lancer</p></div>

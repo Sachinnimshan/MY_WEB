@@ -1,5 +1,5 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
+import {Slide, Fade} from 'react-reveal';
 import {MdDesktopMac} from 'react-icons/md';
 import {AiOutlineMobile} from 'react-icons/ai';
 
@@ -13,32 +13,32 @@ function Services() {
             </div>
             
             <div className='service-card-main-container'>
-                <div style={{textAlign: 'center'}}><img className='serve-img' src='/Images/bg1.png'/></div>
+                <Slide left><div style={{textAlign: 'center'}}><img className='serve-img' src='/Images/bg1.png'/></div></Slide>
 
             <div className='services-card-container'>
                 
                 <div className='service-card'>
-                <Fade bottom> <div className='service-icons'><img src='/Images/web.png'/></div>
+                <Slide right> <div className='service-icons'><img src='/Images/web.png'/></div>
                      <h4>WEB DEVELOPMENT</h4>
-                     <div className='breaker'></div></Fade>
+                     <div className='breaker'></div></Slide>
                  </div>
                  
                  <div className='service-card'>
-                     <Fade bottom><div className='service-icons'><img src='/Images/desktop.png'/></div>
+                     <Slide right><div className='service-icons'><img src='/Images/desktop.png'/></div>
                      <h4>DESKTOP APP DEVELOPMENT</h4>
-                     <div className='breaker'></div></Fade>
+                     <div className='breaker'></div></Slide>
                  </div>
                  
                  <div className='service-card'>
-                     <Fade bottom><div className='service-icons'><img src='/Images/phone.png'/></div>
+                     <Slide right><div className='service-icons'><img src='/Images/phone.png'/></div>
                      <h4>MOBILE APP DEVELOPMENT</h4>
-                     <div className='breaker'></div></Fade>
+                     <div className='breaker'></div></Slide>
                  </div>
                  
                  <div className='service-card'>
-                     <Fade bottom><div className='service-icons'><img src='/Images/ux.png'/></div>
+                     <Slide right><div className='service-icons'><img src='/Images/ux.png'/></div>
                      <h4>UI / UX DESIGN</h4>
-                     <div className='breaker'></div></Fade>
+                     <div className='breaker'></div></Slide>
                  </div>
              </div>
             </div>
