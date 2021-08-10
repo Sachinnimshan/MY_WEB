@@ -18,7 +18,7 @@ function Projects() {
     
     <div className='pro-card-container'>
 
-    <div className="card project-card">
+    <Fade bottom><div className="card project-card">
     <img className="card-img-top" src="/Images/p1.jpg" alt="Card image cap"/>
     <div className="card-body">
     <h5 className="pro-title">Amazon Clone</h5>
@@ -34,7 +34,7 @@ function Projects() {
     <Button variant="outline-danger">Youtube</Button>
     </a>
     </div>
-    </div>
+    </div></Fade>
 
     
 

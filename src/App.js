@@ -48,12 +48,13 @@ function App() {
       <div className='header-container'>
       <Slide top><div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div></Slide>
       <div className='menu-container'>
-          <Slide top><ul className='menu-item-container'>
-            <li className='menu-item'><a href='#'>Home</a></li>
-            <li className='menu-item'><a href='#about'>About</a></li>
-            <li className='menu-item'><a href='#services'>Services</a></li>
-            <li className='menu-item'><a href='#projects'>Projects</a></li>
-            <li className='menu-item'><a href='#contact'>Contact</a></li>
+          <Slide top>
+          <ul className='menu-item-container'>
+            <div className='menu-item'><a href='#'>Home</a></div>
+            <div className='menu-item'><a href='#about'>About</a></div>
+            <div className='menu-item'><a href='#services'>Services</a></div>
+            <div className='menu-item'><a href='#projects'>Projects</a></div>
+            <div className='menu-item'><a href='#contact'>Contact</a></div>
           </ul></Slide>
         </div>
         
@@ -84,6 +85,7 @@ function App() {
         <section id="home"><Home/></section>
         <section id="about"><About/></section>
         <section id="services"><Services/></section>
+        <div className='page-break'></div>
         <section id="projects"><Projects/></section>
         <section id='contact'><Contact/></section>
         <section><Footer/></section>

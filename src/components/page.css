@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 
+.page-break{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
 .scrollTop {
     position: fixed;
     bottom: 10px;
@@ -44,8 +51,7 @@
 .home-screen{
     display: flex;
     height: 90vh;
-    background-color: #E6F4F9;
-    opacity: 0.95;
+    background: linear-gradient(150deg, white 60% , #7952B3);
     margin-top: 4rem;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -56,7 +62,6 @@
 
 .home-img{
     width: auto;
-    margin-top: 1rem;
 }
 
 
@@ -77,10 +82,8 @@
 
 .home-center-info {
     opacity: 0.85;
-    position: relative;
-    height: 512px;
-    width: 512px;
-    justify-content: center;
+    width: auto;
+    border-radius: 1rem;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -119,21 +122,14 @@
     transform: scale(1.5);
 }
 
-.home-banner{
-    width: 512px;
-    height: 512px;
-    display: flex;
-    justify-content: center;
-}
 /*********************************************************************/
 
 .header-container{
     height: 5rem;
     display: flex;
     width: 100%;
-    background-color: #fff;
+    background-color: white;
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     justify-content: space-between;
     z-index: 1;
     top: 0;
@@ -151,12 +147,6 @@
     align-items: center;
 }
 
-.menu-container > ul > li{
-    list-style-type: none;
-    display: flex;
-    text-decoration: none;
-    
-}
 
 .menu-item-container{
     display: flex; 
@@ -164,17 +154,21 @@
 
 .menu-item{
     padding: 1.25rem 1.25rem;
+    height: 1rem;
+    transition: all ease-in-out 0.3s;
+    
 }
 
 .menu-item > a{
-    font-size: 18px;
+    font-size: 17px;
     color: #5F5E64;
     letter-spacing: 1px;
     text-decoration: none;
 }
 
-.menu-item:hover{
-    color: #4F6AFF;
+.menu-item >a:hover{
+    color: #7952B3;
+    transition: all ease-in-out 0.3s;
 }
 
 .menu-icon{
@@ -268,10 +262,6 @@
     .home-center-info{
         padding: 2rem 2rem;
     }
-
-    .home-banner{
-        width: 90%;
-    }
     
 }
 
@@ -311,12 +301,15 @@
 
 
 .home-btn{
-    background-color: #4F6AFF;
+    background-color: #7952B3;
     height: 3rem;
-    width: 200px;
+    width: 225px;
     color: white;
     border-radius: 5px;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     letter-spacing: 1px;
     transition: all 0.2s ease-in-out;
@@ -324,7 +317,12 @@
 }
 
 .home-btn:hover{
-    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-down-icon{
+    font-size: 22px;
+    margin-right: 0.5rem;
 }
 
 /********************************************************************/
@@ -422,7 +420,6 @@
 .services-container{
     height: auto;
     padding-bottom: 5rem;
-    background-color: #E6F4F9;
     
 }
 
@@ -582,7 +579,7 @@
 }
 
 .contact-over{
-    opacity: 0.8;
+    opacity: 0.9;
     background-color: #111821;
 }
 .contact-card{
@@ -708,7 +705,6 @@
 .footer-container{
     height: 4rem;
     background-color: white;
-    opacity: 0.8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -716,7 +712,7 @@
 
 .footer-container > div {
     color: #5E5D63;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
 }
 
