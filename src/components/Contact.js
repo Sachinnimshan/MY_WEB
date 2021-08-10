@@ -5,7 +5,7 @@ import {AiOutlineFacebook, AiOutlineMail, AiOutlineYoutube} from 'react-icons/ai
 import {FcPhoneAndroid} from 'react-icons/fc';
 import ContactForm from './ContactForm';
 import validate from './ValidateInfo';
-import Fade from 'react-reveal/Fade';
+import {Fade, Slide} from 'react-reveal';
 import {Spinner} from 'react-bootstrap';
 import Bounce from 'react-reveal/Bounce';
 import { IoLogoInstagram } from 'react-icons/io';
@@ -26,7 +26,7 @@ function Contact(){
       </div>
 
      <div className='contact-container'>
-     <div style={{textAlign: 'center'}}><img className='contact-image' src='/Images/contact1.png'/>
+     <Slide left><div style={{textAlign: 'center'}}><img className='contact-image' src='/Images/contact1.png'/>
      <div className='social-media-container'>
       <div><h5>Follow Me On Social Media</h5></div>
       <div>
@@ -37,7 +37,7 @@ function Contact(){
       </div>
 
     </div>
-     </div>
+     </div></Slide>
 
      <div className='contact-form'>
        <form onSubmit={handleSubmit}>

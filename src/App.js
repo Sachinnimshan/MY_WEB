@@ -46,7 +46,7 @@ function App() {
     return (
     <div>
       <div className='header-container'>
-      <Slide top><div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div></Slide>
+      <Slide left><div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div></Slide>
       <div className='menu-container'>
           <Slide top>
           <ul className='menu-item-container'>

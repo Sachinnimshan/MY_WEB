@@ -16,8 +16,6 @@ function Projects() {
         
     <div className='project-container'>
     
-    <div className='pro-card-container'>
-
     <Fade bottom><div className="card project-card">
     <img className="card-img-top" src="/Images/p1.jpg" alt="Card image cap"/>
     <div className="card-body">
@@ -38,12 +36,8 @@ function Projects() {
 
     
 
-    </div>
 
-   
-    <div style={{textAlign: 'center'}}><Slide right><img className='pro-image' src='/Images/serve.png'/></Slide></div>
-    
-
+  
     </div>
     </div>
     )

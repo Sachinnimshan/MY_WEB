@@ -67,13 +67,13 @@
 
 .home-screen > div > div> h1 {
     color:black;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 .home-screen > div > div > p{
-    font-size: 28px;
+    font-size: 24px;
     letter-spacing: 1px;
     color:gray;
     text-align: center;
@@ -149,12 +149,12 @@
 
 
 .menu-item-container{
-    display: flex; 
+    display: flex;
+    padding-top: 1rem; 
 }
 
 .menu-item{
-    padding: 1.25rem 1.25rem;
-    height: 1rem;
+    padding: 1.5rem 1.5rem;
     transition: all ease-in-out 0.3s;
     
 }
@@ -321,7 +321,7 @@
 }
 
 .btn-down-icon{
-    font-size: 22px;
+    font-size: 18px;
     margin-right: 0.5rem;
 }
 
@@ -333,13 +333,13 @@
 
 .about-over{
     background-color: #111821;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .about-description{
-    color: lightgray;
+    color: gray;
     text-align: center;
-    font-size: 18px;
+    font-size: 17px;
     letter-spacing: 1px;
     line-height: 2rem;
 }
@@ -356,7 +356,7 @@
 }
 
 .pro-icons{
-    font-size: 6rem;
+    font-size: 4rem;
     color: lightgray;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -419,7 +419,7 @@
 
 .services-container{
     height: auto;
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
     
 }
 
@@ -454,7 +454,7 @@
     color: #414047;
     width: 100%;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -480,6 +480,7 @@
 
 .service-card > h4{
     font-size: 15px;
+    color: gray;
 }
 
 .service-card:hover{
@@ -491,7 +492,7 @@
 
 
 .breaker{
-    border: 2px solid #5F5E64;
+    border: 2px solid gray;
     width: 100%;
     border-radius: 2rem;
 }
@@ -519,21 +520,10 @@
 }
 .project-container{
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.pro-card-container{
-    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
 }
 
-.pro-image{
-   width: 525px;
-    
-}
 
 .project-card{
     width: 22rem;
@@ -651,7 +641,7 @@
 }
 
 .contact-form{
-    border: 1px solid lightgrey;
+    border: 1px solid gray;
     padding: 10px;
     border-radius: 5px;
     width: 40%;
@@ -686,7 +676,7 @@
 
 .social-media-container > div > h5{
     font-size: 20px;
-    color: white;
+    color: lightgray;
 }
 
 
