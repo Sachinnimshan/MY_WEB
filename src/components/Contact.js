@@ -61,7 +61,7 @@ function Contact(){
 
      <div className='contact-form'>
        <form onSubmit={handleSubmit}>
-        <div className="form-group p-4">
+        <div className="form-group p-3">
           
           <input 
             type="text"
@@ -75,7 +75,7 @@ function Contact(){
             {errors.username && <p className='form-errors'>{errors.username}</p>}
         </div>
         
-        <div className="form-group p-4">
+        <div className="form-group p-3">
           
           <input 
            type="text"
@@ -88,7 +88,7 @@ function Contact(){
            {errors.email && <p className='form-errors'>{errors.email}</p>}
         </div>
         
-        <div className="form-group p-4">
+        <div className="form-group p-3">
           
           <textarea 
             type="text" 

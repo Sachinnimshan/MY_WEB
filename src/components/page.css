@@ -58,7 +58,7 @@
 
 .section-title > span{
     color: #012970;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 700;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1px;
@@ -465,6 +465,10 @@
         justify-content: center;
     }
 
+    .service-card{
+        width: 85%;
+    }
+
     .serve-img{
         width: 90%;
     }
@@ -593,6 +597,7 @@
 
 .contact-form{
     padding: 5px;
+    padding-top: 1rem;
     background-color: #FAFBFF;
     border-radius: 5px;
     height: fit-content;
