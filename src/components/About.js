@@ -9,11 +9,13 @@ import {SiCsharp} from 'react-icons/si';
 
 function About() {
     return (
-        <div className='about-container' style={{backgroundImage: 'url(/Images/service.jpg)', backgroundSize: 'cover'}}>
-         <div className='about-over'><div className='section-title1'>
-          <Fade top cascade>
+        <div className='about-container'>
+         <div className='section-title'>
+           <Fade bottom cascade>
             <h1>About Me</h1>
-             <span>What I Do</span></Fade></div>
+             <span>What I Do</span>
+             </Fade>
+            </div>
           <div className='skill-container container'>
           <Fade bottom><div className='container about-description'><p>I have more than 5+ years' experience building softwares in different programming languages since 2016.
           Below is a quick overview of my main technical skill sets and technologies I use.</p></div></Fade>
@@ -29,7 +31,7 @@ function About() {
               <div><FaJava className='pro-icons'/></div>
               <div><SiCsharp className='pro-icons'/></div>
           </div></Bounce>
-          </div></div>
+          </div>
         </div>
     )
 }

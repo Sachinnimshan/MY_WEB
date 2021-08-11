@@ -9,3 +9,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.app{
+  background-color: #FFFFFF;
+}

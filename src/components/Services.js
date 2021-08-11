@@ -8,7 +8,7 @@ function Services() {
         <div className='services-container'>
             <div className='services-over'>
             <div className='section-title'>
-              <Fade top cascade><h1>My Services</h1>
+              <Fade bottom cascade><h1>My Services</h1>
               <span>What I Do</span></Fade>
             </div>
             
@@ -16,29 +16,26 @@ function Services() {
         
             <div className='services-card-container'>
                 
-                <div className='service-card'>
-                <Slide right> <div className='service-icons'><img src='/Images/web.png'/></div>
-                     <h4>WEB DEVELOPMENT</h4>
-                     <div className='breaker'></div></Slide>
-                 </div>
+            <Slide bottom><div style={{borderBottom: '4px solid #00C7FF'}} className='service-card'>
+                 <div className='service-icons'><img src='/Images/s1.png'/></div>
+                     <h4>web development</h4>
+                 </div></Slide>
                  
-                 <div className='service-card'>
-                     <Slide right><div className='service-icons'><img src='/Images/desktop.png'/></div>
-                     <h4>DESKTOP APP DEVELOPMENT</h4>
-                     <div className='breaker'></div></Slide>
-                 </div>
+                 <Slide bottom><div style={{borderBottom: '4px solid #F58B09'}} className='service-card'>
+                     <div className='service-icons'><img src='/Images/s2.png'/></div>
+                     <h4>desktop app development</h4>
+                 </div></Slide>
                  
-                 <div className='service-card'>
-                     <Slide right><div className='service-icons'><img src='/Images/phone.png'/></div>
-                     <h4>MOBILE APP DEVELOPMENT</h4>
-                     <div className='breaker'></div></Slide>
-                 </div>
+                 {/* <Slide bottom><div className='service-card'>
+                     <div className='service-icons'><img src='/Images/s3.png'/></div>
+                     <h4>mobile app development</h4>
+                 </div></Slide> */}
                  
-                 <div className='service-card'>
-                     <Slide right><div className='service-icons'><img src='/Images/ux.png'/></div>
-                     <h4>UI / UX DESIGN</h4>
-                     <div className='breaker'></div></Slide>
-                 </div>
+                 <Slide bottom><div  style={{borderBottom: '4px solid #08D94E'}}  className='service-card'>
+                     <div className='service-icons'><img src='/Images/s4.png'/></div>
+                     <h4>ui / ux design</h4>
+                 </div></Slide>
+
              </div>
             </div>
         </div>

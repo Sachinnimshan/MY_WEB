@@ -1,19 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Open+Sans:wght@700&display=swap');
 
-
-.page-break{
-    width: 100%;
-    display: flex;
-    text-align: center;
-    border-bottom: 1px solid lightgray;
-}
 
 .scrollTop {
     position: fixed;
     bottom: 10px;
     right: 0;
+    font-size: 3rem;
     align-items: center;
     height: 3rem;
     justify-content: center;
@@ -22,7 +18,7 @@
     animation: fadeIn 0.3s;
     transition: opacity 0.4s;
     opacity: 0.5;
-    color: #7952B3;
+    color: #495CF2;
   }
   
   .scrollTop:hover{
@@ -44,6 +40,29 @@
 
 }
 
+.section-title{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    padding: 1rem;
+    padding-top: 5.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-title > h1{
+    color: #4154F1;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title > span{
+    color: #012970;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
+}
 
 
 
@@ -51,7 +70,7 @@
 .home-screen{
     display: flex;
     height: 90vh;
-    background: linear-gradient(180deg, white 60% , #7952B3);
+    background: linear-gradient(60deg, white 20% , #F2F5FC);
     margin-top: 4rem;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -66,22 +85,21 @@
 
 
 .home-screen > div > div> h1 {
-    color:black;
+    color:#012970;
     font-size: 40px;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 .home-screen > div > div > p{
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 1px;
-    color:gray;
+    color:#5F5F61;
     text-align: center;
 }  
 
 
 .home-center-info {
-    opacity: 0.85;
     width: auto;
     border-radius: 1rem;
     align-items: center;
@@ -125,12 +143,13 @@
 /*********************************************************************/
 
 .header-container{
-    height: 5rem;
+    height: 4.75rem;
     display: flex;
     width: 100%;
-    background-color: white;
+    background-color: #FFFFFF;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
     z-index: 1;
     top: 0;
     position: fixed;
@@ -160,23 +179,20 @@
 }
 
 .menu-item > a{
-    font-size: 17px;
-    color: #5F5E64;
-    letter-spacing: 1px;
+    font-size: 16px;
+    color: #022A71;
+    font-family: 'Nunito', sans-serif;
     text-decoration: none;
 }
 
 .menu-item >a:hover{
-    color: #7952B3;
+    color: #4154F1;
     transition: all ease-in-out 0.3s;
 }
 
 .menu-icon{
-    font-size: 2rem;
     display: none;
-    color: #434E41;
-    margin-right: 1rem;
-    cursor: pointer;
+    
 }
 
 .close-menu-container{
@@ -184,29 +200,28 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    justify-content: space-between;
+    text-align: right;
     padding: 1rem 1rem;
 }
 
 .close-menu{
-    color: lightgray;
+    width: 100%;
+    text-align: right;
+}
+
+.close-menu-icon{
+    color: #022A71;
     font-size: 2rem;
     cursor: pointer;
 }
 
-.close-menu:hover{
-    color: white;
+.close-menu-icon:hover{
+    color: #4154F1;
 }
 
 .menu-header{
     list-style-type: none;
 }
-
-.menu-title{
-    color: lightgray;
-    font-size: 1.1rem;
-}
-
 
 
 @media screen and (max-width: 1100px){
@@ -222,7 +237,7 @@
     .menu-icon{
         font-size: 2rem;
         display: block;
-        color: #434E41;
+        color: #022A71;
         margin-right: 1rem;
         cursor: pointer;
     }
@@ -230,9 +245,10 @@
     .nav-menu{
         width: 100%;
         height: auto;
-        background-color: #1E2A3A;
+        background-color: #FFFFFF;
         display: none;
         position: fixed;
+        border-radius: 1rem;
         top: 0;
         right: 0;
         z-index: 2;
@@ -252,13 +268,7 @@
         height: auto;
         padding-top: 10rem;
     }
-    .header-container{
-        display: flex;
-        opacity: 0.96;
-        position: fixed;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        justify-content: space-between;
-    }
+    
     .home-center-info{
         padding: 2rem 2rem;
     }
@@ -266,16 +276,12 @@
 }
 
 .nav-item{
-    padding: 1.5rem 1.5rem;
+    padding: 0.5rem 0.5rem;
     cursor: pointer;
     align-items: center;
     width: 100%;
     color: white;
     list-style-type: none;
-}
-
-.nav-item:hover{
-    background-color: #7952B3;
 }
 
 .nav-item-container{
@@ -286,22 +292,22 @@
 
 
 .nav-item-container > li > a{
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-    color: white;
-    letter-spacing: 1.5px;
+    color: #022A71;
+    letter-spacing: 1px;
 }
 
 
 .nav-item-container > li > a:hover{
-    color: white;
+    color: #4154F1;
 }
 
 
 .home-btn{
-    background-color: #7952B3;
+    background-color: #4154F1;
     height: 3rem;
     width: 225px;
     color: white;
@@ -331,15 +337,11 @@
     width: 100%;
 }
 
-.about-over{
-    background-color: #111821;
-    opacity: 0.95;
-}
-
 .about-description{
     color: gray;
     text-align: center;
-    font-size: 17px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
     line-height: 2rem;
 }
@@ -357,7 +359,7 @@
 
 .pro-icons{
     font-size: 4rem;
-    color: lightgray;
+    color: #5F5F61;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -365,7 +367,6 @@
 .pro-icons:hover{
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
-    color: white;
 }
 
 
@@ -374,52 +375,9 @@
 
 
 
-
-
-
-.section-title{
-    text-align: center;
-    padding: 1rem;
-    padding-top: 5.5rem;
-    margin-bottom: 2rem;
-}
-
-.section-title > h1{
-    color: #7952B3;
-    font-weight: 700;
-    font-size: 28px;
-    letter-spacing: 2px;
-}
-
-.section-title > span{
-    color: #716E7D;
-    font-size: 18px;
-}
-
-.section-title1{
-    text-align: center;
-    padding: 1rem;
-    padding-top: 5.5rem;
-    margin-bottom: 2rem;
-}
-
-.section-title1 > h1 {
-    color: white;
-    font-weight: 700;
-    font-size: 28px;
-    letter-spacing: 2px;
-}
-
-.section-title1 > span{
-    color: gray;
-    font-size: 18px;
-}
-
-
-
 .services-container{
     height: auto;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     
 }
 
@@ -436,6 +394,7 @@
     font-size: 28px;
     letter-spacing: 2px;
     color: white;
+    font-family: 'Nunito', sans-serif;
 }
 
 .services-section > span{
@@ -444,6 +403,7 @@
     font-size: 18px;
     letter-spacing: 2px;
     color: lightgray;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .service-card-main-container{
@@ -454,7 +414,7 @@
     color: #414047;
     width: 100%;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -472,30 +432,30 @@
     text-align: center;
     display: flex;
     align-items: center;
-    padding: 1rem 1rem;
-    width: 15rem;
+    padding-top: 3rem;
+    width: 22rem;
+    height: 12rem;
+    border-radius: 5px;
     flex-direction: column;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 .service-card > h4{
-    font-size: 15px;
-    color: gray;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #5F5F61;
+    font-family: 'Nunito';
 }
 
 .service-card:hover{
-    transform: scale(1.1);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-
-.breaker{
-    border: 2px solid gray;
-    width: 100%;
-    border-radius: 2rem;
-}
 
 @media screen and (max-width: 800px){
 
@@ -529,24 +489,27 @@
     width: 22rem;
     height: min-content;
     transition: all ease-in-out 0.3s;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 .project-card:hover{
     transition: all ease-in-out 0.3s;
     cursor: pointer;
     transform: scale(1.1);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
 
 .pro-title{
-    color: #0F70FF;
+    color: #012970;
+    font-family: 'Nunito';
+    font-size: 24px;
 }
 
 .pro-text{
-    color: #5F5E64;
-    font-size: 15px;
+    color: #444444;
+    font-size: 16px;
+    font-family: 'Open Sans';
 }
 
 @media screen and (max-width: 800px){
@@ -564,64 +527,54 @@
 
 /****************************************************************/
 
-.contact-section{
-    background-color: #242A32;
+.contact-details-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.contact-over{
-    opacity: 0.9;
-    background-color: #111821;
-}
-.contact-card{
-    border: none;
-    background-color: transparent;
+.contact-details{
+    background-color: #FAFBFF;
+    width: 18rem;
+    height: auto;
+    padding: 0.5rem;
 }
 
-.label-fonts{
-    font-size: 16px;
-    margin-bottom: 0.5rem;
-    color: lightgray;
-    font-weight: 500;
-    letter-spacing: 1px;
+.contact-details > ul > li {
+    list-style-type: none;
+}
+
+.contact-details > ul > li > h4{
+    color: #012970;
+    font-family: 'Nunito';
+    font-size: 24px;
+}
+.contact-icons{
+    color: #4154f1;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.contact-details > ul > li > span{
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: #444444;
 }
 
 .contact-container{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 1rem;
     margin: 1rem 1rem;
-    padding-bottom: 4rem;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.contact-card > div > h1{
+    color: lightgray;
 }
 
 
-.contact-container > div > ul > li{
-    border: none;
-}
-
-
-.contact-container > div > ul > li > div{
-    display: flex;
-    align-items: center;
-}
-
-.contact-container > div > ul > li > span {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #686E7D;
-}
-
-.contact-container > div > ul > li > h4{
-    font-size: 20px;
-    color: #686E7D;
-}
-
-
-.contact-icon-address{
-    color: red;
-    font-size: 2rem;
-}
 
 .contact-icon-email{
     color: #2AC2B8;
@@ -634,25 +587,24 @@
     margin-right: 1rem;
 }
 
-
 .contact-image{
-    width: 18rem;
-
+    width: 22rem;
 }
 
 .contact-form{
-    border: 1px solid gray;
-    padding: 10px;
+    padding: 5px;
+    background-color: #FAFBFF;
     border-radius: 5px;
-    width: 40%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: fit-content;
+    width: 30rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 
 .submit-btn{
     width: 100%;
     height: 3rem;
-    background-color: #9373C2;
+    background-color: #4154F1;
     border: none;
     border-radius: 5px;
     color: white;
@@ -663,6 +615,12 @@
     .contact-form{
         width: 100%;
     }
+
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
 }
 
@@ -671,12 +629,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .social-media-container > div > h5{
     font-size: 20px;
-    color: lightgray;
+    color: gray;
 }
 
 
@@ -693,16 +651,20 @@
 }
 
 .footer-container{
-    height: 4rem;
-    background-color: white;
+    height: 7rem;
+    background-color: #F6F9FF;
+    border-top: 0.5px solid lightgray;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
     justify-content: center;
 }
 
 .footer-container > div {
-    color: #5E5D63;
-    font-size: 16px;
+    color: #022A71;
+    font-family: 'Open Sans';
     letter-spacing: 1px;
+    font-size: 14px;
 }
 

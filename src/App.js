@@ -18,6 +18,7 @@ import {IoMdCloseCircle} from 'react-icons/io';
 import Slide from 'react-reveal/Slide';
 import Projects from './components/Projects';
 import {GoThreeBars} from 'react-icons/go';
+import {CgArrowUpR} from 'react-icons/cg';
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -44,7 +45,7 @@ function App() {
 
 
     return (
-    <div>
+    <div className='app'>
       <div className='header-container'>
       <Slide left><div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div></Slide>
       <div className='menu-container'>
@@ -64,11 +65,10 @@ function App() {
         <Slide right>
         <div className='navbar-container'>
           <ul className='nav-item-container'>
-            <li className='container menu-header'>
-            <div className='close-menu-container'>
-              <div className='menu-title'>Hello' You are Welcome</div>
-              <div><IoMdCloseCircle onClick={closeMenu} className='close-menu'/></div>
-            </div>
+            <li className='w-100' style={{listStyleType:'none'}}>
+              <div className='close-menu-container'>
+               <div className='close-menu'><IoMdCloseCircle onClick={closeMenu} className='close-menu-icon'/></div>
+              </div>
             </li>
             <li className='nav-item' onClick={closeMenu}><a href='#'>Home</a></li>
             <li className='nav-item' onClick={closeMenu}><a href='#about'>About</a></li>
@@ -81,11 +81,10 @@ function App() {
         </div>
       </Slide>
       </div>
-        <div><img className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}} src='/Images/top.png'/></div>
+        <div><CgArrowUpR className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/></div>
         <section id="home"><Home/></section>
         <section id="about"><About/></section>
         <section id="services"><Services/></section>
-        <div className='page-break'></div>
         <section id="projects"><Projects/></section>
         <section id='contact'><Contact/></section>
         <section><Footer/></section>
