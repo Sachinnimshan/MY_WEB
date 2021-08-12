@@ -55,7 +55,7 @@ function App() {
             <div className='menu-item'><a href='#about'>About</a></div>
             <div className='menu-item'><a href='#services'>Services</a></div>
             <div className='menu-item'><a href='#projects'>Projects</a></div>
-            <div className='menu-item'><a href='#contact'>Contact</a></div>
+            <div><a href='#contact'><button className='btn-contact'>Contact</button></a></div>
           </ul></Slide>
         </div>
         

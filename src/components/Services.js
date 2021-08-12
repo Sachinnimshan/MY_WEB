@@ -1,4 +1,5 @@
 import React from 'react';
+import './page.css';
 import {Slide, Fade} from 'react-reveal';
 import {MdDesktopMac} from 'react-icons/md';
 import {AiOutlineMobile} from 'react-icons/ai';

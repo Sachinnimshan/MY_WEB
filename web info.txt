@@ -1,4 +1,4 @@
 Button Color = #4154F1
 Nav Link  = #022A71
 Page Title =  #5061F2 / Nunito', sans-serif;
-Page Title Disc = #022A71 / Open Sans
+Page Title Disc = #012970 / Open Sans

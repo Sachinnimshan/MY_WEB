@@ -48,7 +48,7 @@ function Contact(){
          <div className='contact-details'>
            <ul>
              <li><AiOutlineClockCircle className='contact-icons'/></li>
-             <li><h4>Availble Hours</h4></li>
+             <li><h4>Available Hours</h4></li>
              <li><span>Monday - Friday</span></li>
              <li><span>9:00AM - 05:00PM</span></li>
              </ul>
@@ -60,12 +60,12 @@ function Contact(){
      
 
      <div className='contact-form'>
-       <form onSubmit={handleSubmit}>
+       <form onSubmit={handleSubmit} >
         <div className="form-group p-3">
-          
           <input 
             type="text"
             className="form-control"
+            style={{fontFamily: 'Open Sans', fontSize: '15px'}}
             id="username" 
             aria-describedby="emailHelp"
             placeholder="Enter Your Name"
@@ -79,7 +79,8 @@ function Contact(){
           
           <input 
            type="text"
-           className="form-control" 
+           className="form-control"
+           style={{fontFamily: 'Open Sans', fontSize: '15px'}}
            id="email" 
            placeholder="Enter Your Email"
            name="email"
@@ -93,6 +94,7 @@ function Contact(){
           <textarea 
             type="text" 
             className="form-control"
+            style={{fontFamily: 'Open Sans', fontSize: '15px'}}
             id="message" 
             aria-describedby="emailHelp"
             placeholder="Enter Your Message"
