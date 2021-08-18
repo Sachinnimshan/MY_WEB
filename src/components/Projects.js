@@ -33,10 +33,6 @@ function Projects() {
     </a>
     </div>
     </div></Fade>
-
-    
-
-
   
     </div>
     </div>
