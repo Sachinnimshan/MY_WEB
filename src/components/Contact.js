@@ -29,37 +29,38 @@ function Contact(){
 
      <div className='contact-container'>
        <div className='contact-details-container'>
+
+         <Slide bottom>
          <div className='contact-details'>
            <ul>
              <li><IoCallOutline className='contact-icons'/></li>
              <li><h4>Call Me</h4></li>
              <li><span>+94 77 9012 655</span></li>
            </ul>
-
          </div>
-         <div className='contact-details'>
+         </Slide>
+
+         <Slide bottom><div className='contact-details'>
            <ul>
              <li><HiOutlineMail className='contact-icons'/></li>
              <li><h4>Email</h4></li>
              <li><span>sachinnimshan@gmail.com</span></li>
            </ul>
+         </div></Slide>
 
-         </div>
-         <div className='contact-details'>
+         <Slide bottom><div className='contact-details'>
            <ul>
              <li><AiOutlineClockCircle className='contact-icons'/></li>
              <li><h4>Available Hours</h4></li>
              <li><span>Monday - Friday</span></li>
              <li><span>9:00AM - 05:00PM</span></li>
              </ul>
-         </div>
+         </div></Slide>
+
 
        </div>
 
-
-     
-
-     <div className='contact-form'>
+     <Slide bottom><div className='contact-form'>
        <form onSubmit={handleSubmit} >
         <div className="form-group p-3">
           <input 
@@ -108,7 +109,7 @@ function Contact(){
         </div>
         </form>
       </div>
-
+</Slide>
 </div>
 </div>
   )

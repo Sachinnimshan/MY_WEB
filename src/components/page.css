@@ -39,6 +39,7 @@
   
 .site-logo{
     width: auto;
+    
 
 }
 
@@ -72,7 +73,7 @@
 .home-screen{
     display: flex;
     height: 90vh;
-    background: linear-gradient(60deg, white 20% , #F2F5FC);
+    background: linear-gradient(60deg, white 30% , #F2F5FC);
     margin-top: 4rem;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -146,7 +147,7 @@
 /*********************************************************************/
 
 .header-container{
-    height: 4.75rem;
+    height: 4.5rem;
     display: flex;
     width: 100%;
     background-color: #FFFFFF;
@@ -203,6 +204,12 @@
     border-radius: 5px;
     font-family: 'Nunito';
     font-size: 17px;
+    transition: all ease-in-out 0.3s;
+}
+
+.btn-contact:hover{
+    opacity: 0.8;
+    transition: all ease-in-out 0.3s;
 }
 
 .menu-icon{
@@ -263,7 +270,6 @@
         background-color: #FFFFFF;
         display: none;
         position: fixed;
-        border-radius: 1rem;
         top: 0;
         right: 0;
         z-index: 2;
@@ -374,6 +380,7 @@
 
 .pro-icons{
     font-size: 4rem;
+    opacity: 0.95;
     color: #022A71;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -426,10 +433,9 @@
     justify-content: center;
 }
 .services-card-container{
-    color: #414047;
     width: 100%;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -448,7 +454,7 @@
     display: flex;
     align-items: center;
     padding-top: 3rem;
-    width: 22rem;
+    width: 20rem;
     height: 12rem;
     border-radius: 5px;
     flex-direction: column;
@@ -467,9 +473,11 @@
 
 .service-card:hover{
     transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 
 @media screen and (max-width: 800px){
@@ -481,7 +489,7 @@
     }
 
     .service-card{
-        width: 85%;
+        width: 75%;
     }
 
     .serve-img{
@@ -549,6 +557,7 @@
 .contact-details-container{
     display: flex;
     flex-wrap: wrap;
+    width: 50%;
     justify-content: center;
     gap: 0.5rem;
 }
@@ -585,7 +594,7 @@
 
 .contact-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 1rem 1rem;
     gap: 0.5rem;
     padding-bottom: 2rem;
@@ -661,7 +670,6 @@
 .footer-container{
     height: 7rem;
     background-color: #F6F9FF;
-    border-top: 0.5px solid lightgray;
     display: flex;
     align-items: center;
     gap: 0.5rem;

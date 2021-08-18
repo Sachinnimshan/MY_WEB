@@ -19,7 +19,7 @@ function About() {
           <div className='skill-container container'>
           <Fade bottom><div className='container about-description'><p>I have more than 5+ years' experience building softwares in different programming languages since 2016.
           Below is a quick overview of my main technical skill sets and technologies I use.</p></div></Fade>
-          <Bounce right cascade>
+          <Bounce bottom cascade>
             <div className='container pt-5 pb-5 d-flex justify-content-center gap-5 py-2 px-2 flex-wrap'>
               <div><FaReact className='pro-icons'/></div>
               <div><FaVuejs className='pro-icons'/></div>
