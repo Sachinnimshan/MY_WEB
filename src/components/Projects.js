@@ -8,10 +8,8 @@ function Projects() {
     return (
     <div className='project-section'>
     <div className='section-title'>
-      <Fade bottom cascade>
       <h1>Projects</h1>
       <span>What I Have Done</span>
-      </Fade>
     </div>
         
     <div className='project-container'>

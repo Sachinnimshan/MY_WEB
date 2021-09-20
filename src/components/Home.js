@@ -29,7 +29,7 @@ function Home() {
           </div>
           </Slide>
           
-          <div><Slide right><img className='home-img' src='/Images/banner.png'/></Slide></div>
+          <div><Slide right><img className='home-img' src='/Images/homebg.png'/></Slide></div>
         </div>
     )
 }

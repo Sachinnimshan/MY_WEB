@@ -9,8 +9,9 @@ function Services() {
         <div className='services-container'>
             <div className='services-over'>
             <div className='section-title'>
-              <Fade bottom cascade><h1>My Services</h1>
-              <span>What I Do</span></Fade>
+                <h1>My Services</h1>
+              <span>What I Do</span>
+              
             </div>
             
             <div className='service-card-main-container'>

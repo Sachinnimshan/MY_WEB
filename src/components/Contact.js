@@ -21,10 +21,8 @@ function Contact(){
   return (
     <div className='contact-section'>
     <div className='section-title'>
-    <Fade bottom cascade>
       <h1>Contact</h1>
       <span>Leave Me A Message</span>
-      </Fade>
       </div>
 
      <div className='contact-container'>

@@ -45,7 +45,6 @@
 
 .section-title{
     text-align: center;
-    font-family: 'Nunito', sans-serif;
     padding: 1rem;
     padding-top: 5.5rem;
     margin-bottom: 2rem;
@@ -60,10 +59,10 @@
 }
 
 .section-title > span{
-    color: #012970;
+    color: #37517E;
     font-size: 26px;
     font-weight: 700;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
 }
 
@@ -72,8 +71,8 @@
 
 .home-screen{
     display: flex;
-    height: 90vh;
-    background: linear-gradient(60deg, white 30% , #F2F5FC);
+    height: 85vh;
+    background-color: #37517E;
     margin-top: 4rem;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -83,22 +82,22 @@
 }
 
 .home-img{
-    width: auto;
+    width: 34rem;
     filter: drop-shadow(2px 2px 2px #4154F1);
 }
 
 
 .home-screen > div > div> h1 {
-    color:#012970;
+    color:white;
     font-size: 40px;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
-.home-screen > div > div > p{
-    font-size: 25px;
+.home-screen > div > div > p, span{
+    font-size: 18px;
     letter-spacing: 1px;
-    color:#5F5F61;
+    color:lightgray;
     text-align: center;
 }  
 
@@ -119,7 +118,7 @@
 }
 
 .social-media-icon{
-    color: #7952B3;
+    color: lightgray;
     font-size: 2.5rem;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
@@ -147,13 +146,13 @@
 /*********************************************************************/
 
 .header-container{
-    height: 4.5rem;
+    height: 5rem;
     display: flex;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: #37517E;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05); */
     z-index: 1;
     top: 0;
     position: fixed;
@@ -178,33 +177,34 @@
 }
 
 .menu-item{
-    padding: 1.5rem 1.5rem;
+    padding: 2rem 2rem;
     transition: all ease-in-out 0.3s;
     
 }
 
 .menu-item > a{
     font-size: 16px;
-    color: #022A71;
+    color: white;
     font-family: 'Nunito', sans-serif;
     text-decoration: none;
 }
 
 .menu-item >a:hover{
-    color: #4154F1;
+    color: lightgray;
     transition: all ease-in-out 0.3s;
 }
 
 .btn-contact{
-    background-color: #4154F1;
+    background-color: transparent;
     color: white;
     width: 7rem;
-    border: none;
     padding: 6px 6px;
-    border-radius: 5px;
+    border-radius: 2rem;
     font-family: 'Nunito';
+    border: 2px solid white;
     font-size: 17px;
     transition: all ease-in-out 0.3s;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 .btn-contact:hover{
@@ -259,7 +259,7 @@
     .menu-icon{
         font-size: 2rem;
         display: block;
-        color: #022A71;
+        color: white;
         margin-right: 1rem;
         cursor: pointer;
     }
@@ -328,22 +328,23 @@
 
 
 .home-btn{
-    background-color: #4154F1;
+    background-color: transparent;
     height: 3rem;
+    border: 2px solid white;
     width: 225px;
     color: white;
-    border-radius: 5px;
+    border-radius: 2rem;
     font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
     letter-spacing: 1px;
     transition: all 0.2s ease-in-out;
     margin: 1rem 1rem;
 }
 
 .home-btn:hover{
+    opacity: 0.9;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -380,8 +381,7 @@
 
 .pro-icons{
     font-size: 4rem;
-    opacity: 0.95;
-    color: #022A71;
+    color: #4154F1;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -459,7 +459,6 @@
     border-radius: 5px;
     flex-direction: column;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 .service-card > h4{

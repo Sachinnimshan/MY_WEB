@@ -14,18 +14,16 @@ import Services from './components/Services';
 import About from './components/About';
 import {FaBars} from 'react-icons/fa';
 import {CgClose} from 'react-icons/cg';
-import {IoMdCloseCircle} from 'react-icons/io';
+
 import Slide from 'react-reveal/Slide';
 import Projects from './components/Projects';
-import {GoThreeBars} from 'react-icons/go';
+
 import {CgArrowUpR} from 'react-icons/cg';
+import Header from './components/Header';
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
-  const [menu, setmenu] = useState(false);
-
-  const showMenu=()=> setmenu(!menu);
-  const closeMenu=()=> setmenu(false);
+  
 
   
 
@@ -46,41 +44,7 @@ function App() {
 
     return (
     <div className='app'>
-      <div className='header-container'>
-      <Slide left><div><a href='#'><img className='site-logo' src='/Images/signature.png'/></a></div></Slide>
-      <div className='menu-container'>
-          <Slide top>
-          <ul className='menu-item-container'>
-            <div className='menu-item'><a href='#'>Home</a></div>
-            <div className='menu-item'><a href='#about'>About</a></div>
-            <div className='menu-item'><a href='#services'>Services</a></div>
-            <div className='menu-item'><a href='#projects'>Projects</a></div>
-            <div><a href='#contact'><button className='btn-contact'>Contact</button></a></div>
-          </ul></Slide>
-        </div>
-        
-        <div><GoThreeBars onClick={showMenu} className='menu-icon'/></div>
-      <Slide right>
-        <div className={menu ? 'nav-menu active' : 'nav-menu'}>
-        <Slide right>
-        <div className='navbar-container'>
-          <ul className='nav-item-container'>
-            <li className='w-100' style={{listStyleType:'none'}}>
-              <div className='close-menu-container'>
-               <div className='close-menu'><IoMdCloseCircle onClick={closeMenu} className='close-menu-icon'/></div>
-              </div>
-            </li>
-            <li className='nav-item' onClick={closeMenu}><a href='#'>Home</a></li>
-            <li className='nav-item' onClick={closeMenu}><a href='#about'>About</a></li>
-            <li className='nav-item' onClick={closeMenu}><a href='#services'>Services</a></li>
-            <li className='nav-item' onClick={closeMenu}><a href='#projects'>Projects</a></li>
-            <li className='nav-item' onClick={closeMenu}><a href='#contact'>Contact</a></li>
-          </ul>
-        </div>
-      </Slide>
-        </div>
-      </Slide>
-      </div>
+        <section id="header"><Header/></section> 
         <div><CgArrowUpR className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/></div>
         <section id="home"><Home/></section>
         <section id="about"><About/></section>

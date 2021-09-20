@@ -11,10 +11,8 @@ function About() {
     return (
         <div className='about-container'>
          <div className='section-title'>
-           <Fade bottom cascade>
             <h1>About Me</h1>
              <span>What I Do</span>
-             </Fade>
             </div>
           <div className='skill-container container'>
           <Fade bottom><div className='container about-description'><p>I have more than 5+ years' experience building softwares in different programming languages since 2016.
