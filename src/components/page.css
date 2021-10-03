@@ -71,7 +71,7 @@
 
 .home-screen{
     display: flex;
-    height: 85vh;
+    height: 90vh;
     background-color: #37517E;
     margin-top: 4rem;
     flex-wrap: wrap;
@@ -82,14 +82,14 @@
 }
 
 .home-img{
-    width: 34rem;
+    width: 36rem;
     filter: drop-shadow(2px 2px 2px #4154F1);
 }
 
 
 .home-screen > div > div> h1 {
     color:white;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -146,7 +146,7 @@
 /*********************************************************************/
 
 .header-container{
-    height: 5rem;
+    height: 6rem;
     display: flex;
     width: 100%;
     background-color: #37517E;
@@ -177,7 +177,7 @@
 }
 
 .menu-item{
-    padding: 2rem 2rem;
+    padding: 1.75rem 1.75rem;
     transition: all ease-in-out 0.3s;
     
 }
@@ -250,6 +250,10 @@
 
     .home-screen{
         margin-top: 0;
+    }
+
+    .header-container{
+        height: 4rem;
     }
 
     .menu-container{
@@ -456,25 +460,36 @@
     padding-top: 3rem;
     width: 20rem;
     height: 12rem;
-    border-radius: 5px;
+    font-family: "Poppins";
     flex-direction: column;
     transition: all 0.3s ease-in-out;
+    color: #5F5F61;
 }
 
 .service-card > h4{
-    font-size: 20px;
+    font-size: 18px;
     text-transform: capitalize;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
-    color: #5F5F61;
-    font-family: 'Nunito';
 }
 
 .service-card:hover{
     transition: all 0.3s ease-in-out;
-    transform: scale(1.2);
     cursor: pointer;
+    color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card1:hover{
+    background-color: #00C7FF;
+}
+
+.card2:hover{
+    background-color: #F58B09;
+}
+
+.card3:hover{
+    background-color: #08D94E;
 }
 
 

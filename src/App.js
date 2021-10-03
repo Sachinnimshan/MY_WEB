@@ -14,19 +14,14 @@ import Services from './components/Services';
 import About from './components/About';
 import {FaBars} from 'react-icons/fa';
 import {CgClose} from 'react-icons/cg';
-
 import Slide from 'react-reveal/Slide';
 import Projects from './components/Projects';
-
 import {CgArrowUpR} from 'react-icons/cg';
 import Header from './components/Header';
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
   
-
-  
-
    const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400){
       setShowScroll(true)

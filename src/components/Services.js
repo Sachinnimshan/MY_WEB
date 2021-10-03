@@ -11,7 +11,6 @@ function Services() {
             <div className='section-title'>
                 <h1>My Services</h1>
               <span>What I Do</span>
-              
             </div>
             
             <div className='service-card-main-container'>
