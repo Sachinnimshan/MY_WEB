@@ -1,23 +1,20 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
+
 import './components/page.css';
 import './App.css';
-
-
-import {BiMouse} from 'react-icons/bi';
-import Home from './components/Home';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Home from './components/pages/Home';
+import Contact from './components/pages/Contact';
+import Footer from './components/shared/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Bounce from 'react-reveal/Bounce';
-import Services from './components/Services';
-import About from './components/About';
-import {FaBars} from 'react-icons/fa';
-import {CgClose} from 'react-icons/cg';
-import Slide from 'react-reveal/Slide';
-import Projects from './components/Projects';
+import About from './components/pages/About';
+import Projects from './components/pages/Projects';
 import {CgArrowUpR} from 'react-icons/cg';
-import Header from './components/Header';
+import Header from './components/shared/Header';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Login from './components/login/Login';
+import Register from './components/login/Register';
+import {Modal, Button} from 'react-bootstrap';
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -36,17 +33,24 @@ function App() {
 
   window.addEventListener('scroll', checkScrollTop);
 
+  
+
 
     return (
     <div className='app'>
-        <section id="header"><Header/></section> 
+        <Router>
+        <div className='header'><Header/></div>
         <div><CgArrowUpR className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/></div>
-        <section id="home"><Home/></section>
-        <section id="about"><About/></section>
-        <section id="services"><Services/></section>
-        <section id="projects"><Projects/></section>
-        <section id='contact'><Contact/></section>
-        <section><Footer/></section>
+        <Route exact path='/' component={Home}/>
+        <Route path='/about' component={About}/>
+        <Route path='/projects' component={Projects}/>
+        <Route path='/contact' component={Contact}/>
+        <Route path='/signin' component={Login}/>
+        <Route path='/signup' component={Register}/>
+        <Footer/>
+        </Router>
+
+       
       </div>
     )
 }

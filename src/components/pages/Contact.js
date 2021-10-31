@@ -1,18 +1,13 @@
-import React, { Component} from 'react';
-import './page.css';
-import {VscLocation} from 'react-icons/vsc';
-import {AiOutlineFacebook, AiOutlineMail, AiOutlineYoutube, AiOutlineClockCircle} from 'react-icons/ai';
-import {FcPhoneAndroid} from 'react-icons/fc';
-import ContactForm from './ContactForm';
-import validate from './ValidateInfo';
-import {Fade, Slide} from 'react-reveal';
-import {Spinner} from 'react-bootstrap';
-import Bounce from 'react-reveal/Bounce';
-import { IoLogoInstagram} from 'react-icons/io';
-import { FiTwitter } from 'react-icons/fi';
-import {IoCallOutline} from 'react-icons/io5';
+import React from 'react';
+import '../page.css';
+import {AiOutlineClockCircle} from 'react-icons/ai';
+import ContactForm from '../shared/ContactForm';
+import validate from '../util/ValidateInfo';
+import { FiSend} from 'react-icons/fi';
+import {IoEarth} from 'react-icons/io5';
 import {HiOutlineMail} from 'react-icons/hi';
-
+import {Button} from 'react-bootstrap';
+import {Slide,Rotate} from 'react-reveal';
 
 function Contact(){
   
@@ -21,44 +16,46 @@ function Contact(){
   return (
     <div className='contact-section'>
     <div className='section-title'>
-      <h1>Contact</h1>
+      <Slide top><h1>Contact</h1></Slide>
       <span>Leave Me A Message</span>
       </div>
 
      <div className='contact-container'>
-       <div className='contact-details-container'>
+
+          <Slide bottom>
+          <div className='contact-details'>
+           <IoEarth className='contact-icons'/>
+           <h4>Website</h4>
+           <span><a style={{textDecoration: "none", color: "#444444"}} href='https://sachinnimshan.herokuapp.com'>Visit My Web</a></span>
+           </div>
+          </Slide>
+
+          {/* <div className='contact-details'>
+           <IoCallOutline className='contact-icons'/>
+           <h4>Call Me</h4>
+           <span>+94 77 9012 655</span>
+          </div> */}
+         
+
+        <Slide top>
+        <div className='contact-details'>
+           <HiOutlineMail className='contact-icons'/>
+           <h4>Email</h4>
+           <span>sachinnimshan@gmail.com</span>
+         </div>
+        </Slide>
 
          <Slide bottom>
          <div className='contact-details'>
-           <ul>
-             <li><IoCallOutline className='contact-icons'/></li>
-             <li><h4>Call Me</h4></li>
-             <li><span>+94 77 9012 655</span></li>
-           </ul>
+           <AiOutlineClockCircle className='contact-icons'/>
+           <h4>Available Hours</h4>
+           <span>Monday - Friday</span>
+           <span>9:00AM - 05:00PM</span>
          </div>
          </Slide>
 
-         <Slide bottom><div className='contact-details'>
-           <ul>
-             <li><HiOutlineMail className='contact-icons'/></li>
-             <li><h4>Email</h4></li>
-             <li><span>sachinnimshan@gmail.com</span></li>
-           </ul>
-         </div></Slide>
-
-         <Slide bottom><div className='contact-details'>
-           <ul>
-             <li><AiOutlineClockCircle className='contact-icons'/></li>
-             <li><h4>Available Hours</h4></li>
-             <li><span>Monday - Friday</span></li>
-             <li><span>9:00AM - 05:00PM</span></li>
-             </ul>
-         </div></Slide>
-
-
-       </div>
-
-     <Slide bottom><div className='contact-form'>
+        <Slide top>
+        <div className='contact-form'>
        <form onSubmit={handleSubmit} >
         <div className="form-group p-3">
           <input 
@@ -103,12 +100,15 @@ function Contact(){
             {errors.message && <p className='form-errors'>{errors.message}</p>}
         </div>
         <div className="form-group p-3">
-        <button type="submit" className="submit-btn">Send Message</button>
+        <Button type="submit" variant='primary' size='lg'><FiSend/> Send Message</Button>
         </div>
         </form>
       </div>
-</Slide>
-</div>
+        </Slide>
+
+
+       </div>
+
 </div>
   )
 }
