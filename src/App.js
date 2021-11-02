@@ -11,10 +11,10 @@ import About from './components/pages/About';
 import Projects from './components/pages/Projects';
 import {CgArrowUpR} from 'react-icons/cg';
 import Header from './components/shared/Header';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Login from './components/login/Login';
 import Register from './components/login/Register';
-import {Modal, Button} from 'react-bootstrap';
+import ProjectInfo from './components/pages/ProjectInfo';
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -47,6 +47,7 @@ function App() {
         <Route path='/contact' component={Contact}/>
         <Route path='/signin' component={Login}/>
         <Route path='/signup' component={Register}/>
+        <Route path='/project/:id' component={ProjectInfo}/>
         <Footer/>
         </Router>
 

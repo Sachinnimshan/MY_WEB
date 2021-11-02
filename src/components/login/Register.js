@@ -17,7 +17,9 @@ function Register(props) {
     const [password, setpassword] = useState('');
     const [confirmpwd, setconfirmpwd] = useState('');
    
-    const redirect = '/';
+    const redirect = (props.location.search) ? 
+    (props.location.search.split("=")[1])
+    : ('/');
 
     const userRegister = useSelector((state)=>state.userRegister);
     const {loading, errors, userInfo} = userRegister;
@@ -45,9 +47,9 @@ function Register(props) {
                 <div>
                 <span className='login-title'>Create an account</span>
                 </div>
+                <form className='login-form' onSubmit={handleSubmit}>
                 {loading && (<LoadingBox></LoadingBox>)}
                 {errors && (<MessageBox>{errors}</MessageBox>)}
-                <form className='login-form' onSubmit={handleSubmit}>
                     <div className='form-group'>
                     <label className='txt-lbl'>Name</label>
                     <input 

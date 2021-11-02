@@ -114,7 +114,7 @@
 
 .home-screen > div > div > p, span{
     font-family: 'Comic Neue', cursive;
-    color: #444444;
+    color: #666666;
     letter-spacing: 1px;
     text-align: center;
 }  
@@ -149,6 +149,13 @@
 .social-media-icon:hover{
     transition: all 0.2s ease-in-out;
     transform: scale(1.5);
+}
+
+@media screen and (max-width: 800px) {
+    .home-screen{
+        height: auto;
+    }
+    
 }
 
 
@@ -391,7 +398,7 @@
 }
 
 .service-title{
-    color: #444444;
+    color: #666666;
     font-size: 20px;
 }
 
@@ -444,8 +451,15 @@
 .project-name{
     font-size: 22px;
     font-family: "Open Sans", sans-serif;
-    color: #444444;
+    color: #666666;
     font-weight: 600;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+}
+
+.project-name:hover{
+    color: #7087FF;
+    transition: all ease-in-out 0.3s;
 }
 
 .project-desc{
@@ -470,6 +484,152 @@
     background-color: #FAFBFF;
     color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/****************************************************************/
+.project-info-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.info-container{
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-left, .info-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.project-lbl{
+    color: #666666;
+    font-family: "Open Sans";
+    font-weight: 600;
+}
+
+.project-info-img{
+    border-radius: 5px;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-info-desc{
+    font-family: "Comic Neue";
+    font-size: 18px;
+    color: gray;
+}
+
+.info-icons{
+    color: yellowgreen;
+    font-size: 18px;
+}
+
+.project-info-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.project-gal-img{
+    width: 8rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+@media screen and (max-width: 800px) {
+    .project-info-container{
+        height: auto;
+    }
+
+    .project-info-img{
+        width: 100%;
+        height: auto;
+    }
+    .info-container{
+        align-items: flex-start;
+    }
+    
+}
+/******************************************************************/
+
+.review-main-container{
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    
+}
+
+.review-container{
+    border: 1.5px solid #F0F0F0;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 70%;
+}
+
+.review-banner{
+    padding: 1.5rem;
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.review-icon{
+    width: 3rem;
+}
+
+.review-banner > span{
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.review-item-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.review{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1rem 0 1rem 0;
+    align-items: flex-start;
+    border-bottom: 1px solid #F0F0F0;
+  
+}
+
+.review >span {
+    font-family: "Fira Sans";
+    color: gray;
+}
+
+
+@media screen and (max-width: 800px) {
+    .review-container{
+        width: 100%;
+        padding: 1rem;
+    }
+    
 }
 
 
@@ -516,7 +676,7 @@
 .contact-details > span {
     font-size: 15px;
     font-family: "Open Sans",sans-serif;
-    color: #444444;
+    color: #666666;
     font-weight: 500;
 }
 

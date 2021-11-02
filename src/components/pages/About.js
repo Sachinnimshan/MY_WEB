@@ -44,6 +44,11 @@ function About() {
       id: 8,
       image: "/tech/reactnative.png",
       text: "React Native"
+    },
+    {
+      id: 9,
+      image: "/tech/mern.png",
+      text: "MERN Stack"
     }
   ]
 
