@@ -47,7 +47,7 @@ function Login(props) {
                 {success && (<Alert variant="success">Login Successful</Alert>)}
                 <form className='login-form' onSubmit={handleSubmit}>
                     <div className='form-group'>
-                    <label className='txt-lbl'>Username</label>
+                    <label className='txt-lbl'>Email</label>
                     <input 
                     type='text' 
                     className='txt-input'

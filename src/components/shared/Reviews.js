@@ -27,14 +27,14 @@ function Reviews(props) {
            <div className='review-item-container'>
            {loading ? (<LoadingBox></LoadingBox>)
             : errors ? (<MessageBox></MessageBox>)
-            : (reviews.map((review)=>(
+            : (reviews.slice(0,2).map((review)=>(
                <div className='review'>
                 <span style={{fontSize: '18px'}}>{review.comment}</span>
                 <span style={{fontSize: '14px'}}>{review.name}</span>
                </div>
                 )))}
            </div>
-             <ReviewForm/>
+             <ReviewForm projectID={props.projectID}/>
            </div>
           
         </div>

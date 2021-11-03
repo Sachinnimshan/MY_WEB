@@ -59,7 +59,7 @@ function Register(props) {
                     onChange={(e)=> setname(e.target.value)}/>
                     </div>
                     <div className='form-group'>
-                    <label className='txt-lbl'>Username</label>
+                    <label className='txt-lbl'>Email</label>
                     <input 
                     type='text' 
                     className='txt-input'

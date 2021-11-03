@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import { getAllProjectsReducer, getProjectInfoReducer, getProjectReviewsReducer } from './reducers/projectReducer';
+import { getAllProjectsReducer, getProjectInfoReducer, getProjectReviewsReducer, postReviewReducer } from './reducers/projectReducer';
 import { userSignInReducer, userSignUpReducer } from './reducers/userReducer';
 
 export default combineReducers({
@@ -7,5 +7,6 @@ export default combineReducers({
     userRegister: userSignUpReducer,
     projectList: getAllProjectsReducer,
     projectData: getProjectInfoReducer,
-    projectReviews: getProjectReviewsReducer
+    projectReviews: getProjectReviewsReducer,
+    reviewpost: postReviewReducer
 });

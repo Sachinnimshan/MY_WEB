@@ -244,7 +244,7 @@
 
 .profile-name{
     color: white;
-    font-family: "Comic Neue";
+    font-family: "Open Sans";
     font-size: 16px;
 }
 
@@ -337,8 +337,8 @@
 .about-description{
     color: gray;
     text-align: center;
-    font-size: 20px;
-    font-family: 'Comic Neue', cursive;
+    font-size: 18px;
+    font-family: 'Open Sans', cursive;
     letter-spacing: 1px;
     font-weight: 500;
     line-height: 2rem;
@@ -465,7 +465,7 @@
 .project-desc{
     font-size: 14px;
     font-weight: 400;
-    font-family: "Comic Neue", sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: gray;
 }
 
@@ -522,8 +522,8 @@
 }
 
 .project-info-desc{
-    font-family: "Comic Neue";
-    font-size: 18px;
+    font-family: "Open Sans";
+    font-size: 16px;
     color: gray;
 }
 
