@@ -24,46 +24,105 @@ function ProjectInfo(props) {
 
 
     return (
-        <div className='project-info-container'>
-            {loading ? (<LoadingBox></LoadingBox>)
-            :errors ? (<MessageBox>{errors}</MessageBox>)
-            :
-           (<div className='info-container'>
-              <h1 className='project-lbl'>{projectInfo.title}</h1>
-               <div style={{display: 'flex',width: "100%", justifyContent: "space-evenly",gap:"1rem", flexWrap: "wrap"}}>
-               <div className='info-left'>
-               <img className='project-info-img' src={projectInfo.image}/>
-               {/* <div className='project-info-gallery'>
+      <div className="project-info-container">
+        {loading ? (
+          <LoadingBox></LoadingBox>
+        ) : errors ? (
+          <MessageBox>{errors}</MessageBox>
+        ) : (
+          <div className="info-container">
+            <h1 className="project-lbl">{projectInfo.title}</h1>
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                justifyContent: "space-evenly",
+                gap: "1rem",
+                flexWrap: "wrap",
+              }}
+            >
+              <div className="info-left">
+                <img className="project-info-img" src={projectInfo.image} />
+                {/* <div className='project-info-gallery'>
                     {projectInfo.gallery.map((gal)=>(
                         <img className='project-gal-img' src={gal}/>
                     ))}
                 </div> */}
-               </div>
-              <div className='info-right'>
-              <h4 className='project-lbl'>Check My Work</h4>
-              <div style={{display: 'flex', flexDirection: 'row', flexWrap: "wrap", gap: "10px"}}>
-                   <Button variant='primary' target="_blank" href={projectInfo.demo}><BiSlideshow/>Demo</Button>
-                   <Button variant='danger' target="_blank" href={projectInfo.youtube}><AiOutlineYoutube/>Youtube</Button>
-                   <Button variant='success' target="_blank" href={projectInfo.github}><AiOutlineGithub/>Github</Button>
-               </div>
-              <h4 className='project-lbl'>Used Languages</h4>
-              <div style={{display: "flex", gap: "0.5rem", flexWrap: 'wrap'}}>
-                {projectInfo.languages.map((lang)=>(
-                   <div style={{display: 'flex',alignItems: 'center', gap: "5px"}}>
-                       <FiCheckCircle className='info-icons'/>
-                       <span className='project-info-desc'>{lang}</span></div>
-               ))}</div>
-               <h4 className='project-lbl'>Technology</h4>
-               <div style={{display: 'flex',alignItems: 'center', gap: "5px"}}>
-                   <FiCheckCircle className='info-icons'/>
-                   <span className='project-info-desc'>{projectInfo.technology}</span>
+              </div>
+              <div className="info-right">
+                <h4 className="project-lbl">Check My Work</h4>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    gap: "10px",
+                  }}
+                >
+                  {projectInfo.demo && (
+                    <Button
+                      variant="primary"
+                      target="_blank"
+                      href={projectInfo.demo}
+                    >
+                      <BiSlideshow />
+                      Demo
+                    </Button>
+                  )}
+                  {projectInfo.youtube && (
+                    <Button
+                      variant="danger"
+                      target="_blank"
+                      href={projectInfo.youtube}
+                    >
+                      <AiOutlineYoutube />
+                      Youtube
+                    </Button>
+                  )}
+                  {projectInfo.github && (
+                    <Button
+                      variant="success"
+                      target="_blank"
+                      href={projectInfo.github}
+                    >
+                      <AiOutlineGithub />
+                      Github
+                    </Button>
+                  )}
+                </div>
+                <h4 className="project-lbl">Used Languages</h4>
+                <div
+                  style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}
+                >
+                  {projectInfo.languages.map((lang) => (
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "5px",
+                      }}
+                    >
+                      <FiCheckCircle className="info-icons" />
+                      <span className="project-info-desc">{lang}</span>
+                    </div>
+                  ))}
+                </div>
+                <h4 className="project-lbl">Technology</h4>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "5px" }}
+                >
+                  <FiCheckCircle className="info-icons" />
+                  <span className="project-info-desc">
+                    {projectInfo.technology}
+                  </span>
                 </div>
               </div>
-               </div>
-            </div>)}
-            <Reviews projectID={projectID}/>
-        </div>
-    )
+            </div>
+          </div>
+        )}
+        <Reviews projectID={projectID} />
+      </div>
+    );
 }
 
 export default ProjectInfo;

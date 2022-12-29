@@ -6,6 +6,7 @@ import MessageBox from '../util/MessageBox';
 import ReviewForm from './ReviewForm';
 import {BiBadgeCheck} from 'react-icons/bi';
 import '../page.css';
+import moment from 'moment';
 
 function Reviews(props) {
     const dispatch = useDispatch();
@@ -18,27 +19,37 @@ function Reviews(props) {
     }, [dispatch, props.projectID]);
 
     return (
-        <div className='review-main-container'>
-           <div className='review-container'>
-           <h3 className='project-lbl'>Reviews</h3>
-           <div className='review-banner'>
-               <img src='/Images/reviews.png' className='review-icon'/><span>100% Original reviews by coding fans all over the world</span>
-           </div>
-           <div className='review-item-container'>
-           {loading ? (<LoadingBox></LoadingBox>)
-            : errors ? (<MessageBox></MessageBox>)
-            : (reviews.slice(0,2).map((review)=>(
-               <div className='review'>
-                <span style={{fontSize: '18px'}}>{review.comment}</span>
-                <span style={{fontSize: '14px'}}>{review.name}</span>
-               </div>
-                )))}
-           </div>
-             <ReviewForm projectID={props.projectID}/>
-           </div>
-          
+      <div className="review-main-container">
+        <div className="review-container">
+          <h3 className="project-lbl">Reviews</h3>
+          <div className="review-banner">
+            <img src="/Images/reviews.png" className="review-icon" />
+            <span>100% Original reviews by coding fans all over the world</span>
+          </div>
+          <div className="review-item-container">
+            {loading ? (
+              <LoadingBox></LoadingBox>
+            ) : errors ? (
+              <MessageBox></MessageBox>
+            ) : (
+              reviews
+                .slice(0, 2)
+                .sort()
+                .map((review) => (
+                  <div className="review">
+                    <span style={{ fontSize: "18px" }}>{review.comment}</span>
+                    <span style={{ fontSize: "14px" }}>{review.name}</span>
+                    <span style={{ fontSize: "14px" }}>
+                      {moment(review.createdAt).format('MMMM Do YYYY')}
+                    </span>
+                  </div>
+                ))
+            )}
+          </div>
+          <ReviewForm projectID={props.projectID} />
         </div>
-    )
+      </div>
+    );
 }
 
 export default Reviews;
