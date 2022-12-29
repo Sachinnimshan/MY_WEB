@@ -22,7 +22,7 @@ function Home() {
           <Slide left>
           <div className='home-center-info' >
           <div><Flip top><h1>HI, I'm Sachin</h1></Flip></div>
-          <div><p style={{fontSize: '22px',textTransform: "uppercase"}}>Software Developer / Free Lancer</p></div>
+          <div><p style={{fontSize: '22px',textTransform: "uppercase"}}>Software Engineer / Free Lancer</p></div>
           <div><span style={{fontSize: "18px"}}>High Level Experience in Web Design & Development</span></div>
           
           <div className='top-social-icons'>
@@ -30,7 +30,7 @@ function Home() {
                 <a href='https://github.com/Sachinnimshan'><AiFillGithub className='social-media-icon'/></a>
                 <a href='https://www.instagram.com/sachin_nimshan.06/'><IoLogoInstagram className='social-media-icon'/></a>
                 <a href='https://www.facebook.com/sachin.nimshan/'><AiOutlineFacebook className='social-media-icon'/></a>
-                <a href='https://twitter.com/SachinNimshan'><FiTwitter className='social-media-icon'/></a> 
+                {/* <a href='https://twitter.com/SachinNimshan'><FiTwitter className='social-media-icon'/></a>  */}
           </div>
           <div>
             <Button className='home-btn' size='lg'><FaDownload className='btn-down-icon'/>DOWNLOAD MY CV</Button>
