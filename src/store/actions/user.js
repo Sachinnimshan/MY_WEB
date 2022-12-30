@@ -1,9 +1,13 @@
 import axios from 'axios';
+const BASE_API_URL = "https://sn-backend.onrender.com";
 
 export const userSignIn=(email,password)=>async(dispatch)=>{
     dispatch({type: "USER_SIGN_IN__REQUEST"});
     try{
-        const {data} = await axios.post('/api/users/signin', {email,password});
+        const { data } = await axios.post(`${BASE_API_URL}/api/users/signin`, {
+          email,
+          password,
+        });
         dispatch({type: "USER_SIGN_IN_SUCCESS", payload: (data)});
         localStorage.setItem("userInfo", JSON.stringify(data));
     }catch(error){
@@ -20,7 +24,11 @@ export const userSignOut=()=>async(dispatch)=>{
 export const userSignUp=(name, email, password)=>async(dispatch)=>{
     dispatch({type: "USER_SIGN_UP_REQUEST", payload:{name, email, password}});
     try{
-        const {data} = await axios.post('/api/users/signup', {name, email, password});
+        const { data } = await axios.post(`${BASE_API_URL}/api/users/signup`, {
+          name,
+          email,
+          password,
+        });
         dispatch({type: "USER_SIGN_UP_SUCCESS", payload: (data)});
         dispatch({type: "USER_SIGN_IN_SUCCESS", payload: (data)});
         localStorage.setItem("userInfo", JSON.stringify(data));
