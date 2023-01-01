@@ -36,27 +36,11 @@ function Home() {
                 High Level Experience in Web Design & Development
               </span>
             </div>
-
-            <div className="top-social-icons">
-              <a href="https://www.youtube.com/@SachinNimshan">
-                <AiOutlineYoutube className="social-media-icon" />
-              </a>
-              <a href="https://github.com/Sachinnimshan">
-                <AiFillGithub className="social-media-icon" />
-              </a>
-              <a href="https://www.instagram.com/sachin_nimshan.06/">
-                <IoLogoInstagram className="social-media-icon" />
-              </a>
-              <a href="https://www.facebook.com/sachin.nimshan/">
-                <AiOutlineFacebook className="social-media-icon" />
-              </a>
-              {/* <a href='https://twitter.com/SachinNimshan'><FiTwitter className='social-media-icon'/></a>  */}
-            </div>
             <div>
-              <Button className="home-btn" size="lg">
+              <button className="home-btn" >
                 <FaDownload className="btn-down-icon" />
                 DOWNLOAD MY CV
-              </Button>
+              </button>
             </div>
           </div>
         </Slide>

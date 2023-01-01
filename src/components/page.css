@@ -92,7 +92,7 @@
 .home-screen{
     display: flex;
     height: 90vh;
-    background: linear-gradient(170deg, white 50%, #7087FF);
+    background: linear-gradient(170deg, white 30%, #7087FF);
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
@@ -107,7 +107,7 @@
 
 .home-screen > div > div> h1 {
     color:#012970;
-    font-size: 36px;
+    font-size: 60px;
     font-family: "Open Sans";
     font-weight: 600;
 }
@@ -122,33 +122,29 @@
 
 .home-center-info {
     width: auto;
-    border-radius: 1rem;
     align-items: center;
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
-    background-color: #F2F5FC;
-    padding: 2rem;
 }
 
 
 .top-social-icons{
     display: flex;
-    gap: 0.5rem;
-    margin: 1rem 1rem;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .social-media-icon{
-    color: #7087FF;
-    font-size: 2.5rem;
+    color: #fff;
+    font-size: 1.5rem;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    margin-right: 10px;
 }
 
 .social-media-icon:hover{
     transition: all 0.2s ease-in-out;
-    transform: scale(1.5);
+    transform: scale(1.25);
 }
 
 @media screen and (max-width: 800px) {
@@ -156,6 +152,20 @@
         height: auto;
     }
     
+}
+
+.home-btn{
+    margin-top: 1rem;
+    background-color: #012970;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.follow-me-text{
+    color: lightgray;
+    margin-right: 1rem;
 }
 
 
@@ -166,7 +176,7 @@
     width: 100%;
     padding: 15px;
     align-items: center;
-    background-color: #7087FF;
+    background-color: #012970;
     justify-content: space-between;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
     z-index: 1000;
@@ -217,6 +227,7 @@
     font-family: 'Nunito', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 14px;
 }
 
 .menu-item >a:hover{
@@ -306,7 +317,7 @@
 
 
     .menu-item{
-        padding: 0.75rem;
+        padding: 0.75rem 0;
     }
     
     .nav-menu.active{
@@ -317,6 +328,10 @@
     
     .home-center-info{
         padding: 2rem 2rem;
+    }
+
+    .top-social-icons{
+        margin-top: 1rem;
     }
 }
 
@@ -743,7 +758,7 @@
 }
 
 .footer-container{
-    padding: 1rem;
+    padding: 10px 15px;
     background-color: #F6F9FF;
     display: flex;
     gap: 5px;
