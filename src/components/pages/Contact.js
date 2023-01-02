@@ -22,14 +22,6 @@ function Contact(){
 
      <div className='contact-container'>
 
-          <Slide bottom>
-          <div className='contact-details'>
-           <IoEarth className='contact-icons'/>
-           <h4>Website</h4>
-           <span><a style={{textDecoration: "none", color: "#444444"}} href='https://sachinnimshan.herokuapp.com'>Visit My Web</a></span>
-           </div>
-          </Slide>
-
           {/* <div className='contact-details'>
            <IoCallOutline className='contact-icons'/>
            <h4>Call Me</h4>
@@ -37,6 +29,7 @@ function Contact(){
           </div> */}
          
 
+        <div style={{display: "flex", flexDirection: "column", gap: "12px"}}>
         <Slide top>
         <div className='contact-details'>
            <HiOutlineMail className='contact-icons'/>
@@ -53,6 +46,7 @@ function Contact(){
            <span>9:00AM - 05:00PM</span>
          </div>
          </Slide>
+        </div>
 
         <Slide top>
         <div className='contact-form'>
