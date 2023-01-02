@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../page.css';
 import {Flip,Slide} from 'react-reveal';
-import {Button, Modal} from 'react-bootstrap';
 import {FaDownload} from 'react-icons/fa';
-import {IoLogoInstagram} from 'react-icons/io';
-import {FiTwitter} from 'react-icons/fi';
-import {AiOutlineFacebook, AiOutlineYoutube, AiFillGithub} from 'react-icons/ai';
 
 function Home() {
   //Modal Hooks

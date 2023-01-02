@@ -7,7 +7,8 @@ function Footer() {
         <div className='footer-container'>
             <div className='footer-left'>
             <div>© Copyright | All Rights Reserved</div>
-            <div>Designend by <a style={{textDecoration: 'none'}} href='#'><strong>Sachin Nimshan</strong></a></div>
+            <span>|</span>
+            <div>Designend and Developed by <a style={{textDecoration: 'none'}} href='#'><strong> Sachin Nimshan</strong></a></div>
             </div>
 
             <div className='footer-right'>

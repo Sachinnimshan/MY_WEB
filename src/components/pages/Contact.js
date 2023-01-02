@@ -7,7 +7,7 @@ import { FiSend} from 'react-icons/fi';
 import {IoEarth} from 'react-icons/io5';
 import {HiOutlineMail} from 'react-icons/hi';
 import {Button} from 'react-bootstrap';
-import {Slide,Rotate} from 'react-reveal';
+import {Slide} from 'react-reveal';
 
 function Contact(){
   

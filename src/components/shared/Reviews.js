@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from 'react-redux';
 import LoadingBox from '../util/LoadingBox';
 import MessageBox from '../util/MessageBox';
 import ReviewForm from './ReviewForm';
-import {BiBadgeCheck} from 'react-icons/bi';
 import '../page.css';
 import moment from 'moment';
 

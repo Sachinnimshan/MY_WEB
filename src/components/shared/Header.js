@@ -8,7 +8,6 @@ import {Link} from 'react-router-dom';
 import {FaHome} from 'react-icons/fa';
 import {HiLightBulb} from 'react-icons/hi';
 import {MdMessage} from 'react-icons/md';
-import {FaUserCircle} from 'react-icons/fa';
 import {useDispatch, useSelector} from 'react-redux';
 import {userSignOut} from '../../store/actions/user';
 import {IoLogoInstagram} from 'react-icons/io';
@@ -35,17 +34,16 @@ function Header() {
         <Link to='/'><IoFingerPrint style={{fontSize: "2rem", fontWeight: "bold", marginLeft: "1rem", color: "white"}}/></Link>
         <div onClick={showMenu}>{menu ? <IoMdCloseCircle className='menu-icon'/> : <HiOutlineMenu className='menu-icon'/>}</div>
         </div>
-        <Slide top>
+        <Slide bottom>
         <div className='header-right'>
           
           <div className={menu ? 'nav-menu active' : 'nav-menu'}>
             
             <div className='nav-left'>
-             <div className='menu-item' onClick={closeMenu}><FaHome className='menu-item-icon'/><Link to='/'>Home</Link></div>
-              <div className='menu-item' onClick={closeMenu}><HiLightBulb className='menu-item-icon'/><Link to='/about'>About</Link></div>
-              {/* <div className='menu-item' onClick={closeMenu}><a href='#services'>Services</a></div> */}
-              <div className='menu-item' onClick={closeMenu}><IoIosRocket className='menu-item-icon'/><Link to='/projects'>Projects</Link></div>
-              <div className='menu-item' onClick={closeMenu}><MdMessage className='menu-item-icon'/><Link to='/contact'>Contact</Link></div>
+             <div className='menu-item' onClick={closeMenu}><Link to='/'>Home</Link></div>
+              <div className='menu-item' onClick={closeMenu}><Link to='/about'>About</Link></div>
+              <div className='menu-item' onClick={closeMenu}><Link to='/projects'>Projects</Link></div>
+              <div className='menu-item' onClick={closeMenu}><Link to='/contact'>Contact</Link></div>
             </div>
 
             {/* {

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getProjectInfo, getProjectReviews} from '../../store/actions/projects';
+import {getProjectInfo} from '../../store/actions/projects';
 import LoadingBox from '../util/LoadingBox';
 import MessageBox from '../util/MessageBox';
 import '../page.css';

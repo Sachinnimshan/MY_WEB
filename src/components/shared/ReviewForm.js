@@ -5,7 +5,6 @@ import {useDispatch, useSelector} from 'react-redux';
 import {postReviews} from '../../store/actions/projects';
 import LoadingBox from '../util/LoadingBox';
 import MessageBox from '../util/MessageBox';
-import validator from 'validator';
 
 function ReviewForm(props) {
     const dispatch = useDispatch();
