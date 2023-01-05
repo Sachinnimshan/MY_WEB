@@ -36,7 +36,7 @@ function Home() {
             <a href="https://sn-backend.onrender.com/api/resume">
               <button className="home-btn">
                 <FaDownload className="btn-down-icon" />
-                DOWNLOAD MY CV
+                DOWNLOAD MY CVv
               </button>
             </a>
           </div>
