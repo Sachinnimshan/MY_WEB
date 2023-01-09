@@ -70,19 +70,16 @@ function Projects() {
                   >
                     {item.demo && (
                       <Button variant="primary" size="sm" href={item.demo}>
-                        <BiSlideshow />
                         Demo
                       </Button>
                     )}
                     {item.youtube && (
                       <Button variant="danger" size="sm" href={item.youtube}>
-                        <AiOutlineYoutube />
                         Youtube
                       </Button>
                     )}
                     {item.youtube && (
                       <Button variant="success" size="sm" href={item.github}>
-                        <AiOutlineGithub />
                         Github
                       </Button>
                     )}

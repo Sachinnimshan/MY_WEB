@@ -1,110 +1,120 @@
-import React from 'react';
-import '../page.css';
-import {AiOutlineClockCircle} from 'react-icons/ai';
-import ContactForm from '../shared/ContactForm';
-import validate from '../util/ValidateInfo';
-import { FiSend} from 'react-icons/fi';
-import {IoEarth} from 'react-icons/io5';
-import {HiOutlineMail} from 'react-icons/hi';
-import {Button} from 'react-bootstrap';
-import {Slide} from 'react-reveal';
+import React from "react";
+import "../page.css";
+import { AiOutlineClockCircle } from "react-icons/ai";
+import ContactForm from "../shared/ContactForm";
+import validate from "../util/ValidateInfo";
+import { FiSend } from "react-icons/fi";
+import { IoEarth } from "react-icons/io5";
+import { HiOutlineMail } from "react-icons/hi";
+import { Button } from "react-bootstrap";
+import { Slide } from "react-reveal";
 
-function Contact(){
-  
-  const {handleChange, values, handleSubmit, errors} = ContactForm(validate);
+function Contact() {
+  const { handleChange, values, handleSubmit, errors } = ContactForm(validate);
 
   return (
-    <div className='contact-section'>
-    <div className='section-title'>
-      <Slide top><h1>Contact</h1></Slide>
-      <span>Leave Me A Message</span>
+    <div className="contact-section">
+      <div className="section-title">
+        <Slide top>
+          <h1>Contact</h1>
+        </Slide>
+        <span>Leave Me A Message</span>
       </div>
-
-     <div className='contact-container'>
-
-          {/* <div className='contact-details'>
+      <Slide bottom>
+      <div className="contact-container">
+        {/* <div className='contact-details'>
            <IoCallOutline className='contact-icons'/>
            <h4>Call Me</h4>
            <span>+94 77 9012 655</span>
           </div> */}
-         
 
-        <div style={{display: "flex", flexDirection: "column", gap: "12px"}}>
-        <Slide top>
-        <div className='contact-details'>
-           <HiOutlineMail className='contact-icons'/>
-           <h4>Email</h4>
-           <span>sachinnimshan@gmail.com</span>
-         </div>
-        </Slide>
+        <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            <div className="contact-details">
+              <HiOutlineMail className="contact-icons" />
+              <h4>Email</h4>
+              <span>sachinnimshan@gmail.com</span>
+            </div>
 
-         <Slide bottom>
-         <div className='contact-details'>
-           <AiOutlineClockCircle className='contact-icons'/>
-           <h4>Available Hours</h4>
-           <span>Monday - Friday</span>
-           <span>9:00AM - 05:00PM</span>
-         </div>
-         </Slide>
+            <div className="contact-details">
+              <AiOutlineClockCircle className="contact-icons" />
+              <h4>Available Hours</h4>
+              <span>Monday - Friday</span>
+              <span>9:00AM - 05:00PM</span>
+            </div>
         </div>
 
-        <Slide top>
-        <div className='contact-form'>
-       <form onSubmit={handleSubmit} >
-        <div className="form-group p-3">
-          <input 
-            type="text"
-            className="form-control"
-            style={{fontFamily: 'Open Sans', fontSize: '15px'}}
-            id="username" 
-            aria-describedby="emailHelp"
-            placeholder="Enter Your Name"
-            name = "username"
-            value={values.username}
-            onChange={handleChange}/>
-            {errors.username && <p className='form-errors'>{errors.username}</p>}
-        </div>
-        
-        <div className="form-group p-3">
-          
-          <input 
-           type="text"
-           className="form-control"
-           style={{fontFamily: 'Open Sans', fontSize: '15px'}}
-           id="email" 
-           placeholder="Enter Your Email"
-           name="email"
-           value={values.email}
-           onChange={handleChange}/>
-           {errors.email && <p className='form-errors'>{errors.email}</p>}
-        </div>
-        
-        <div className="form-group p-3">
-          
-          <textarea 
-            type="text" 
-            className="form-control"
-            style={{fontFamily: 'Open Sans', fontSize: '15px'}}
-            id="message" 
-            aria-describedby="emailHelp"
-            placeholder="Enter Your Message"
-            name="message"
-            value={values.message}
-            onChange={handleChange}/>
-            {errors.message && <p className='form-errors'>{errors.message}</p>}
-        </div>
-        <div className="form-group p-3">
-        <Button type="submit" variant='primary' size='lg'><FiSend/> Send Message</Button>
-        </div>
-        </form>
+          <div className="contact-form">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group p-2">
+              <label className='form-lbl'>Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  style={{
+                    fontFamily: "Open Sans",
+                    fontSize: "15px",
+                    padding: "10px",
+                  }}
+                  id="username"
+                  aria-describedby="emailHelp"
+                  name="username"
+                  value={values.username}
+                  onChange={handleChange}
+                />
+                {errors.username && (
+                  <p className="form-errors">{errors.username}</p>
+                )}
+              </div>
+
+              <div className="form-group p-2">
+              <label className='form-lbl'>Email Address</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  style={{
+                    fontFamily: "Open Sans",
+                    fontSize: "15px",
+                    padding: "10px",
+                  }}
+                  id="email"
+                  name="email"
+                  value={values.email}
+                  onChange={handleChange}
+                />
+                {errors.email && <p className="form-errors">{errors.email}</p>}
+              </div>
+
+              <div className="form-group p-2">
+              <label className='form-lbl'>Message</label>
+                <textarea
+                  type="text"
+                  className="form-control"
+                  style={{
+                    fontFamily: "Open Sans",
+                    fontSize: "15px",
+                    padding: "10px",
+                  }}
+                  id="message"
+                  aria-describedby="emailHelp"
+                  name="message"
+                  value={values.message}
+                  onChange={handleChange}
+                />
+                {errors.message && (
+                  <p className="form-errors">{errors.message}</p>
+                )}
+              </div>
+              <div className="form-group p-3">
+                <button type="submit" className="home-btn">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
       </div>
-        </Slide>
-
-
-       </div>
-
-</div>
-  )
+      </Slide>
+    </div>
+  );
 }
 
 export default Contact;

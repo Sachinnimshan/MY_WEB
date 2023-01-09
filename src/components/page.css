@@ -81,7 +81,7 @@
 }
 
 .section-title > span{
-    color: #1B262C;
+    color: #666666;
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
@@ -160,7 +160,7 @@
 
 .home-btn{
     margin-top: 1rem;
-    background-image: linear-gradient(to right top, #1b262c, #a8eb12);
+    background-image: linear-gradient(to left bottom, #94D600, #1b262c);
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
@@ -480,7 +480,9 @@
 }
 
 .project-name:hover{
-    color: #7087FF;
+    background-image: linear-gradient(#94D600, #1B262C);
+    background-clip: text;
+    color: transparent;
     transition: all ease-in-out 0.3s;
 }
 
@@ -488,7 +490,9 @@
     font-size: 14px;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
-    color: gray;
+    background-image: linear-gradient(#94D600, #1B262C);
+    background-clip: text;
+    color: transparent;
 }
 
 .project-btn-links{
@@ -531,10 +535,20 @@
     align-items: flex-start;
 }
 
-.project-lbl{
+.project-info-name{
+    font-family: "Open Sans", sans-serif;
     color: #666666;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+    margin-bottom: 1rem;
+}
+
+.project-lbl{
+    color: #999999;
     font-family: "Open Sans";
     font-weight: 600;
+    font-size: 18px;
 }
 
 .project-info-img{
@@ -658,8 +672,7 @@
 /****************************************************************/
 
 .contact-section{
-    padding: 1rem;
-    padding-top: 1rem;
+    padding-top: 1rem ;
     padding-bottom: 2rem;
     min-height: 95vh;
 }
@@ -669,10 +682,13 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    border: 1.5px solid #F0F0F0;
+    width: fit-content;
+    margin: auto;
+    border-radius: 5px;
 }
 
 .contact-details{
-    background-color: #FAFBFF;
     height: 12rem;
     border-radius: 5px;
     display: flex;
@@ -681,11 +697,10 @@
     gap: 10px;
     width: 18rem;
     padding: 1.5rem;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 .contact-icons{
-    color: #4154F1;
+    color: #94D600;
     font-size: 2rem;
 }
 
@@ -693,7 +708,7 @@
     font-size: 22px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    color: #012970;
+    color: #666666;
 }
 
 .contact-details > span {
@@ -707,13 +722,11 @@
 .contact-form{
     padding: 5px;
     padding-top: 1rem;
-    background-color: #FAFBFF;
     border-radius: 5px;
     font-family: 'Open Sans';
     height: fit-content;
     border-radius: 5px;
     width: 30rem;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 

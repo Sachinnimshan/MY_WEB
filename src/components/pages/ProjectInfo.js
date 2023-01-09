@@ -31,7 +31,7 @@ function ProjectInfo(props) {
           <MessageBox>{errors}</MessageBox>
         ) : (
           <div className="info-container">
-            <h1 className="project-lbl">{projectInfo.title}</h1>
+            <h2 className="project-info-name">{projectInfo.title}</h2>
             <div
               style={{
                 display: "flex",
@@ -65,7 +65,6 @@ function ProjectInfo(props) {
                       target="_blank"
                       href={projectInfo.demo}
                     >
-                      <BiSlideshow />
                       Demo
                     </Button>
                   )}
@@ -75,7 +74,6 @@ function ProjectInfo(props) {
                       target="_blank"
                       href={projectInfo.youtube}
                     >
-                      <AiOutlineYoutube />
                       Youtube
                     </Button>
                   )}
@@ -85,7 +83,6 @@ function ProjectInfo(props) {
                       target="_blank"
                       href={projectInfo.github}
                     >
-                      <AiOutlineGithub />
                       Github
                     </Button>
                   )}

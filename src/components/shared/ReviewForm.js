@@ -49,7 +49,9 @@ function ReviewForm(props) {
                 <label className='form-lbl'>Comment</label>
                 <textarea type='text' value={comment} onChange={(e)=> setcomment(e.target.value)}/>
             </div>
-            <Button type='submit' size='lg' variant='primary'>Submit Review</Button>
+            <button type="submit" className="home-btn">
+                Submit
+              </button>
             </form>
         </div>
     )
