@@ -71,7 +71,9 @@
 }
 
 .section-title > h1{
-    color: #94D600;
+    background-image: linear-gradient(#94D600, #1B262C);
+    background-clip: text;
+    color: transparent;
     letter-spacing: 0.5px;
     font-size: 16px;
     text-transform: uppercase;
@@ -94,7 +96,7 @@
     min-height: 95vh;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background: linear-gradient(170deg, white 20%, #94D600);
+    background: linear-gradient(170deg, white 50%, #94D600);
     align-items: center;
     overflow: hidden;
     text-align: center;
@@ -106,10 +108,12 @@
 
 
 .home-screen > div > div> h1 {
-    color:#1B262C;
     font-size: 60px;
     font-family: "Open Sans";
     font-weight: 600;
+    background-image: linear-gradient(#94D600, #1B262C);
+    background-clip: text;
+    color: transparent;
 }
 
 .home-screen > div > div > p, span{
@@ -156,11 +160,11 @@
 
 .home-btn{
     margin-top: 1rem;
-    background-color: #1B262C;
+    background-image: linear-gradient(to right top, #1b262c, #a8eb12);
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
-    color: #94D600;
+    color: white;
 }
 
 .follow-me-text{
