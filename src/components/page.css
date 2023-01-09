@@ -71,7 +71,7 @@
 }
 
 .section-title > h1{
-    color: #7087FF;
+    color: #94D600;
     letter-spacing: 0.5px;
     font-size: 16px;
     text-transform: uppercase;
@@ -79,7 +79,7 @@
 }
 
 .section-title > span{
-    color: #012970;
+    color: #1B262C;
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
@@ -92,9 +92,9 @@
 .home-screen{
     display: flex;
     min-height: 95vh;
-    background: linear-gradient(170deg, white 10%, #7087FF);
     flex-wrap: wrap;
     justify-content: space-evenly;
+    background: linear-gradient(170deg, white 20%, #94D600);
     align-items: center;
     overflow: hidden;
     text-align: center;
@@ -106,7 +106,7 @@
 
 
 .home-screen > div > div> h1 {
-    color:#012970;
+    color:#1B262C;
     font-size: 60px;
     font-family: "Open Sans";
     font-weight: 600;
@@ -136,7 +136,7 @@
 }
 
 .social-media-icon{
-    color: lightgray;
+    color: white;
     font-size: 1.5rem;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
@@ -144,7 +144,7 @@
 
 .social-media-icon:hover{
     transition: all 0.2s ease-in-out;
-    color: white;
+    color: #94D600;
 }
 
 @media screen and (max-width: 800px) {
@@ -156,11 +156,11 @@
 
 .home-btn{
     margin-top: 1rem;
-    background-color: #012970;
+    background-color: #1B262C;
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
-    color: #fff;
+    color: #94D600;
 }
 
 .follow-me-text{
@@ -176,10 +176,11 @@
     width: 100%;
     padding: 15px;
     align-items: center;
-    background-color: #012970;
+    background-color: #1B262C;
     justify-content: space-between;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
     z-index: 1000;
+    border-bottom: 4px solid #94D600;
 }
 
 .header-top{
@@ -211,14 +212,11 @@
 
 .menu-item{
     transition: all ease-in-out 0.3s;
-    padding: 5px;
+    padding: 5px 15px;
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-.menu-item-icon{
-    color: lightgray;
+    cursor: pointer;
 }
 
 .menu-item > a{
@@ -227,11 +225,11 @@
     font-family: 'Nunito', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .menu-item >a:hover{
-    color: white;
+    color: #94D600;
     transition: all ease-in-out 0.3s;
 }
 
@@ -318,6 +316,10 @@
 
     .menu-item{
         padding: 0.75rem 0;
+    }
+
+    .menu-item:hover{
+        background-color: #1B262C;
     }
     
     .nav-menu.active{
@@ -761,7 +763,7 @@
 
 .footer-container{
     padding: 15px 35px;
-    background-color: #012970;
+    background-color: #1B262C;
     display: flex;
     gap: 5px;
     align-items: center;
