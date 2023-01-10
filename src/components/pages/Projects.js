@@ -28,7 +28,7 @@ function Projects() {
         </Slide>
         <span>What I Have Done</span>
       </div>
-
+      <Fade bottom>
       <div className="project-container">
         {loading ? (
           <LoadingBox></LoadingBox>
@@ -36,7 +36,7 @@ function Projects() {
           <MessageBox>{errors}</MessageBox>
         ) : (
           projects.length > 0 && projects.map((item) => (
-            <Fade bottom>
+            
               <div key={item.id} className="project-card">
                 <img
                   src={item.image}
@@ -86,11 +86,11 @@ function Projects() {
                   </div>
                 </div>
               </div>
-            </Fade>
+            
           ))
         )}
       </div>
-
+      </Fade>
       <div
         style={{
           display: "flex",
