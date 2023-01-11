@@ -20,6 +20,7 @@ function Reviews(props) {
     return (
       <div className="review-main-container">
         <div className="review-container">
+          <div style={{display: "flex", flexDirection: "column"}}>
           <h3 className="project-lbl">Reviews</h3>
           <div className="review-banner">
             <img src="/Images/reviews.png" className="review-icon" />
@@ -44,6 +45,7 @@ function Reviews(props) {
                   </div>
                 ))
             )}
+          </div>
           </div>
           <ReviewForm projectID={props.projectID} />
         </div>

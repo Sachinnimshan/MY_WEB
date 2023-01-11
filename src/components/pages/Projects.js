@@ -43,14 +43,7 @@ function Projects() {
                   className="project-thumbnail"
                   alt={item.title}
                 />
-                <div
-                  style={{
-                    height: "auto",
-                    gap: "0.5rem",
-                    padding: "0.25rem",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
+                <div className="project-card-info"
                 >
                   <span>
                     <Link to={`/project/${item._id}`} className="project-name">
@@ -64,7 +57,7 @@ function Projects() {
                       justifyContent: "center",
                       alignItems: "center",
                       gap: "10px",
-                      marginTop: "0.5rem",
+                      marginTop: "1rem",
                       paddingBottom: "1rem",
                     }}
                   >
