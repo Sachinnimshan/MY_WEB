@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useDispatch } from "react-redux";
+import { IoFingerPrint } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io";
 import {
   AiOutlineFacebook,
@@ -42,10 +42,16 @@ function Header() {
     { name: "Contact", route: "/contact" },
   ];
   return (
-    <HeaderContainer>
-        <SiteLogo />
+    <HeaderContainer mobile={mobile}>
+      <SiteLogo to="/">
+        <IoFingerPrint />
+      </SiteLogo>
       {mobile ? (
-        menu ? <CloseIcon onClick={closeMenu}/> : <MenuIcon onClick={showMenu} />
+        menu ? (
+          <CloseIcon onClick={closeMenu} />
+        ) : (
+          <MenuIcon onClick={showMenu} />
+        )
       ) : (
         <MenuContainer>
           <NavMenuContainer>
@@ -60,10 +66,12 @@ function Header() {
           </SocialIconContainer>
         </MenuContainer>
       )}
-      {menu && (
+      {mobile && menu && (
         <SideMenuContainer>
-          {navData.map((item)=>(
-            <MenuItem to={item.route} onClick={closeMenu}>{item.name}</MenuItem>
+          {navData.map((item) => (
+            <MenuItem to={item.route} onClick={closeMenu}>
+              {item.name}
+            </MenuItem>
           ))}
           <SocialIconContainer>
             {socialData.map((item) => (

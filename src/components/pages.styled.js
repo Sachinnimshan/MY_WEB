@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import { IoFingerPrint } from "react-icons/io5";
 import { HiOutlineMenu } from "react-icons/hi";
 import {Link} from 'react-router-dom';
 import { VscClose } from "react-icons/vsc";
@@ -17,7 +16,7 @@ const breatheAnimation = keyframes`
 export const HeaderContainer = styled("div")`
   display: flex;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: ${(props) => (props.mobile === true ? `0.25rem 1.75rem` : `0.5rem 1.75rem`)};
   align-items: center;
   background-color: #1b262c;
   justify-content: space-between;
@@ -34,10 +33,14 @@ export const MenuContainer = styled("div")`
   margin-left: 2rem;
 `;
 
-export const SiteLogo = styled(IoFingerPrint)`
-  color: white;
+export const SiteLogo = styled(Link)`
+  color: lightgray;
   font-size: 2rem;
   cursor: pointer;
+  text-decoration: none;
+  &:hover{
+    color: white;
+  }
 `;
 
 export const MenuIcon = styled(HiOutlineMenu)`
@@ -66,7 +69,7 @@ export const CloseIcon = styled(VscClose)`
 
 export const NavMenuContainer = styled("div")`
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 `;
 
 export const MenuItem = styled(Link)`
@@ -90,7 +93,7 @@ export const SocialIcons = styled("div")`
   font-size: 22px;
   cursor: pointer;
   &:hover {
-    color: white;
+    color: #94d600;
   }
 `;
 
@@ -99,7 +102,7 @@ export const SideMenuContainer = styled("div")`
   flex-direction: column;
   gap: 1rem;
   position: fixed;
-  top: 10%;
+  top: 9%;
   right: 0;
   background-color: #1b262c;
   width: 60%;
@@ -108,6 +111,7 @@ export const SideMenuContainer = styled("div")`
   opacity: 0.95;
   animation-name: ${breatheAnimation};
   animation-duration: 0.8s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
 
