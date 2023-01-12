@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { IoFingerPrint } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io";
 import {
   AiOutlineFacebook,
@@ -8,6 +7,7 @@ import {
 } from "react-icons/ai";
 import {
   CloseIcon,
+  DesktopHeader,
   HeaderContainer,
   MenuContainer,
   MenuIcon,
@@ -19,10 +19,10 @@ import {
   SocialIcons,
 } from "../pages.styled";
 import { useResponsive } from "../../hooks/useResponsive";
+import { useEffect } from "react";
 
 function Header() {
   const { mobile } = useResponsive();
-  const currentRef = useRef(null);
 
   const [menu, setmenu] = useState(false);
   const showMenu = () => setmenu(!menu);
@@ -41,35 +41,43 @@ function Header() {
     { name: "Projects", route: "/projects" },
     { name: "Contact", route: "/contact" },
   ];
+
+  useEffect(() => {
+    if (menu && !mobile) {
+      closeMenu();
+    }
+  }, [mobile]);
+
   return (
-    <HeaderContainer mobile={mobile}>
-      <SiteLogo to="/">
-        <IoFingerPrint />
-      </SiteLogo>
-      {mobile ? (
-        menu ? (
-          <CloseIcon onClick={closeMenu} />
-        ) : (
-          <MenuIcon onClick={showMenu} />
-        )
-      ) : (
-        <MenuContainer>
-          <NavMenuContainer>
-            {navData.map((item) => (
-              <MenuItem to={item.route}>{item.name}</MenuItem>
-            ))}
-          </NavMenuContainer>
-          <SocialIconContainer>
-            {socialData.map((item) => (
-              <SocialIcons key={item}>{item.icon}</SocialIcons>
-            ))}
-          </SocialIconContainer>
-        </MenuContainer>
+    <HeaderContainer>
+      {!menu && (
+        <DesktopHeader>
+          <SiteLogo to="/" mobile={mobile}>
+            Sachin Nimshan
+          </SiteLogo>
+          {mobile ? (
+            <MenuIcon onClick={showMenu} />
+          ) : (
+            <MenuContainer>
+              <NavMenuContainer>
+                {navData.map((item) => (
+                  <MenuItem to={item.route}>{item.name}</MenuItem>
+                ))}
+              </NavMenuContainer>
+              <SocialIconContainer>
+                {socialData.map((item) => (
+                  <SocialIcons key={item}>{item.icon}</SocialIcons>
+                ))}
+              </SocialIconContainer>
+            </MenuContainer>
+          )}
+        </DesktopHeader>
       )}
-      {mobile && menu && (
-        <SideMenuContainer>
+      {menu && (
+        <SideMenuContainer mobile={mobile}>
+          <CloseIcon onClick={closeMenu} />
           {navData.map((item) => (
-            <MenuItem to={item.route} onClick={closeMenu}>
+            <MenuItem to={item.route} onClick={closeMenu} mobile={mobile}>
               {item.name}
             </MenuItem>
           ))}
@@ -78,6 +86,7 @@ function Header() {
               <SocialIcons key={item}>{item.icon}</SocialIcons>
             ))}
           </SocialIconContainer>
+          <SiteLogo to="/">Sachin Nimshan</SiteLogo>
         </SideMenuContainer>
       )}
     </HeaderContainer>

@@ -3,43 +3,60 @@ import { HiOutlineMenu } from "react-icons/hi";
 import {Link} from 'react-router-dom';
 import { VscClose } from "react-icons/vsc";
 
-const breatheAnimation = keyframes`
+const sideMenuAnimation = keyframes`
  from {
     right: -100%;
   }
   to {
     right: 0%;
   }
+`;
 
+const headerAnimation = keyframes`
+ from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
 `;
 
 export const HeaderContainer = styled("div")`
+  
+`;
+
+export const DesktopHeader = styled("div")`
   display: flex;
   width: 100%;
-  padding: ${(props) => (props.mobile === true ? `0.25rem 1.75rem` : `0.5rem 1.75rem`)};
+  padding: 0.65rem 1.75rem;
   align-items: center;
   background-color: #1b262c;
   justify-content: space-between;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
   z-index: 1000;
-  border-bottom: 4px solid #94d600;
+  animation-name: ${headerAnimation};
+  animation-duration: 0.25s;
+  position: fixed;
 `;
+
 
 export const MenuContainer = styled("div")`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-left: 2rem;
+  margin-left: 5rem;
 `;
 
 export const SiteLogo = styled(Link)`
   color: lightgray;
-  font-size: 2rem;
+  font-size: ${((props)=> props.mobile ===  true ? "1.75rem": "2rem")};
   cursor: pointer;
+  font-family: 'Kaushan Script', cursive;
+  min-width: max-content;
   text-decoration: none;
   &:hover{
-    color: white;
+    color: #94d600;
   }
 `;
 
@@ -49,7 +66,7 @@ export const MenuIcon = styled(HiOutlineMenu)`
   cursor: pointer;
   position: fixed;
   right: 0;
-  z-index: 1000;
+  z-index: 8000;
   background-color: #1b262c;
   margin-right: 1.5rem;
   border-radius: 2px;
@@ -61,10 +78,10 @@ export const CloseIcon = styled(VscClose)`
   cursor: pointer;
   position: fixed;
   right: 0;
-  z-index: 1000;
+  z-index: 8000;
   background-color: #1b262c;
   margin-right: 1.5rem;
-  border-radius: 2px;
+  border: 1px solid lightgray;
 `;
 
 export const NavMenuContainer = styled("div")`
@@ -76,6 +93,7 @@ export const MenuItem = styled(Link)`
   color: lightgray;
   transition: all ease-in-out 0.3s;
   text-decoration: none;
+  padding: ${(props) => (props.mobile === true && `1rem 0` )};
   &:hover {
     color: #94d600;
     cursor: pointer;
@@ -90,7 +108,7 @@ export const SocialIconContainer = styled("div")`
 `;
 export const SocialIcons = styled("div")`
   color: lightgray;
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
   &:hover {
     color: #94d600;
@@ -100,17 +118,19 @@ export const SocialIcons = styled("div")`
 export const SideMenuContainer = styled("div")`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   position: fixed;
-  top: 9%;
+  top: 0;
   right: 0;
   background-color: #1b262c;
-  width: 60%;
-  padding: 3rem;
+  height: 100vh;
+  width: 75%;
+  padding: 1rem 3rem;
   z-index: 2500;
-  opacity: 0.95;
-  animation-name: ${breatheAnimation};
-  animation-duration: 0.8s;
+  opacity: 0.98;
+  animation-name: ${sideMenuAnimation};
+  animation-duration: 0.5s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
