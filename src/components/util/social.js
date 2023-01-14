@@ -1,5 +1,4 @@
 import {IoLogoInstagram} from 'react-icons/io';
-import {FiTwitter} from 'react-icons/fi';
 import {AiOutlineFacebook, AiOutlineYoutube, AiFillGithub} from 'react-icons/ai';
 
 
@@ -24,9 +23,4 @@ export const socialIcons = [
     icon: <AiOutlineFacebook />,
     url: "https://www.facebook.com/sachin.nimshan/",
   },
-//   {
-//     name: "Twitter",
-//     icon: <FiTwitter />,
-//     url: "https://twitter.com/SachinNimshan",
-//   },
 ];

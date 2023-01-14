@@ -20,6 +20,7 @@ import {
 } from "../pages.styled";
 import { useResponsive } from "../../hooks/useResponsive";
 import { useEffect } from "react";
+import { socialIcons } from "../util/social";
 
 function Header() {
   const { mobile } = useResponsive();
@@ -27,13 +28,6 @@ function Header() {
   const [menu, setmenu] = useState(false);
   const showMenu = () => setmenu(!menu);
   const closeMenu = () => setmenu(false);
-
-  const socialData = [
-    { name: "Youtube", icon: <AiOutlineYoutube /> },
-    { name: "Github", icon: <AiFillGithub /> },
-    { name: "Instagram", icon: <IoLogoInstagram /> },
-    { name: "Facebook", icon: <AiOutlineFacebook /> },
-  ];
 
   const navData = [
     { name: "Home", route: "/" },
@@ -65,8 +59,10 @@ function Header() {
                 ))}
               </NavMenuContainer>
               <SocialIconContainer>
-                {socialData.map((item) => (
-                  <SocialIcons key={item}>{item.icon}</SocialIcons>
+                {socialIcons.map((item) => (
+                  <SocialIcons key={item} href={item.url}>
+                    {item.icon}
+                  </SocialIcons>
                 ))}
               </SocialIconContainer>
             </MenuContainer>
@@ -82,8 +78,10 @@ function Header() {
             </MenuItem>
           ))}
           <SocialIconContainer>
-            {socialData.map((item) => (
-              <SocialIcons key={item}>{item.icon}</SocialIcons>
+            {socialIcons.map((item) => (
+              <SocialIcons key={item} href={item.url}>
+                {item.icon}
+              </SocialIcons>
             ))}
           </SocialIconContainer>
           <SiteLogo to="/">Sachin Nimshan</SiteLogo>

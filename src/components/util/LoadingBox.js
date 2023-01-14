@@ -1,10 +1,21 @@
 import React from 'react';
-import {Spinner} from 'react-bootstrap';
+import { makeStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      display: 'flex',
+      '& > * + *': {
+        marginLeft: theme.spacing(2),
+      },
+    },
+  }));
 
 function LoadingBox(props) {
+    const classes = useStyles();
     return (
-        <div className='loading-container'>
-            <Spinner size='lg' animation="border" variant="primary"/>
+        <div className={classes.root}>
+            <CircularProgress />
         </div>
     )
 }

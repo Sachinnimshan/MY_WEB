@@ -1,77 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../page.css";
-import { Flip, Slide } from "react-reveal";
+import { Slide } from "react-reveal";
 import { FaDownload } from "react-icons/fa";
+import {
+  ButtonText,
+  DownloadIcon,
+  DownloadLinkBtn,
+  HomeBanner,
+  HomeContainer,
+  HomeLeftContainer,
+  HomeRightContainer,
+  MyDescription,
+  MyJob,
+  MyName,
+} from "../pages.styled";
+import { useResponsive } from "../../hooks/useResponsive";
 
 function Home() {
-  //Modal Hooks
-  const [show, setshow] = useState(true);
-  const handleClose = () => setshow(false);
-  const handleShow = () => setshow(true);
-
-  useEffect(() => {
-    setshow(true);
-  }, []);
-
+  const { mobile } = useResponsive();
   return (
-    <div className="home-screen">
+    <HomeContainer>
       <Slide left>
-        <div className="home-center-info">
-          <div>
-            <Flip top>
-              <h1>HI, I'm Sachin</h1>
-            </Flip>
-          </div>
-          <div>
-            <p style={{ fontSize: "22px", textTransform: "uppercase" }}>
-              Software Engineer / Free Lancer
-            </p>
-          </div>
-          <div>
-            <span style={{ fontSize: "18px" }}>
-              High Level Experience in Web Design & Development
-            </span>
-          </div>
-          <div>
-            <a href="https://sn-backend.onrender.com/api/resume">
-              <button className="home-btn">
-                <FaDownload className="btn-down-icon" />
-                DOWNLOAD MY CV
-              </button>
-            </a>
-          </div>
-        </div>
+        <HomeLeftContainer mobile={mobile}>
+          <MyName mobile={mobile}>Hi, I'm Sachin</MyName>
+          <MyJob>Software Engineer | Free Lancer</MyJob>
+          <MyDescription>
+            High Level Experience in Web Design & Development
+          </MyDescription>
+          <DownloadLinkBtn href="https://sn-backend.onrender.com/api/resume" margin>
+            <ButtonText>Download My CV</ButtonText>
+            <DownloadIcon/>
+          </DownloadLinkBtn>
+        </HomeLeftContainer>
       </Slide>
-
-      <div>
-        <Slide right>
-          <img className="home-img" src="/Images/homebg.png" />
-        </Slide>
-      </div>
-
-      {/* <Modal
-        size='lg'
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          I will not close if you click outside me. Don't even try to press
-          escape key.
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary">Understood</Button>
-        </Modal.Footer>
-      </Modal> */}
-    </div>
+      <Slide right>
+        <HomeRightContainer>
+          <HomeBanner src="/Images/homebg.png" />
+        </HomeRightContainer>
+      </Slide>
+    </HomeContainer>
   );
 }
 

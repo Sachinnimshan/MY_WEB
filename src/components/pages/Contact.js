@@ -1,119 +1,133 @@
 import React from "react";
-import "../page.css";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import ContactForm from "../shared/ContactForm";
-import validate from "../util/ValidateInfo";
-import { FiSend } from "react-icons/fi";
-import { IoEarth } from "react-icons/io5";
-import { HiOutlineMail } from "react-icons/hi";
-import { Button } from "react-bootstrap";
+
 import { Slide } from "react-reveal";
+import {
+  ButtonText,
+  PageContainer,
+  PageHeader,
+  PageMessage,
+  PageTitle,
+  Button,
+  ContactFormContainer,
+  ContactContainer,
+  ContactInfoContainer,
+  ContactInfo,
+  ContactInfoTitle,
+  ContactInfoSubtitle,
+  EmailIcon,
+  AvailableHoursIcon,
+} from "../pages.styled";
+import { useForm, Controller } from "react-hook-form";
+import Input from "../common/Input/input";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { contactSchema } from "../schemas/contactSchema";
+import axios from "axios";
+import swal from "sweetalert";
 
 function Contact() {
-  const { handleChange, values, handleSubmit, errors } = ContactForm(validate);
+  const {
+    control,
+    watch,
+    formState: { errors, touchedFields, isValid },
+    setValue,
+    getValues,
+    handleSubmit,
+    trigger,
+  } = useForm({
+    mode: "all",
+    resolver: yupResolver(contactSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  const handleSubmitButton = async () => {
+    const payload = {
+      name: getValues("name"),
+      email: getValues("email"),
+      message: getValues("message"),
+    };
+
+    const response = await axios.post(
+      "https://sn-backend.onrender.com/email/sendemail",
+      payload
+    );
+    if (response.success) {
+      swal("Good job!", "Thank You For Your Support", "success");
+    } else {
+      swal("Oops", "Someting Went Wrong", "error");
+    }
+  };
 
   return (
-    <div className="contact-section">
-      <div className="section-title">
-        <Slide top>
-          <h1>Contact</h1>
-        </Slide>
-        <span>Leave Me A Message</span>
-      </div>
+    <PageContainer>
+      <PageHeader>
+        <PageTitle>Contact</PageTitle>
+        <PageMessage>Leave me a message</PageMessage>
+      </PageHeader>
       <Slide bottom>
-      <div className="contact-container">
-        {/* <div className='contact-details'>
-           <IoCallOutline className='contact-icons'/>
-           <h4>Call Me</h4>
-           <span>+94 77 9012 655</span>
-          </div> */}
-
-        <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <div className="contact-details">
-              <HiOutlineMail className="contact-icons" />
-              <h4>Email</h4>
-              <span>sachinnimshan@gmail.com</span>
-            </div>
-
-            <div className="contact-details">
-              <AiOutlineClockCircle className="contact-icons" />
-              <h4>Available Hours</h4>
-              <span>Monday - Friday</span>
-              <span>9:00AM - 05:00PM</span>
-            </div>
-        </div>
-
-          <div className="contact-form">
-            <form onSubmit={handleSubmit}>
-              <div className="form-group p-2">
-              <label className='form-lbl'>Name</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  style={{
-                    fontFamily: "Open Sans",
-                    fontSize: "15px",
-                    padding: "10px",
-                  }}
-                  id="username"
-                  aria-describedby="emailHelp"
-                  name="username"
-                  value={values.username}
-                  onChange={handleChange}
+        <ContactContainer>
+          <ContactInfoContainer>
+            <ContactInfo>
+              <EmailIcon />
+              <ContactInfoTitle>Email</ContactInfoTitle>
+              <ContactInfoSubtitle>sachinnimshan@gmail.com</ContactInfoSubtitle>
+            </ContactInfo>
+            <ContactInfo>
+              <AvailableHoursIcon />
+              <ContactInfoTitle>Available hours</ContactInfoTitle>
+              <ContactInfoSubtitle>Monday - Friday</ContactInfoSubtitle>
+              <ContactInfoSubtitle>9:00 AM - 05:00 PM</ContactInfoSubtitle>
+            </ContactInfo>
+          </ContactInfoContainer>
+          <ContactFormContainer>
+            <Controller
+              control={control}
+              name="name"
+              render={({ field }) => (
+                <Input
+                  label="Your Name"
+                  error={touchedFields.name && errors.name?.message}
+                  {...field}
                 />
-                {errors.username && (
-                  <p className="form-errors">{errors.username}</p>
-                )}
-              </div>
-
-              <div className="form-group p-2">
-              <label className='form-lbl'>Email Address</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  style={{
-                    fontFamily: "Open Sans",
-                    fontSize: "15px",
-                    padding: "10px",
-                  }}
-                  id="email"
-                  name="email"
-                  value={values.email}
-                  onChange={handleChange}
+              )}
+            />
+            <Controller
+              control={control}
+              name="email"
+              render={({ field }) => (
+                <Input
+                  label="Your Email"
+                  error={touchedFields.email && errors.email?.message}
+                  {...field}
                 />
-                {errors.email && <p className="form-errors">{errors.email}</p>}
-              </div>
-
-              <div className="form-group p-2">
-              <label className='form-lbl'>Message</label>
-                <textarea
-                  type="text"
-                  className="form-control"
-                  style={{
-                    fontFamily: "Open Sans",
-                    fontSize: "15px",
-                    padding: "10px",
-                  }}
-                  id="message"
-                  aria-describedby="emailHelp"
-                  name="message"
-                  value={values.message}
-                  onChange={handleChange}
+              )}
+            />
+            <Controller
+              control={control}
+              name="message"
+              render={({ field }) => (
+                <Input
+                  label="Your Message"
+                  error={touchedFields.message && errors.message?.message}
+                  {...field}
                 />
-                {errors.message && (
-                  <p className="form-errors">{errors.message}</p>
-                )}
-              </div>
-              <div className="form-group p-3">
-                <button type="submit" className="home-btn">
-                  Send Message
-                </button>
-              </div>
-            </form>
-          </div>
-      </div>
+              )}
+            />
+
+            <Button
+              onClick={handleSubmit(handleSubmitButton)}
+              disabled={!isValid}
+              margin
+            >
+              <ButtonText>Send Message</ButtonText>
+            </Button>
+          </ContactFormContainer>
+        </ContactContainer>
       </Slide>
-    </div>
+    </PageContainer>
   );
 }
 

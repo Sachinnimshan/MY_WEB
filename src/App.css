@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 button{
@@ -41,12 +42,13 @@ textarea{
   height: 125px;
   border: none;
   border: 1px solid lightgray;
+  padding: 0.75rem;
 }
 
 textarea:focus{
   outline: none;
   border-radius: 5px;
-  padding: 0.75rem;
+  
   color: gray;
 }
 

@@ -1,14 +1,21 @@
-import React from 'react';
-import {Alert} from 'react-bootstrap';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: "100%",
+    "& > * + *": {
+      marginTop: theme.spacing(2),
+    },
+  },
+}));
 
 function MessageBox(props) {
-    return (
-        <div>
-            <Alert variant='danger'>
-            <Alert.Heading>{props.children}</Alert.Heading>
-            </Alert>
-        </div>
-    )
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+    </div>
+  );
 }
 
 export default MessageBox;

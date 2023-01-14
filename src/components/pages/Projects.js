@@ -1,14 +1,25 @@
-import { Button } from "react-bootstrap";
 import React, { useEffect } from "react";
-import "../page.css";
-import { BiSlideshow } from "react-icons/bi";
-import { AiOutlineGithub, AiOutlineYoutube } from "react-icons/ai";
-import { Fade, Slide } from "react-reveal";
+import { Fade } from "react-reveal";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllProjects } from "../../store/actions/projects";
 import LoadingBox from "../util/LoadingBox";
 import MessageBox from "../util/MessageBox";
-import { Link } from "react-router-dom";
+import {
+  DemoBtn,
+  GithubBtn,
+  PageContainer,
+  PageHeader,
+  PageMessage,
+  PageTitle,
+  ProjectBanner,
+  ProjectCard,
+  ProjectLinkContainer,
+  ProjectsContainer,
+  ProjectSubtitle,
+  ProjectThumbnail,
+  ProjectTitle,
+  YoutubeBtn,
+} from "../pages.styled";
 
 function Projects() {
   const dispatch = useDispatch();
@@ -21,79 +32,50 @@ function Projects() {
   }, [dispatch]);
 
   return (
-    <div className="project-section">
-      <div className="section-title">
-        <Slide top>
-          <h1>Projects</h1>
-        </Slide>
-        <span>What I Have Done</span>
-      </div>
+    <PageContainer>
+      <PageHeader>
+        <PageTitle>Projects</PageTitle>
+        <PageMessage>What i have done</PageMessage>
+      </PageHeader>
       <Fade bottom>
-      <div className="project-container">
-        {loading ? (
-          <LoadingBox></LoadingBox>
-        ) : errors ? (
-          <MessageBox>{errors}</MessageBox>
-        ) : (
-          projects.length > 0 && projects.map((item) => (
-            
-              <div key={item.id} className="project-card">
-                <img
-                  src={item.image}
-                  className="project-thumbnail"
-                  alt={item.title}
-                />
-                <div className="project-card-info"
-                >
-                  <span>
-                    <Link to={`/project/${item._id}`} className="project-name">
-                      {item.title}
-                    </Link>
-                  </span>
-                  <span className="project-desc">{item.description}</span>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      gap: "10px",
-                      marginTop: "1rem",
-                      paddingBottom: "1rem",
-                    }}
-                  >
-                    {item.demo && (
-                      <Button variant="primary" size="sm" href={item.demo}>
-                        Demo
-                      </Button>
-                    )}
-                    {item.youtube && (
-                      <Button variant="danger" size="sm" href={item.youtube}>
-                        Youtube
-                      </Button>
-                    )}
-                    {item.youtube && (
-                      <Button variant="success" size="sm" href={item.github}>
-                        Github
-                      </Button>
-                    )}
-                  </div>
-                </div>
-              </div>
-            
-          ))
-        )}
-      </div>
+        <ProjectsContainer>
+          {loading ? (
+            <LoadingBox/>
+          ) : errors ? (
+            <MessageBox>{errors}</MessageBox>
+          ) : (
+            projects.length > 0 &&
+            projects.map((item) => (
+              <ProjectCard key={item.id}>
+                <ProjectThumbnail src={item.image} alt={item.title} />
+                <ProjectTitle to={`/project/${item._id}`}>
+                  {item.title}
+                </ProjectTitle>
+                <ProjectSubtitle>{item.description}</ProjectSubtitle>
+                <ProjectLinkContainer>
+                  {item.demo && (
+                    <DemoBtn href={item.demo} target="_blank">
+                      Demo
+                    </DemoBtn>
+                  )}
+                  {item.youtube && (
+                    <YoutubeBtn href={item.youtube} target="_blank">
+                      Youtube
+                    </YoutubeBtn>
+                  )}
+                  {item.github && (
+                    <GithubBtn href={item.github} target="_blank">
+                      Github
+                    </GithubBtn>
+                  )}
+                </ProjectLinkContainer>
+              </ProjectCard>
+            ))
+          )}
+        </ProjectsContainer>
       </Fade>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginTop: "2rem",
-        }}
-      >
-        <img style={{ width: "50%" }} src="/Images/serve.png" />
-      </div>
-    </div>
+      <ProjectBanner src="/Images/serve.png" />
+    </PageContainer>
   );
 }
 
