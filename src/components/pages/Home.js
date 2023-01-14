@@ -20,24 +20,20 @@ function Home() {
   const { mobile } = useResponsive();
   return (
     <HomeContainer>
-      <Slide left>
         <HomeLeftContainer mobile={mobile}>
           <MyName mobile={mobile}>Hi, I'm Sachin</MyName>
-          <MyJob>Software Engineer | Free Lancer</MyJob>
+          <MyJob mobile={mobile}>Software Engineer | Free Lancer</MyJob>
           <MyDescription>
-            High Level Experience in Web Design & Development
+            High Level Experience in Web Design
           </MyDescription>
           <DownloadLinkBtn href="https://sn-backend.onrender.com/api/resume" margin>
             <ButtonText>Download My CV</ButtonText>
             <DownloadIcon/>
           </DownloadLinkBtn>
         </HomeLeftContainer>
-      </Slide>
-      <Slide right>
         <HomeRightContainer>
           <HomeBanner src="/Images/homebg.png" />
         </HomeRightContainer>
-      </Slide>
     </HomeContainer>
   );
 }

@@ -11,8 +11,10 @@ import {
   SkillContainer,
   SkillDescription,
 } from "../pages.styled";
+import { useResponsive } from "../../hooks/useResponsive";
 
 function About() {
+  const { mobile } = useResponsive();
   const languages = [
     {
       id: 1,
@@ -65,7 +67,7 @@ function About() {
     <PageContainer>
       <PageHeader>
         <PageTitle>About</PageTitle>
-        <PageMessage>My Skills</PageMessage>
+        <PageMessage mobile={mobile}>My Skills</PageMessage>
       </PageHeader>
       <SkillContainer>
         <Fade bottom>

@@ -36,10 +36,11 @@ export const PageTitle = styled("h1")`
 
 export const PageMessage = styled("h1")`
   color: #666666;
-  font-size: 36px;
+  font-size: ${(props) => (props.mobile === true ? "24px" : "36px")};
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
+  margin-top: 5px;
 `;
 
 /*************************page structure and elements*******************/
@@ -125,7 +126,7 @@ export const MenuContainer = styled("div")`
 
 export const SiteLogo = styled(Link)`
   color: lightgray;
-  font-size: ${(props) => (props.mobile === true ? "1.75rem" : "2rem")};
+  font-size: ${(props) => (props.mobile === true ? "20px" : "2rem")};
   cursor: pointer;
   font-family: "Kaushan Script", cursive;
   min-width: max-content;
@@ -200,7 +201,6 @@ export const SideMenuContainer = styled("div")`
   right: 0;
   background-color: #1b262c;
   height: 100vh;
-  width: 75%;
   padding: 1rem 3rem;
   z-index: 2500;
   opacity: 0.98;
@@ -228,7 +228,6 @@ export const HomeLeftContainer = styled("div")`
   align-items: center;
   justify-content: center;
   gap: 5px;
-  position: relative;
   @media (max-width: 1300px) {
     padding-top: 4rem;
   }
@@ -245,20 +244,20 @@ export const MyName = styled("h1")`
 `;
 
 export const MyJob = styled("span")`
-  font-family: "Open Sans", cursive;
+  font-family: "Open Sans", sans-serif;
   background-image: -webkit-linear-gradient(#94d600, #1b262c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 22px;
+  font-size:  ${(props) => (props.mobile === true ? "18px" : "24px")};
   font-weight: 600;
 `;
 
 export const MyDescription = styled("p")`
-  font-family: "Comic sans", cursive;
+  font-family: "Poppins", sans-serif;
   background-image: -webkit-linear-gradient(#94d600, #1b262c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 `;
 

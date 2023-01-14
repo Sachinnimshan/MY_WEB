@@ -23,8 +23,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { contactSchema } from "../schemas/contactSchema";
 import axios from "axios";
 import swal from "sweetalert";
+import { useResponsive } from "../../hooks/useResponsive";
 
 function Contact() {
+  const { mobile } = useResponsive();
   const {
     control,
     watch,
@@ -65,7 +67,7 @@ function Contact() {
     <PageContainer>
       <PageHeader>
         <PageTitle>Contact</PageTitle>
-        <PageMessage>Leave me a message</PageMessage>
+        <PageMessage mobile={mobile}>Leave me a message</PageMessage>
       </PageHeader>
       <Slide bottom>
         <ContactContainer>

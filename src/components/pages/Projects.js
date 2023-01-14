@@ -20,10 +20,11 @@ import {
   ProjectTitle,
   YoutubeBtn,
 } from "../pages.styled";
+import { useResponsive } from "../../hooks/useResponsive";
 
 function Projects() {
   const dispatch = useDispatch();
-
+  const { mobile } = useResponsive();
   const projectList = useSelector((state) => state.projectList);
   const { loading, errors, projects } = projectList;
 
@@ -35,7 +36,7 @@ function Projects() {
     <PageContainer>
       <PageHeader>
         <PageTitle>Projects</PageTitle>
-        <PageMessage>What i have done</PageMessage>
+        <PageMessage mobile={mobile}>What i have done</PageMessage>
       </PageHeader>
       <Fade bottom>
         <ProjectsContainer>
