@@ -70,7 +70,7 @@ function Contact() {
         <PageMessage mobile={mobile}>Leave me a message</PageMessage>
       </PageHeader>
       <Slide bottom>
-        <ContactContainer>
+        <ContactContainer mobile={mobile}>
           <ContactInfoContainer>
             <ContactInfo>
               <EmailIcon />
@@ -121,7 +121,6 @@ function Contact() {
 
             <Button
               onClick={handleSubmit(handleSubmitButton)}
-              disabled={!isValid}
               margin
             >
               <ButtonText>Send Message</ButtonText>

@@ -6,6 +6,7 @@ import {
   ButtonText,
   DownloadIcon,
   DownloadLinkBtn,
+  Hellotext,
   HomeBanner,
   HomeContainer,
   HomeLeftContainer,
@@ -21,7 +22,8 @@ function Home() {
   return (
     <HomeContainer>
         <HomeLeftContainer mobile={mobile}>
-          <MyName mobile={mobile}>Hi, I'm Sachin</MyName>
+          <Hellotext>Hello,</Hellotext>
+          <MyName mobile={mobile}>I'm Sachin</MyName>
           <MyJob mobile={mobile}>Software Engineer | Free Lancer</MyJob>
           <MyDescription>
             High Level Experience in Web Design

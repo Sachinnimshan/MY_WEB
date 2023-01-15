@@ -9,7 +9,6 @@ import { FaDownload } from "react-icons/fa";
 
 /*************************page structure and elements*******************/
 export const PageContainer = styled("div")`
-  
   padding: 2rem;
   min-height: 95vh;
 `;
@@ -64,7 +63,7 @@ export const ButtonText = styled("span")`
 `;
 
 export const DownloadLinkBtn = styled("a")`
-background-image: linear-gradient(to left bottom, #94d600, #1b262c);
+  background-image: linear-gradient(to left bottom, #94d600, #1b262c);
   padding: 15px 25px;
   border: none;
   border-radius: 5px;
@@ -77,8 +76,8 @@ background-image: linear-gradient(to left bottom, #94d600, #1b262c);
 `;
 
 export const DownloadIcon = styled(FaDownload)`
-color: white;
-font-size: 1rem;
+  color: white;
+  font-size: 1rem;
 `;
 /************************* Buttons *******************/
 
@@ -101,8 +100,7 @@ const headerAnimation = keyframes`
   }
 `;
 
-export const HeaderContainer = styled("div")`
-`;
+export const HeaderContainer = styled("div")``;
 
 export const DesktopHeader = styled("div")`
   display: flex;
@@ -216,16 +214,16 @@ export const HomeContainer = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(170deg, white 50%, #94d600);
+  background: linear-gradient(170deg, white 20%, #94d600);
   gap: 2rem;
   flex-wrap: wrap;
-  min-height: 95vh;
+  min-height: 90vh;
 `;
 
 export const HomeLeftContainer = styled("div")`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: ${(props) => (props.mobile === true ? "flex-start" : "center")};
   justify-content: center;
   gap: 5px;
   @media (max-width: 1300px) {
@@ -233,8 +231,17 @@ export const HomeLeftContainer = styled("div")`
   }
 `;
 
+export const Hellotext = styled("span")`
+  font-family: "Open sans",sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  background-image: -webkit-linear-gradient(#94d600, #1b262c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
 export const MyName = styled("h1")`
-  font-size: ${(props) => (props.mobile === true ? "2em" : "4em")};
+  font-size: ${(props) => (props.mobile === true ? "2em" : "80px")};
   font-family: "Open Sans";
   font-weight: 600;
   background-image: -webkit-linear-gradient(#94d600, #1b262c);
@@ -248,7 +255,7 @@ export const MyJob = styled("span")`
   background-image: -webkit-linear-gradient(#94d600, #1b262c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size:  ${(props) => (props.mobile === true ? "18px" : "24px")};
+  font-size: ${(props) => (props.mobile === true ? "18px" : "26px")};
   font-weight: 600;
 `;
 
@@ -257,7 +264,7 @@ export const MyDescription = styled("p")`
   background-image: -webkit-linear-gradient(#94d600, #1b262c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
 `;
 
@@ -281,7 +288,7 @@ export const SkillContainer = styled("div")`
 export const SkillDescription = styled("p")`
   color: #999999;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Open Sans", cursive;
   letter-spacing: 1px;
   font-weight: 500;
@@ -294,6 +301,7 @@ export const LanguageContainer = styled("div")`
   gap: 2rem;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 `;
 
 export const LanguageCard = styled("div")``;
@@ -324,7 +332,7 @@ export const ProjectCard = styled("div")`
 
 export const ProjectThumbnail = styled("img")`
   width: 100%;
-  height: 170px;
+  max-height: 170px;
   border-radius: 5px 5px 0 0;
 `;
 
@@ -351,6 +359,7 @@ export const ProjectSubtitle = styled("span")`
   background-image: -webkit-linear-gradient(#94d600, #1b262c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 `;
 
 export const ProjectLinkContainer = styled("div")`
@@ -436,7 +445,7 @@ export const ProjectInfoTitle = styled("span")`
 
 export const ProjectInfoImage = styled("img")`
   border-radius: 5px;
-  height: 250px;
+  max-height: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-width: 100%;
 `;
@@ -455,7 +464,7 @@ export const ProjectInfoStack = styled("div")`
 `;
 
 export const ProjectInfoHeader = styled("span")`
-  font-size: 24px;
+  font-size: 18px;
   color: #999999;
   font-family: "Open sans", sans-serif;
   font-weight: 600;
@@ -503,7 +512,7 @@ export const ReviewFormContainer = styled("div")`
 `;
 
 export const ReviewFormHeader = styled("span")`
-  font-size: 24px;
+  font-size: 20px;
   color: #999999;
   font-family: "Open sans", sans-serif;
   font-weight: 600;
@@ -519,7 +528,7 @@ export const ReviewsContainer = styled("div")`
 `;
 
 export const ReviewsHeader = styled("span")`
-  font-size: 24px;
+  font-size: 20px;
   color: #999999;
   font-family: "Open sans", sans-serif;
   font-weight: 600;
@@ -553,7 +562,7 @@ export const ReviewMessage = styled("span")`
 export const ContactContainer = styled("div")`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: ${(props) => (props.mobile === true ? "flex-start" : "center")};;
   gap: 5rem;
 `;
 
@@ -566,12 +575,11 @@ export const ContactInfoContainer = styled("div")`
 export const ContactInfo = styled("div")`
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   gap: 10px;
 `;
 
 export const ContactInfoTitle = styled("span")`
-  font-size: 22px;
+  font-size: 18px;
   color: #999999;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -592,49 +600,47 @@ export const ContactFormContainer = styled("div")`
 `;
 
 export const EmailIcon = styled(HiOutlineMail)`
-color: #94D600;
-    font-size: 2rem;
+  color: #94d600;
+  font-size: 2rem;
 `;
 
 export const AvailableHoursIcon = styled(AiOutlineClockCircle)`
-color: #94D600;
-    font-size: 2rem;
+  color: #94d600;
+  font-size: 2rem;
 `;
-
 
 /************************* Contact *******************/
 
 /************************* Footer *******************/
 export const FooterContainer = styled("div")`
   background-color: #1b262c;
-  padding: 0.5rem 1.75rem;
+  padding: 1rem 1.75rem;
   align-items: center;
   display: flex;
-  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-`;
-
-export const CopyRightContainer = styled("span")`
   font-size: 13px;
   color: gray;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  justify-content: center;
 `;
 
-export const MyNameLink = styled('a')`
-font-family: "Poppins",sans-serif;
-font-family: 13px;
-font-weight: 400;
-color: gray;
-transition: all ease-in-out 0.3s;
-text-decoration: none;
-&:hover{
-  text-decoration: none;
-  color: #94d600;
-  cursor: pointer;
+export const CopyRightItems = styled("span")``;
+
+export const MyNameLink = styled("a")`
+  font-family: "Poppins", sans-serif;
+  font-family: 13px;
+  font-weight: 400;
+  color: gray;
   transition: all ease-in-out 0.3s;
-}
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: #94d600;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+  }
 `;
 
 /************************* Footer *******************/

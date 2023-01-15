@@ -40,7 +40,7 @@ function ProjectInfo(props) {
   return (
     <PageContainer>
       {loading ? (
-        <LoadingBox></LoadingBox>
+        <LoadingBox/>
       ) : errors ? (
         <MessageBox>{errors}</MessageBox>
       ) : (

@@ -1,6 +1,7 @@
 import React from "react";
 import {
   CopyRightContainer,
+  CopyRightItems,
   FooterContainer,
   MyNameLink,
   SocialIconContainer,
@@ -11,12 +12,11 @@ import { socialIcons } from "../util/social";
 function Footer() {
   return (
     <FooterContainer>
-      <CopyRightContainer>
-        © Copyright | All Rights Reserved | Designend and Developed by{" "}
-        <MyNameLink>Sachin Nimshan</MyNameLink>
-      </CopyRightContainer>
-
-      <SocialIconContainer>
+        <CopyRightItems>Copyright | All Rights Reserved</CopyRightItems>
+        <CopyRightItems>
+          Designend and Developed by <MyNameLink>Sachin Nimshan</MyNameLink>
+        </CopyRightItems>
+        <SocialIconContainer>
         {socialIcons &&
           socialIcons.map((item) => (
             <SocialIcons key={item.name} href={item.url}>
