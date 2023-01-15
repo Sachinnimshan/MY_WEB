@@ -114,6 +114,8 @@ function Contact() {
                 <Input
                   label="Your Message"
                   error={touchedFields.message && errors.message?.message}
+                  multiline
+                  rows={3}
                   {...field}
                 />
               )}

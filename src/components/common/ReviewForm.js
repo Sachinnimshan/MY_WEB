@@ -12,7 +12,6 @@ import { useForm, Controller } from "react-hook-form";
 import { reviewSchema } from "../schemas/reviewSchema";
 import Input from "./Input/input";
 
-
 function ReviewForm(props) {
   const dispatch = useDispatch();
   const [projectID, setProjectID] = useState(props.projectID);
@@ -38,11 +37,11 @@ function ReviewForm(props) {
   const reviewpost = useSelector((state) => state.reviewpost);
   const { loading, success, newReview } = reviewpost;
 
-  const clearValues =()=>{
-      setValue("name", "");
-      setValue("email", "");
-      setValue("comment", "");
-  }
+  const clearValues = () => {
+    setValue("name", "");
+    setValue("email", "");
+    setValue("comment", "");
+  };
 
   const handleSubmitButton = (e) => {
     e.preventDefault();
@@ -86,8 +85,10 @@ function ReviewForm(props) {
         name="comment"
         render={({ field }) => (
           <Input
-            label="Your Message"
+            label="Your Comment"
             error={touchedFields.comment && errors.comment?.message}
+            multiline
+            rows={3}
             {...field}
           />
         )}

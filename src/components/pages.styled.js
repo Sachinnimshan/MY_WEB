@@ -100,6 +100,15 @@ const headerAnimation = keyframes`
   }
 `;
 
+const homeBannerAnimation = keyframes`
+from {
+  transform: translateY(0px);
+}
+to {
+  transform: translateY(20px);
+}
+`;
+
 export const HeaderContainer = styled("div")``;
 
 export const DesktopHeader = styled("div")`
@@ -274,6 +283,10 @@ export const HomeRightContainer = styled("div")`
 
 export const HomeBanner = styled("img")`
   max-width: 100%;
+  animation-name: ${homeBannerAnimation};
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate
 `;
 
 /************************* Home *******************/
@@ -502,6 +515,8 @@ export const ReviewMainContainer = styled("div")`
   margin: auto;
   border-radius: 5px;
   margin-top: 2rem;
+  max-width: 1200px;
+  width: 100%;
 `;
 
 export const ReviewFormContainer = styled("div")`
