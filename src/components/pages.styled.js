@@ -233,7 +233,7 @@ export const HomeContainer = styled("div")`
 export const HomeLeftContainer = styled("div")`
   display: flex;
   flex-direction: column;
-  align-items: ${(props) => (props.mobile === true ? "flex-start" : "center")};
+  align-items: center;
   justify-content: center;
   gap: 5px;
   @media (max-width: 1300px) {
@@ -265,7 +265,7 @@ export const MyJob = styled("span")`
   background-image: -webkit-linear-gradient(#94d600, #1b262c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: ${(props) => (props.mobile === true ? "18px" : "26px")};
+  font-size: ${(props) => (props.mobile === true ? "18px" : "32px")};
   font-weight: 600;
 `;
 
@@ -282,6 +282,7 @@ export const HomeRightContainer = styled("div")``;
 
 export const HomeBanner = styled("img")`
   width: 600px;
+  max-width: 100%;
   animation-name: ${BannerAnimation};
   animation-iteration-count: infinite;
   animation-duration: 3s;
