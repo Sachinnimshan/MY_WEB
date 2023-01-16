@@ -19,7 +19,7 @@ function Footer() {
         <SocialIconContainer>
         {socialIcons &&
           socialIcons.map((item) => (
-            <SocialIcons key={item.name} href={item.url}>
+            <SocialIcons key={item.name} href={item.url} target="_blank" aria-label={item.name}>
               {item.icon}
             </SocialIcons>
           ))}

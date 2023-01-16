@@ -18,12 +18,9 @@ function ReviewForm(props) {
 
   const {
     control,
-    watch,
     formState: { errors, touchedFields, isValid },
     setValue,
     getValues,
-    handleSubmit,
-    trigger,
   } = useForm({
     mode: "all",
     resolver: yupResolver(reviewSchema),
@@ -35,7 +32,6 @@ function ReviewForm(props) {
   });
 
   const reviewpost = useSelector((state) => state.reviewpost);
-  const { loading, success, newReview } = reviewpost;
 
   const clearValues = () => {
     setValue("name", "");

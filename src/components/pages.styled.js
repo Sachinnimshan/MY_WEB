@@ -642,10 +642,11 @@ export const FooterContainer = styled("div")`
   gap: 1rem;
   flex-wrap: wrap;
   font-size: 12.5px;
-  color: gray;
+  color: lightgray;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   justify-content: center;
+  letter-spacing: 0.5px;
 `;
 
 export const CopyRightItems = styled("span")``;
@@ -654,7 +655,7 @@ export const MyNameLink = styled("a")`
   font-family: "Poppins", sans-serif;
   font-family: 13px;
   font-weight: 400;
-  color: gray;
+  color: lightgray;
   transition: all ease-in-out 0.3s;
   text-decoration: none;
   &:hover {

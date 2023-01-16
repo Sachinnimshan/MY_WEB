@@ -30,12 +30,9 @@ function Contact() {
   const { mobile } = useResponsive();
   const {
     control,
-    watch,
     formState: { errors, touchedFields, isValid },
-    setValue,
     getValues,
     handleSubmit,
-    trigger,
   } = useForm({
     mode: "all",
     resolver: yupResolver(contactSchema),
@@ -123,7 +120,7 @@ function Contact() {
               )}
             />
 
-            <Button onClick={handleSubmit(handleSubmitButton)} margin>
+            <Button onClick={handleSubmit(handleSubmitButton)} margin disabled={!isValid}>
               <ButtonText>Send Message</ButtonText>
             </Button>
           </ContactFormContainer>
