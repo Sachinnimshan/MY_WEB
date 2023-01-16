@@ -34,7 +34,7 @@ function Home() {
           </DownloadLinkBtn>
         </HomeLeftContainer>
         <HomeRightContainer>
-          <HomeBanner src="/Images/homebg.png" />
+          <HomeBanner src="/Images/home.png" alt="Home"/>
         </HomeRightContainer>
     </HomeContainer>
   );

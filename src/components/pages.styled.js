@@ -113,7 +113,7 @@ export const HeaderContainer = styled("div")``;
 
 export const DesktopHeader = styled("div")`
   display: flex;
-  padding: 0.65rem 1.75rem;
+  padding: ${(props) => (props.mobile === true ? "0.75rem 1.75rem" : "0.75rem 3rem")};
   align-items: center;
   background-color: #1b262c;
   justify-content: space-between;
@@ -133,7 +133,7 @@ export const MenuContainer = styled("div")`
 
 export const SiteLogo = styled(Link)`
   color: lightgray;
-  font-size: ${(props) => (props.mobile === true ? "20px" : "2rem")};
+  font-size: ${(props) => (props.mobile === true ? "24px" : "2rem")};
   cursor: pointer;
   font-family: "Kaushan Script", cursive;
   min-width: max-content;
@@ -223,7 +223,7 @@ export const HomeContainer = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(170deg, white 20%, #94d600);
+  background: linear-gradient(170deg, white 25%, #94d600);
   gap: 2rem;
   flex-wrap: wrap;
   min-height: 90vh;
@@ -241,7 +241,7 @@ export const HomeLeftContainer = styled("div")`
 `;
 
 export const Hellotext = styled("span")`
-  font-family: "Open sans",sans-serif;
+  font-family: "Open sans", sans-serif;
   font-weight: 600;
   font-size: 18px;
   background-image: -webkit-linear-gradient(#94d600, #1b262c);
@@ -277,16 +277,15 @@ export const MyDescription = styled("p")`
   font-weight: 500;
 `;
 
-export const HomeRightContainer = styled("div")`
-  margin-top: 4rem;
-`;
+export const HomeRightContainer = styled("div")``;
 
 export const HomeBanner = styled("img")`
-  max-width: 100%;
+  max-width: 600px;
+  width: 100%;
   animation-name: ${homeBannerAnimation};
   animation-iteration-count: infinite;
   animation-duration: 3s;
-  animation-direction: alternate
+  animation-direction: alternate;
 `;
 
 /************************* Home *******************/
@@ -420,8 +419,9 @@ export const GithubBtn = styled("a")`
 `;
 
 export const ProjectBanner = styled("img")`
-  max-width: 100%;
-  margin-top: 2rem;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
 `;
 
 /************************* Projects *******************/
@@ -510,13 +510,9 @@ export const ReviewMainContainer = styled("div")`
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  border: 1px solid #f0f0f0;
-  padding: 1rem;
   margin: auto;
   border-radius: 5px;
-  margin-top: 2rem;
-  max-width: 1200px;
-  width: 100%;
+  margin-top: 3rem;
 `;
 
 export const ReviewFormContainer = styled("div")`
@@ -577,20 +573,29 @@ export const ReviewMessage = styled("span")`
 export const ContactContainer = styled("div")`
   display: flex;
   flex-wrap: wrap;
-  justify-content: ${(props) => (props.mobile === true ? "flex-start" : "center")};;
-  gap: 5rem;
+  justify-content: center;
+  gap: 3rem;
+`;
+
+export const ContactBanner = styled("img")`
+  max-width: 500px;
+  width: 100%;
+  display: flex;
 `;
 
 export const ContactInfoContainer = styled("div")`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 `;
 
 export const ContactInfo = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 1rem;
+  border: 2px solid #94d600;
+  border-radius: 5px;
 `;
 
 export const ContactInfoTitle = styled("span")`
@@ -616,12 +621,12 @@ export const ContactFormContainer = styled("div")`
 
 export const EmailIcon = styled(HiOutlineMail)`
   color: #94d600;
-  font-size: 2rem;
+  font-size: ${(props) => (props.mobile === true ? "1.5rem" : "2.5rem")}; ;
 `;
 
 export const AvailableHoursIcon = styled(AiOutlineClockCircle)`
   color: #94d600;
-  font-size: 2rem;
+  font-size: ${(props) => (props.mobile === true ? "1.5rem" : "2.5rem")}; ;
 `;
 
 /************************* Contact *******************/
@@ -659,3 +664,17 @@ export const MyNameLink = styled("a")`
 `;
 
 /************************* Footer *******************/
+/************************* 404 Not found *******************/
+export const NotFoundContainer = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+`;
+
+export const NotFoundBanner = styled("img")`
+  max-width: 600px;
+  width: 100%;
+`;
+
+/************************* 404 Not found *******************/

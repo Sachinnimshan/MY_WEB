@@ -16,6 +16,7 @@ import {
   ContactInfoSubtitle,
   EmailIcon,
   AvailableHoursIcon,
+  ContactBanner,
 } from "../pages.styled";
 import { useForm, Controller } from "react-hook-form";
 import Input from "../common/Input/input";
@@ -70,7 +71,9 @@ function Contact() {
         <PageMessage mobile={mobile}>Leave me a message</PageMessage>
       </PageHeader>
       <Slide bottom>
-        <ContactContainer mobile={mobile}>
+        
+        <ContactContainer>
+        
           <ContactInfoContainer>
             <ContactInfo>
               <EmailIcon />
@@ -84,6 +87,7 @@ function Contact() {
               <ContactInfoSubtitle>9:00 AM - 05:00 PM</ContactInfoSubtitle>
             </ContactInfo>
           </ContactInfoContainer>
+          <ContactBanner src="/Images/contact.png"/>
           <ContactFormContainer>
             <Controller
               control={control}

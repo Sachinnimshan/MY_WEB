@@ -73,9 +73,10 @@ function Projects() {
               </ProjectCard>
             ))
           )}
+          <ProjectBanner src="/Images/projects.png" />
         </ProjectsContainer>
       </Fade>
-      <ProjectBanner src="/Images/serve.png" />
+      
     </PageContainer>
   );
 }

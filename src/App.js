@@ -8,9 +8,11 @@ import Footer from "./components/common/Footer";
 import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
 import { CgArrowUpR } from "react-icons/cg";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProjectInfo from "./components/pages/ProjectInfo";
 import Header from "./components/common/Header";
+import ScrollToTop from "./hooks/scrollToTop";
+import NotFound from "./components/pages/404";
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -32,18 +34,23 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Header />
-        <CgArrowUpR
-          className="scrollTop"
-          onClick={scrollTop}
-          style={{ height: 40, display: showScroll ? "flex" : "none" }}
-        />
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/project/:id" component={ProjectInfo} />
-        <Footer />
+        <Switch>
+        <ScrollToTop>
+          <Header />
+          <CgArrowUpR
+            className="scrollTop"
+            onClick={scrollTop}
+            style={{ height: 40, display: showScroll ? "flex" : "none" }}
+          />
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/project/:id" component={ProjectInfo} />
+          {/* <Route component={NotFound}/> */}
+          <Footer />
+        </ScrollToTop>
+        </Switch>
       </Router>
     </div>
   );

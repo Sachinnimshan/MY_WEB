@@ -45,7 +45,7 @@ function Header() {
   return (
     <HeaderContainer>
       {!menu && (
-        <DesktopHeader>
+        <DesktopHeader mobile={mobile}>
           <SiteLogo to="/" mobile={mobile}>
             Sachin Nimshan
           </SiteLogo>
