@@ -1,12 +1,21 @@
-import {IoLogoInstagram} from 'react-icons/io';
-import {AiOutlineFacebook, AiOutlineYoutube, AiFillGithub} from 'react-icons/ai';
-
+import { IoLogoInstagram } from "react-icons/io";
+import {
+  AiOutlineFacebook,
+  AiOutlineYoutube,
+  AiFillGithub,
+  AiOutlineLinkedin,
+} from "react-icons/ai";
 
 export const socialIcons = [
   {
     name: "Youtube",
     icon: <AiOutlineYoutube />,
     url: "https://www.youtube.com/@SachinNimshan",
+  },
+  {
+    name: "Linkedin",
+    icon: <AiOutlineLinkedin />,
+    url: "https://www.linkedin.com/in/sachin-nimshan-187a3614b/",
   },
   {
     name: "Github",

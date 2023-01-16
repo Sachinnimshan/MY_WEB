@@ -71,9 +71,7 @@ function Contact() {
         <PageMessage mobile={mobile}>Leave me a message</PageMessage>
       </PageHeader>
       <Slide bottom>
-        
         <ContactContainer>
-        
           <ContactInfoContainer>
             <ContactInfo>
               <EmailIcon />
@@ -87,7 +85,7 @@ function Contact() {
               <ContactInfoSubtitle>9:00 AM - 05:00 PM</ContactInfoSubtitle>
             </ContactInfo>
           </ContactInfoContainer>
-          <ContactBanner src="/Images/contact.png"/>
+          <ContactBanner src="/Images/contact.png" />
           <ContactFormContainer>
             <Controller
               control={control}
@@ -125,10 +123,7 @@ function Contact() {
               )}
             />
 
-            <Button
-              onClick={handleSubmit(handleSubmitButton)}
-              margin
-            >
+            <Button onClick={handleSubmit(handleSubmitButton)} margin>
               <ButtonText>Send Message</ButtonText>
             </Button>
           </ContactFormContainer>

@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProjectInfo } from "../../store/actions/projects";
 import LoadingBox from "../util/LoadingBox";
 import MessageBox from "../util/MessageBox";
-import "../page.css";
-import { FiCheckCircle } from "react-icons/fi";
 
 import {
   CheckCircle,
@@ -20,7 +18,6 @@ import {
   ProjectInfoStackChips,
   ProjectInfoTitle,
   ProjectInfoTop,
-  ProjectLinkContainer,
   YoutubeBtn,
 } from "../pages.styled";
 import Reviews from "../common/Reviews";

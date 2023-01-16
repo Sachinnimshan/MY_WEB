@@ -12,7 +12,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProjectInfo from "./components/pages/ProjectInfo";
 import Header from "./components/common/Header";
 import ScrollToTop from "./hooks/scrollToTop";
-import NotFound from "./components/pages/404";
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);

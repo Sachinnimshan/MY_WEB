@@ -100,7 +100,7 @@ const headerAnimation = keyframes`
   }
 `;
 
-const homeBannerAnimation = keyframes`
+const BannerAnimation = keyframes`
 from {
   transform: translateY(0px);
 }
@@ -113,7 +113,8 @@ export const HeaderContainer = styled("div")``;
 
 export const DesktopHeader = styled("div")`
   display: flex;
-  padding: ${(props) => (props.mobile === true ? "0.75rem 1.75rem" : "0.75rem 3rem")};
+  padding: ${(props) =>
+    props.mobile === true ? "0.75rem 1.75rem" : "0.75rem 3rem"};
   align-items: center;
   background-color: #1b262c;
   justify-content: space-between;
@@ -280,9 +281,8 @@ export const MyDescription = styled("p")`
 export const HomeRightContainer = styled("div")``;
 
 export const HomeBanner = styled("img")`
-  max-width: 600px;
-  width: 100%;
-  animation-name: ${homeBannerAnimation};
+  width: 600px;
+  animation-name: ${BannerAnimation};
   animation-iteration-count: infinite;
   animation-duration: 3s;
   animation-direction: alternate;
@@ -581,6 +581,10 @@ export const ContactBanner = styled("img")`
   max-width: 500px;
   width: 100%;
   display: flex;
+  animation-name: ${BannerAnimation};
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 `;
 
 export const ContactInfoContainer = styled("div")`
@@ -593,9 +597,6 @@ export const ContactInfo = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 1rem;
-  border: 2px solid #94d600;
-  border-radius: 5px;
 `;
 
 export const ContactInfoTitle = styled("span")`
@@ -639,7 +640,7 @@ export const FooterContainer = styled("div")`
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  font-size: 13px;
+  font-size: 12.5px;
   color: gray;
   font-family: "Poppins", sans-serif;
   font-weight: 400;

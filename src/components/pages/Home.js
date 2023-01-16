@@ -1,7 +1,4 @@
 import React from "react";
-import "../page.css";
-import { Slide } from "react-reveal";
-import { FaDownload } from "react-icons/fa";
 import {
   ButtonText,
   DownloadIcon,

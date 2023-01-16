@@ -1,10 +1,4 @@
-import React, { useState, useRef } from "react";
-import { IoLogoInstagram } from "react-icons/io";
-import {
-  AiOutlineFacebook,
-  AiOutlineYoutube,
-  AiFillGithub,
-} from "react-icons/ai";
+import React, { useState } from "react";
 import {
   CloseIcon,
   DesktopHeader,

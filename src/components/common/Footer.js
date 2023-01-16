@@ -14,7 +14,7 @@ function Footer() {
     <FooterContainer>
         <CopyRightItems>Copyright | All Rights Reserved</CopyRightItems>
         <CopyRightItems>
-          Designend and Developed by <MyNameLink>Sachin Nimshan</MyNameLink>
+          Designend and Developed by <MyNameLink href="https://www.linkedin.com/in/sachin-nimshan-187a3614b/" target="_blank">Sachin Nimshan</MyNameLink>
         </CopyRightItems>
         <SocialIconContainer>
         {socialIcons &&
