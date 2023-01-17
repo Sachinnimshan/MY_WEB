@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Fade } from "react-reveal";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllProjects } from "../../store/actions/projects";
 import LoadingBox from "../util/LoadingBox";
@@ -38,7 +37,6 @@ function Projects() {
         <PageTitle>Projects</PageTitle>
         <PageMessage mobile={mobile}>What i have done</PageMessage>
       </PageHeader>
-      <Fade bottom>
         <ProjectsContainer>
           {loading ? (
             <LoadingBox />
@@ -78,7 +76,6 @@ function Projects() {
             alt="Projects"
           />
         </ProjectsContainer>
-      </Fade>
     </PageContainer>
   );
 }

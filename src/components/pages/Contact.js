@@ -1,6 +1,4 @@
 import React from "react";
-
-import { Slide } from "react-reveal";
 import {
   ButtonText,
   PageContainer,
@@ -67,7 +65,6 @@ function Contact() {
         <PageTitle>Contact</PageTitle>
         <PageMessage mobile={mobile}>Leave me a message</PageMessage>
       </PageHeader>
-      <Slide bottom>
         <ContactContainer>
           <ContactInfoContainer>
             <ContactInfo>
@@ -132,7 +129,6 @@ function Contact() {
             </Button>
           </ContactFormContainer>
         </ContactContainer>
-      </Slide>
     </PageContainer>
   );
 }

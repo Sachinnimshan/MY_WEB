@@ -31,7 +31,6 @@ function ReviewForm(props) {
     },
   });
 
-  const reviewpost = useSelector((state) => state.reviewpost);
 
   const clearValues = () => {
     setValue("name", "");

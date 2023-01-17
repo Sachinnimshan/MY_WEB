@@ -34,7 +34,7 @@ function Header() {
     if (menu && !mobile) {
       closeMenu();
     }
-  }, [mobile]);
+  }, [mobile, menu]);
 
   return (
     <HeaderContainer>

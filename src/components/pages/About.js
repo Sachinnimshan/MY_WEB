@@ -1,5 +1,4 @@
 import React from "react";
-import { Bounce, Fade } from "react-reveal";
 import {
   LanguageCard,
   LanguageContainer,
@@ -70,14 +69,11 @@ function About() {
         <PageMessage mobile={mobile}>My Skills</PageMessage>
       </PageHeader>
       <SkillContainer>
-        <Fade bottom>
           <SkillDescription>
             I have more than 5+ years' experience building softwares in
             different programming languages since 2016. Below is a quick
             overview of my main technical skill sets and technologies I use.
           </SkillDescription>
-        </Fade>
-        <Bounce bottom cascade>
           <LanguageContainer>
             {languages.map((item) => (
               <LanguageCard key={item.id}>
@@ -85,7 +81,6 @@ function About() {
               </LanguageCard>
             ))}
           </LanguageContainer>
-        </Bounce>
       </SkillContainer>
     </PageContainer>
   );

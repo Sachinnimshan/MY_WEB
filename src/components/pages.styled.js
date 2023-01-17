@@ -318,6 +318,8 @@ export const LanguageContainer = styled("div")`
   padding: 2rem;
 `;
 
+
+
 export const LanguageCard = styled("div")``;
 export const LanguageImage = styled("img")`
   width: 10rem;

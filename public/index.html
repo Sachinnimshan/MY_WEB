@@ -19,7 +19,35 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
-    
+    <style>
+      .loader-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #1b262c;
+      }
+      .loader {
+        border: 10px solid #f3f3f3;
+        border-top: 10px solid #94d600;
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+        animation: spin 0.5s linear infinite;
+      }
+      
+      @keyframes spin {
+        0%  { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .myname{
+        color: #94d600;
+        position: fixed;
+        font-size: 4rem;
+      }
+      </style>
     
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -35,6 +63,10 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    
+    <div class="loader-container">
+      <div class="loader">
+      </div>
+      <span class="myname">SN</span>
+   </div>
   </body>
 </html>

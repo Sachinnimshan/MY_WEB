@@ -12,9 +12,15 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProjectInfo from "./components/pages/ProjectInfo";
 import Header from "./components/common/Header";
 import ScrollToTop from "./hooks/scrollToTop";
+import { useEffect } from "react";
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
+  const [showLoading, setShowLoading] = useState(true);
+
+  const dummyRequest = () => {
+    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  };
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -30,25 +36,39 @@ function App() {
 
   window.addEventListener("scroll", checkScrollTop);
 
+  useEffect(() => {
+    dummyRequest().then(() => {
+      const el = document.querySelector(".loader-container");
+      if (el) {
+        el.remove();
+        setShowLoading(!showLoading);
+      }
+    });
+  }, []);
+
+  if (showLoading) {
+    return null;
+  }
+
   return (
     <div className="app">
       <Router>
         <Switch>
-        <ScrollToTop>
-          <Header />
-          <CgArrowUpR
-            className="scrollTop"
-            onClick={scrollTop}
-            style={{ height: 40, display: showScroll ? "flex" : "none" }}
-          />
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/project/:id" component={ProjectInfo} />
-          {/* <Route component={NotFound}/> */}
-          <Footer />
-        </ScrollToTop>
+          <ScrollToTop>
+            <Header />
+            <CgArrowUpR
+              className="scrollTop"
+              onClick={scrollTop}
+              style={{ height: 40, display: showScroll ? "flex" : "none" }}
+            />
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/project/:id" component={ProjectInfo} />
+            {/* <Route component={NotFound}/> */}
+            <Footer />
+          </ScrollToTop>
         </Switch>
       </Router>
     </div>
