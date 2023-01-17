@@ -44,7 +44,7 @@ function ProjectInfo(props) {
         <ProjectInfoContainer>
           <ProjectInfoTitle>{projectInfo.title}</ProjectInfoTitle>
           <ProjectInfoTop>
-            <ProjectInfoImage src={projectInfo.image} />
+            <ProjectInfoImage src={projectInfo.image} alt={projectInfo.title}/>
             <ProjectInfoStack>
               <ProjectInfoHeader>Check my work</ProjectInfoHeader>
               <ProjectInfoBtnContainer>

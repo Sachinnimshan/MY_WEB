@@ -281,7 +281,8 @@ export const MyDescription = styled("p")`
 export const HomeRightContainer = styled("div")``;
 
 export const HomeBanner = styled("img")`
-  width: 600px;
+  width: ${((props)=> props.mobile === true ? "100%" : "600px")};
+  height: ${((props)=> props.mobile === true ? "auto" : "600px")};
   max-width: 100%;
   animation-name: ${BannerAnimation};
   animation-iteration-count: infinite;
@@ -299,7 +300,7 @@ export const SkillContainer = styled("div")`
 `;
 
 export const SkillDescription = styled("p")`
-  color: #999999;
+  color: #666666;
   text-align: center;
   font-size: 16px;
   font-family: "Open Sans", cursive;
@@ -479,7 +480,7 @@ export const ProjectInfoStack = styled("div")`
 
 export const ProjectInfoHeader = styled("span")`
   font-size: 18px;
-  color: #999999;
+  color: #666666;
   font-family: "Open sans", sans-serif;
   font-weight: 600;
 `;
@@ -495,7 +496,7 @@ export const ProjectInfoStackChips = styled("div")`
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #999999;
+  color: #666666;
   font-size: 16px;
   font-weight: 500;
   font-family: "Open sans", sans-serif;
@@ -525,7 +526,7 @@ export const ReviewFormContainer = styled("div")`
 
 export const ReviewFormHeader = styled("span")`
   font-size: 20px;
-  color: #999999;
+  color: #666666;
   font-family: "Open sans", sans-serif;
   font-weight: 600;
   margin: 0 0 1rem 0;
@@ -541,7 +542,7 @@ export const ReviewsContainer = styled("div")`
 
 export const ReviewsHeader = styled("span")`
   font-size: 20px;
-  color: #999999;
+  color: #666666;
   font-family: "Open sans", sans-serif;
   font-weight: 600;
 `;
@@ -556,13 +557,13 @@ export const ReviewItem = styled("div")`
 `;
 
 export const ReviewerName = styled("span")`
-  color: #999999;
+  color: #666666;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
 `;
 
 export const ReviewMessage = styled("span")`
-  color: #999999;
+  color: #666666;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
 `;
@@ -602,14 +603,14 @@ export const ContactInfo = styled("div")`
 
 export const ContactInfoTitle = styled("span")`
   font-size: 18px;
-  color: #999999;
+  color: #666666;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 `;
 
 export const ContactInfoSubtitle = styled("span")`
   font-size: 16px;
-  color: #999999;
+  color: #666666;
   font-family: "Open sans", sans-serif;
   font-weight: 400;
 `;

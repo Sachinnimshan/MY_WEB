@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { OutlinedInput } from "@material-ui/core";
 
 export const InputContainer = styled("div")`
   display: flex;

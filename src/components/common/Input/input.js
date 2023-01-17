@@ -18,6 +18,7 @@ function Input({ error, onBlur, onChange, value, label, ...props }) {
         onBlur={onBlur}
         onChange={onChange}
         value={value}
+        label={label}
         {...props}
       />
       {error && <ErrorLabel>{error}</ErrorLabel>}

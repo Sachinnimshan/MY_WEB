@@ -41,7 +41,7 @@ function Projects() {
       <Fade bottom>
         <ProjectsContainer>
           {loading ? (
-            <LoadingBox/>
+            <LoadingBox />
           ) : errors ? (
             <MessageBox>{errors}</MessageBox>
           ) : (
@@ -73,10 +73,12 @@ function Projects() {
               </ProjectCard>
             ))
           )}
-          <ProjectBanner src="/Images/projects.png" />
+          <ProjectBanner
+            src="https://ik.imagekit.io/ni26jldfa/pageImages/projects.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673925466720"
+            alt="Projects"
+          />
         </ProjectsContainer>
       </Fade>
-      
     </PageContainer>
   );
 }

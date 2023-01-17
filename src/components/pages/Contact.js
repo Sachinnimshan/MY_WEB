@@ -82,7 +82,10 @@ function Contact() {
               <ContactInfoSubtitle>9:00 AM - 05:00 PM</ContactInfoSubtitle>
             </ContactInfo>
           </ContactInfoContainer>
-          <ContactBanner src="/Images/contact.png" />
+          <ContactBanner
+            src="https://ik.imagekit.io/ni26jldfa/pageImages/contact.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673925469388"
+            alt="Contact"
+          />
           <ContactFormContainer>
             <Controller
               control={control}
@@ -120,7 +123,11 @@ function Contact() {
               )}
             />
 
-            <Button onClick={handleSubmit(handleSubmitButton)} margin disabled={!isValid}>
+            <Button
+              onClick={handleSubmit(handleSubmitButton)}
+              margin
+              disabled={!isValid}
+            >
               <ButtonText>Send Message</ButtonText>
             </Button>
           </ContactFormContainer>
