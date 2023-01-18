@@ -63,72 +63,74 @@ function Contact() {
     <PageContainer>
       <PageHeader>
         <PageTitle>Contact</PageTitle>
-        <PageMessage mobile={mobile} marginBottom>Leave me a message</PageMessage>
+        <PageMessage mobile={mobile} marginBottom>
+          Leave me a message
+        </PageMessage>
       </PageHeader>
-        <ContactContainer>
-          <ContactInfoContainer>
-            <ContactInfo>
-              <EmailIcon />
-              <ContactInfoTitle>Email</ContactInfoTitle>
-              <ContactInfoSubtitle>sachinnimshan@gmail.com</ContactInfoSubtitle>
-            </ContactInfo>
-            <ContactInfo>
-              <AvailableHoursIcon />
-              <ContactInfoTitle>Available hours</ContactInfoTitle>
-              <ContactInfoSubtitle>Monday - Friday</ContactInfoSubtitle>
-              <ContactInfoSubtitle>9:00 AM - 05:00 PM</ContactInfoSubtitle>
-            </ContactInfo>
-          </ContactInfoContainer>
-          <ContactBanner
-            src="https://ik.imagekit.io/ni26jldfa/pageImages/contact.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673925469388"
-            alt="Contact"
+      <ContactContainer>
+        <ContactInfoContainer>
+          <ContactInfo>
+            <EmailIcon />
+            <ContactInfoTitle>Email</ContactInfoTitle>
+            <ContactInfoSubtitle>sachinnimshan@gmail.com</ContactInfoSubtitle>
+          </ContactInfo>
+          <ContactInfo>
+            <AvailableHoursIcon />
+            <ContactInfoTitle>Available hours</ContactInfoTitle>
+            <ContactInfoSubtitle>Monday - Friday</ContactInfoSubtitle>
+            <ContactInfoSubtitle>9:00 AM - 05:00 PM</ContactInfoSubtitle>
+          </ContactInfo>
+        </ContactInfoContainer>
+        <ContactBanner
+          src="https://ik.imagekit.io/ni26jldfa/pageImages/contact.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673925469388"
+          alt="Contact"
+        />
+        <ContactFormContainer>
+          <Controller
+            control={control}
+            name="name"
+            render={({ field }) => (
+              <Input
+                label="Your Name"
+                error={touchedFields.name && errors.name?.message}
+                {...field}
+              />
+            )}
           />
-          <ContactFormContainer>
-            <Controller
-              control={control}
-              name="name"
-              render={({ field }) => (
-                <Input
-                  label="Your Name"
-                  error={touchedFields.name && errors.name?.message}
-                  {...field}
-                />
-              )}
-            />
-            <Controller
-              control={control}
-              name="email"
-              render={({ field }) => (
-                <Input
-                  label="Your Email"
-                  error={touchedFields.email && errors.email?.message}
-                  {...field}
-                />
-              )}
-            />
-            <Controller
-              control={control}
-              name="message"
-              render={({ field }) => (
-                <Input
-                  label="Your Message"
-                  error={touchedFields.message && errors.message?.message}
-                  multiline
-                  rows={3}
-                  {...field}
-                />
-              )}
-            />
+          <Controller
+            control={control}
+            name="email"
+            render={({ field }) => (
+              <Input
+                label="Your Email"
+                error={touchedFields.email && errors.email?.message}
+                {...field}
+              />
+            )}
+          />
+          <Controller
+            control={control}
+            name="message"
+            render={({ field }) => (
+              <Input
+                label="Your Message"
+                error={touchedFields.message && errors.message?.message}
+                multiline
+                rows={3}
+                {...field}
+              />
+            )}
+          />
 
-            <Button
-              onClick={handleSubmit(handleSubmitButton)}
-              margin
-              disabled={!isValid}
-            >
-              <ButtonText>Send Message</ButtonText>
-            </Button>
-          </ContactFormContainer>
-        </ContactContainer>
+          <Button
+            onClick={handleSubmit(handleSubmitButton)}
+            margin
+            disabled={!isValid}
+          >
+            <ButtonText>Send Message</ButtonText>
+          </Button>
+        </ContactFormContainer>
+      </ContactContainer>
     </PageContainer>
   );
 }

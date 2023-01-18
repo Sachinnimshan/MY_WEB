@@ -35,7 +35,9 @@ function Projects() {
     <PageContainer>
       <PageHeader>
         <PageTitle>Projects</PageTitle>
-        <PageMessage mobile={mobile} marginBottom>What i have done</PageMessage>
+        <PageMessage mobile={mobile} marginBottom>
+          What i have done
+        </PageMessage>
       </PageHeader>
       <ProjectsContainer>
         {loading && <LoadingBox />}

@@ -7,7 +7,6 @@ export const InputContainer = styled("div")`
   margin: 0 0 10px;
 `;
 
-
 export const InputLabel = styled("span")`
   font-size: 16px;
   color: #999999;

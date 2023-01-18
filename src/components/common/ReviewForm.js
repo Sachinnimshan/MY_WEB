@@ -31,7 +31,6 @@ function ReviewForm(props) {
     },
   });
 
-
   const clearValues = () => {
     setValue("name", "");
     setValue("email", "");

@@ -1,14 +1,16 @@
-import {combineReducers} from 'redux';
-import { getAllExperienceReducer } from './reducers/experienceReducer';
-import { getAllProjectsReducer, getProjectInfoReducer, getProjectReviewsReducer, postReviewReducer } from './reducers/projectReducer';
-import { userSignInReducer, userSignUpReducer } from './reducers/userReducer';
+import { combineReducers } from "redux";
+import { getAllExperienceReducer } from "./reducers/experienceReducer";
+import {
+  getAllProjectsReducer,
+  getProjectInfoReducer,
+  getProjectReviewsReducer,
+  postReviewReducer,
+} from "./reducers/projectReducer";
 
 export default combineReducers({
-    userLogin: userSignInReducer,
-    userRegister: userSignUpReducer,
-    projectList: getAllProjectsReducer,
-    projectData: getProjectInfoReducer,
-    projectReviews: getProjectReviewsReducer,
-    reviewpost: postReviewReducer,
-    experienceData: getAllExperienceReducer
+  projectList: getAllProjectsReducer,
+  projectData: getProjectInfoReducer,
+  projectReviews: getProjectReviewsReducer,
+  reviewpost: postReviewReducer,
+  experienceData: getAllExperienceReducer,
 });

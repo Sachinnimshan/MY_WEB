@@ -6,7 +6,7 @@ import { FiCheckCircle } from "react-icons/fi";
 import { AiOutlineCalendar, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaDownload } from "react-icons/fa";
-import { BsBriefcase,BsDash } from "react-icons/bs";
+import { BsBriefcase, BsDash } from "react-icons/bs";
 
 /*************************page structure and elements*******************/
 export const PageContainer = styled("div")`

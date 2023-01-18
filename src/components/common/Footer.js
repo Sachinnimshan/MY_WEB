@@ -7,18 +7,32 @@ import {
   SocialIcons,
 } from "../pages.styled";
 import { socialIcons } from "../util/social";
+import moment from "moment";
 
 function Footer() {
   return (
     <FooterContainer>
-        <CopyRightItems>Copyright | All Rights Reserved</CopyRightItems>
-        <CopyRightItems>
-          Designend and Developed by <MyNameLink href="https://www.linkedin.com/in/sachin-nimshan-187a3614b/" target="_blank">Sachin Nimshan</MyNameLink>
-        </CopyRightItems>
-        <SocialIconContainer>
+      <CopyRightItems>
+        © Copyrights {moment().year()} | All Rights Reserved
+      </CopyRightItems>
+      <CopyRightItems>
+        Designend and Developed by{" "}
+        <MyNameLink
+          href="https://www.linkedin.com/in/sachin-nimshan-187a3614b/"
+          target="_blank"
+        >
+          Sachin Nimshan
+        </MyNameLink>
+      </CopyRightItems>
+      <SocialIconContainer>
         {socialIcons &&
           socialIcons.map((item) => (
-            <SocialIcons key={item.name} href={item.url} target="_blank" aria-label={item.name}>
+            <SocialIcons
+              key={item.name}
+              href={item.url}
+              target="_blank"
+              aria-label={item.name}
+            >
               {item.icon}
             </SocialIcons>
           ))}

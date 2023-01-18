@@ -16,7 +16,6 @@ import { useEffect } from "react";
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
-  
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -31,8 +30,6 @@ function App() {
   };
 
   window.addEventListener("scroll", checkScrollTop);
-
-  
 
   return (
     <div className="app">

@@ -8,14 +8,20 @@ export const Dialog = styled(MuiDialog)`
   flex-direction: column;
 `;
 
-export const Title = styled(Typography)`
+export const Title = styled("span")`
   font-size: 18px;
   font-weight: 600;
   color: #666666;
 `;
 
-export const Body = styled(Typography)`
-font-size: 16px;
-color: #666666;
-font-weight: 400;
+export const Body = styled("span")`
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+`;
+
+export const Cta = styled("span")`
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
 `;

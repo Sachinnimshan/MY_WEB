@@ -37,14 +37,14 @@ function ProjectInfo(props) {
   return (
     <PageContainer>
       {loading ? (
-        <LoadingBox/>
+        <LoadingBox />
       ) : errors ? (
         <MessageBox>{errors}</MessageBox>
       ) : (
         <ProjectInfoContainer>
           <ProjectInfoTitle>{projectInfo.title}</ProjectInfoTitle>
           <ProjectInfoTop>
-            <ProjectInfoImage src={projectInfo.image} alt={projectInfo.title}/>
+            <ProjectInfoImage src={projectInfo.image} alt={projectInfo.title} />
             <ProjectInfoStack>
               <ProjectInfoHeader>Check my work</ProjectInfoHeader>
               <ProjectInfoBtnContainer>

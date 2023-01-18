@@ -15,7 +15,7 @@ import Experience from "../experience";
 
 function About() {
   const { mobile } = useResponsive();
-  
+
   const languages = [
     {
       id: 1,
@@ -69,7 +69,7 @@ function About() {
       <PageHeader>
         <PageTitle>About</PageTitle>
       </PageHeader>
-      <Experience/>
+      <Experience />
       <SkillContainer>
         <PageMessage mobile={mobile} marginBottom>
           Technologies I Use
