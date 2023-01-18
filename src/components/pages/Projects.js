@@ -35,47 +35,42 @@ function Projects() {
     <PageContainer>
       <PageHeader>
         <PageTitle>Projects</PageTitle>
-        <PageMessage mobile={mobile}>What i have done</PageMessage>
+        <PageMessage mobile={mobile} marginBottom>What i have done</PageMessage>
       </PageHeader>
-        <ProjectsContainer>
-          {loading ? (
-            <LoadingBox />
-          ) : errors ? (
-            <MessageBox>{errors}</MessageBox>
-          ) : (
-            projects.length > 0 &&
-            projects.map((item) => (
-              <ProjectCard key={item.id}>
-                <ProjectThumbnail src={item.image} alt={item.title} />
-                <ProjectTitle to={`/project/${item._id}`}>
-                  {item.title}
-                </ProjectTitle>
-                <ProjectSubtitle>{item.description}</ProjectSubtitle>
-                <ProjectLinkContainer>
-                  {item.demo && (
-                    <DemoBtn href={item.demo} target="_blank">
-                      Demo
-                    </DemoBtn>
-                  )}
-                  {item.youtube && (
-                    <YoutubeBtn href={item.youtube} target="_blank">
-                      Youtube
-                    </YoutubeBtn>
-                  )}
-                  {item.github && (
-                    <GithubBtn href={item.github} target="_blank">
-                      Github
-                    </GithubBtn>
-                  )}
-                </ProjectLinkContainer>
-              </ProjectCard>
-            ))
-          )}
-          <ProjectBanner
-            src="https://ik.imagekit.io/ni26jldfa/pageImages/projects.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673925466720"
-            alt="Projects"
-          />
-        </ProjectsContainer>
+      <ProjectsContainer>
+        {loading && <LoadingBox />}
+        {errors && <MessageBox>{errors}</MessageBox>}
+        {projects?.map((item) => (
+          <ProjectCard key={item.id}>
+            <ProjectThumbnail src={item.image} alt={item.title} />
+            <ProjectTitle to={`/project/${item._id}`}>
+              {item.title}
+            </ProjectTitle>
+            <ProjectSubtitle>{item.description}</ProjectSubtitle>
+            <ProjectLinkContainer>
+              {item.demo && (
+                <DemoBtn href={item.demo} target="_blank">
+                  Demo
+                </DemoBtn>
+              )}
+              {item.youtube && (
+                <YoutubeBtn href={item.youtube} target="_blank">
+                  Youtube
+                </YoutubeBtn>
+              )}
+              {item.github && (
+                <GithubBtn href={item.github} target="_blank">
+                  Github
+                </GithubBtn>
+              )}
+            </ProjectLinkContainer>
+          </ProjectCard>
+        ))}
+        <ProjectBanner
+          src="https://ik.imagekit.io/ni26jldfa/pageImages/projects.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673925466720"
+          alt="Projects"
+        />
+      </ProjectsContainer>
     </PageContainer>
   );
 }

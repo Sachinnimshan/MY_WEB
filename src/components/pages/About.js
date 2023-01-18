@@ -11,9 +11,11 @@ import {
   SkillDescription,
 } from "../pages.styled";
 import { useResponsive } from "../../hooks/useResponsive";
+import Experience from "../experience";
 
 function About() {
   const { mobile } = useResponsive();
+  
   const languages = [
     {
       id: 1,
@@ -66,21 +68,24 @@ function About() {
     <PageContainer>
       <PageHeader>
         <PageTitle>About</PageTitle>
-        <PageMessage mobile={mobile}>My Skills</PageMessage>
       </PageHeader>
+      <Experience/>
       <SkillContainer>
-          <SkillDescription>
-            I have more than 5+ years' experience building softwares in
-            different programming languages since 2016. Below is a quick
-            overview of my main technical skill sets and technologies I use.
-          </SkillDescription>
-          <LanguageContainer>
-            {languages.map((item) => (
-              <LanguageCard key={item.id}>
-                <LanguageImage  src={item.image} alt={item.text}/>
-              </LanguageCard>
-            ))}
-          </LanguageContainer>
+        <PageMessage mobile={mobile} marginBottom>
+          Technologies I Use
+        </PageMessage>
+        <SkillDescription>
+          I have more than 5+ years' experience building softwares in different
+          programming languages since 2016. Below is a quick overview of my main
+          technical skill sets and technologies I use.
+        </SkillDescription>
+        <LanguageContainer>
+          {languages.map((item) => (
+            <LanguageCard key={item.id}>
+              <LanguageImage src={item.image} alt={item.text} />
+            </LanguageCard>
+          ))}
+        </LanguageContainer>
       </SkillContainer>
     </PageContainer>
   );

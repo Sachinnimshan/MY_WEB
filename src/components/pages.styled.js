@@ -1,11 +1,12 @@
 import styled, { keyframes } from "styled-components";
-import { HiOutlineMenu } from "react-icons/hi";
+import { HiOutlineLocationMarker, HiOutlineMenu } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { VscClose } from "react-icons/vsc";
 import { FiCheckCircle } from "react-icons/fi";
-import { AiOutlineClockCircle } from "react-icons/ai";
+import { AiOutlineCalendar, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaDownload } from "react-icons/fa";
+import { BsBriefcase,BsDash } from "react-icons/bs";
 
 /*************************page structure and elements*******************/
 export const PageContainer = styled("div")`
@@ -15,14 +16,14 @@ export const PageContainer = styled("div")`
 
 export const PageHeader = styled("div")`
   text-align: center;
-  padding: 0 0 1.5rem;
+  margin-bottom: ${(props) => props.mobile === true && "1.5rem"};
   display: flex;
   align-items: center;
   flex-direction: column;
 `;
 
-export const PageTitle = styled("h1")`
-  background-image: linear-gradient(#94d600, #1b262c);
+export const PageTitle = styled("span")`
+  background: linear-gradient(#94d600, #1b262c);
   background-clip: text;
   color: white;
   letter-spacing: 0.5px;
@@ -40,6 +41,7 @@ export const PageMessage = styled("h1")`
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
   margin-top: 5px;
+  margin-bottom: ${(props) => props.marginBottom === true && "1.5rem"};
 `;
 
 /*************************page structure and elements*******************/
@@ -82,14 +84,7 @@ export const DownloadIcon = styled(FaDownload)`
 /************************* Buttons *******************/
 
 /************************* Header *******************/
-const sideMenuAnimation = keyframes`
- from {
-    right: -100%;
-  }
-  to {
-    right: 0%;
-  }
-`;
+const sideMenuAnimation = keyframes({});
 
 const headerAnimation = keyframes`
  from {
@@ -233,7 +228,7 @@ export const HomeContainer = styled("div")`
 export const HomeLeftContainer = styled("div")`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 5px;
   @media (max-width: 1300px) {
@@ -281,8 +276,8 @@ export const MyDescription = styled("p")`
 export const HomeRightContainer = styled("div")``;
 
 export const HomeBanner = styled("img")`
-  width: ${((props)=> props.mobile === true ? "100%" : "600px")};
-  height: ${((props)=> props.mobile === true ? "auto" : "600px")};
+  width: ${(props) => (props.mobile === true ? "100%" : "600px")};
+  height: ${(props) => (props.mobile === true ? "auto" : "600px")};
   max-width: 100%;
   animation-name: ${BannerAnimation};
   animation-iteration-count: infinite;
@@ -297,6 +292,7 @@ export const SkillContainer = styled("div")`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 `;
 
 export const SkillDescription = styled("p")`
@@ -304,7 +300,6 @@ export const SkillDescription = styled("p")`
   text-align: center;
   font-size: 16px;
   font-family: "Open Sans", cursive;
-  letter-spacing: 1px;
   font-weight: 500;
   line-height: 2rem;
 `;
@@ -317,8 +312,6 @@ export const LanguageContainer = styled("div")`
   align-items: center;
   padding: 2rem;
 `;
-
-
 
 export const LanguageCard = styled("div")``;
 export const LanguageImage = styled("img")`
@@ -684,3 +677,99 @@ export const NotFoundBanner = styled("img")`
 `;
 
 /************************* 404 Not found *******************/
+
+/************************* Experience *******************/
+export const ExperienceContainer = styled("div")`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 45;
+  margin-bottom: 2rem;
+`;
+
+export const ExperienceCardContainer = styled("div")`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+`;
+
+export const ExperienceCard = styled("div")`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  max-width: 400px;
+`;
+
+export const ExperienceItem = styled("div")`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+`;
+
+export const JobDuration = styled("span")`
+  font-weight: 500;
+  color: #666666;
+  font-size: 16px;
+  font-family: "Open sans", sans-serif;
+  display: flex;
+  align-items: center;
+`;
+
+export const CompanyName = styled("span")`
+  font-size: 16px;
+  color: #666666;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+`;
+
+export const JobTitle = styled("span")`
+  font-size: 18px;
+  color: #666666;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+`;
+
+export const JobKeysContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+`;
+
+export const JobKeyItem = styled("div")`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const JobKeys = styled("span")`
+  color: #666666;
+  font-weight: 400;
+  font-family: "Open sans", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+`;
+
+export const CalendarIcon = styled(AiOutlineCalendar)`
+  color: #666666;
+  font-size: 1rem;
+`;
+
+export const LocationIcon = styled(HiOutlineLocationMarker)`
+  color: #666666;
+  font-size: 1rem;
+`;
+
+export const WorkIcon = styled(BsBriefcase)`
+  color: #666666;
+  font-size: 1rem;
+`;
+
+export const KeysIcon = styled(BsDash)`
+  color: #666666;
+  font-size: 14px;
+`;
+/************************* Experience *******************/

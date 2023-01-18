@@ -16,11 +16,7 @@ import { useEffect } from "react";
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
-  const [showLoading, setShowLoading] = useState(true);
-
-  const dummyRequest = () => {
-    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-  };
+  
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -36,19 +32,7 @@ function App() {
 
   window.addEventListener("scroll", checkScrollTop);
 
-  useEffect(() => {
-    dummyRequest().then(() => {
-      const el = document.querySelector(".loader-container");
-      if (el) {
-        el.remove();
-        setShowLoading(!showLoading);
-      }
-    });
-  }, []);
-
-  if (showLoading) {
-    return null;
-  }
+  
 
   return (
     <div className="app">

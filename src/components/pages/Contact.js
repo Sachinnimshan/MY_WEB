@@ -63,7 +63,7 @@ function Contact() {
     <PageContainer>
       <PageHeader>
         <PageTitle>Contact</PageTitle>
-        <PageMessage mobile={mobile}>Leave me a message</PageMessage>
+        <PageMessage mobile={mobile} marginBottom>Leave me a message</PageMessage>
       </PageHeader>
         <ContactContainer>
           <ContactInfoContainer>
