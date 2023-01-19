@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { postReviews } from "../../store/actions/projects";
-import {
-  ButtonText,
-  Button,
-  ReviewFormContainer,
-  ReviewFormHeader,
-} from "../pages.styled";
+import { ReviewFormContainer, ReviewFormHeader } from "../pages.styled";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, Controller } from "react-hook-form";
 import { reviewSchema } from "../schemas/reviewSchema";
 import Input from "./Input/input";
+import Button from "./button/button";
 
 function ReviewForm(props) {
   const dispatch = useDispatch();
@@ -88,12 +84,12 @@ function ReviewForm(props) {
         )}
       />
       <Button
-        type="submit"
-        margin
+        dsize="large"
         disabled={!isValid}
+        marginTop
         onClick={handleSubmitButton}
       >
-        <ButtonText>Submit</ButtonText>
+        Submit
       </Button>
     </ReviewFormContainer>
   );

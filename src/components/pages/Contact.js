@@ -121,7 +121,6 @@ function Contact() {
 
           <Button
             size="large"
-            margin
             disabled={!isValid}
             marginTop
             onClick={handleSubmit(handleSubmitButton)}

@@ -820,4 +820,5 @@ export const DegreeIcon = styled(IoSchoolSharp)`
   color: #666666;
   font-size: 16px;
 `;
+
 /************************* Education *******************/
