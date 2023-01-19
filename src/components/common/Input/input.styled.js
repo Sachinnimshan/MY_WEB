@@ -8,7 +8,7 @@ export const InputContainer = styled("div")`
 `;
 
 export const InputLabel = styled("span")`
-  font-size: 16px;
+  font-size: 15px;
   color: #999999;
   font-family: "Poppins", sans-serif;
   margin-bottom: 10px;

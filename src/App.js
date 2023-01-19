@@ -13,6 +13,7 @@ import ProjectInfo from "./components/pages/ProjectInfo";
 import Header from "./components/common/Header";
 import ScrollToTop from "./hooks/scrollToTop";
 import { useEffect } from "react";
+import Skills from "./components/pages/Skills";
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -44,6 +45,7 @@ function App() {
             />
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/skills" component={Skills} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
             <Route path="/project/:id" component={ProjectInfo} />

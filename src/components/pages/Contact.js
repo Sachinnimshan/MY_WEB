@@ -1,11 +1,7 @@
 import React from "react";
 import {
-  ButtonText,
   PageContainer,
   PageHeader,
-  PageMessage,
-  PageTitle,
-  Button,
   ContactFormContainer,
   ContactContainer,
   ContactInfoContainer,
@@ -15,6 +11,7 @@ import {
   EmailIcon,
   AvailableHoursIcon,
   ContactBanner,
+  SectionTitle,
 } from "../pages.styled";
 import { useForm, Controller } from "react-hook-form";
 import Input from "../common/Input/input";
@@ -23,6 +20,7 @@ import { contactSchema } from "../schemas/contactSchema";
 import axios from "axios";
 import swal from "sweetalert";
 import { useResponsive } from "../../hooks/useResponsive";
+import Button from "../common/button/button";
 
 function Contact() {
   const { mobile } = useResponsive();
@@ -62,10 +60,9 @@ function Contact() {
   return (
     <PageContainer>
       <PageHeader>
-        <PageTitle>Contact</PageTitle>
-        <PageMessage mobile={mobile} marginBottom>
+        <SectionTitle mobile={mobile} marginBottom>
           Leave me a message
-        </PageMessage>
+        </SectionTitle>
       </PageHeader>
       <ContactContainer>
         <ContactInfoContainer>
@@ -123,11 +120,13 @@ function Contact() {
           />
 
           <Button
-            onClick={handleSubmit(handleSubmitButton)}
+            size="large"
             margin
             disabled={!isValid}
+            marginTop
+            onClick={handleSubmit(handleSubmitButton)}
           >
-            <ButtonText>Send Message</ButtonText>
+            Send Message
           </Button>
         </ContactFormContainer>
       </ContactContainer>

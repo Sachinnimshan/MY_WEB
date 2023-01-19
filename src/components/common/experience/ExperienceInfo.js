@@ -12,7 +12,7 @@ import {
   KeysIcon,
   LocationIcon,
   WorkIcon,
-} from "../pages.styled";
+} from "../../pages.styled";
 
 function ExperienceInfo(props) {
   return (

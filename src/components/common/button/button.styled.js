@@ -10,13 +10,14 @@ export const StyledButton = styled(Button)`
     line-height: 20px;
     color: #fff;
     padding: 10px 20px;
-    background-color: linear-gradient(to left bottom, #94d600, #1b262c);
+    background: linear-gradient(to left bottom, #94d600, #1b262c);
+    margin-top: ${((props)=> props.marginTop && "1rem")};
   }
 
   &.MuiButton-outlined {
-    background-color: linear-gradient(to left bottom, #94d600, #1b262c);
+    background: linear-gradient(to left bottom, #94d600, #1b262c);
     border: 2px solid #ffbfc2;
-    color: #222222 !important;
+    color: #ffffff !important;
 
     &.Mui-disabled {
       background-color: #e5e5e5;

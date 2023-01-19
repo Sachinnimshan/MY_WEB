@@ -7,10 +7,11 @@ import { AiOutlineCalendar, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaDownload } from "react-icons/fa";
 import { BsBriefcase, BsDash } from "react-icons/bs";
+import { IoSchoolSharp } from "react-icons/io5";
 
 /*************************page structure and elements*******************/
 export const PageContainer = styled("div")`
-  padding: 2rem;
+  padding: 1.5rem 2rem 2rem 2rem;
   min-height: 95vh;
 `;
 
@@ -22,26 +23,18 @@ export const PageHeader = styled("div")`
   flex-direction: column;
 `;
 
-export const PageTitle = styled("span")`
+export const SectionTitle = styled("h1")`
   background: linear-gradient(#94d600, #1b262c);
   background-clip: text;
-  color: white;
-  letter-spacing: 0.5px;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-family: "Nunito", sans-serif;
-  padding: 8px 10px;
+  color: #ffffff;
+  padding: 8px 20px;
   border-radius: 5px;
-`;
-
-export const PageMessage = styled("h1")`
-  color: #666666;
-  font-size: ${(props) => (props.mobile === true ? "24px" : "36px")};
+  font-size: ${(props) => (props.mobile === true ? "20px" : "28px")};
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
-  margin-top: 5px;
   margin-bottom: ${(props) => props.marginBottom === true && "1.5rem"};
+  border-bottom: 2px solid #e0e0e0;
 `;
 
 /*************************page structure and elements*******************/
@@ -172,6 +165,7 @@ export const MenuItem = styled(Link)`
   color: lightgray;
   transition: all ease-in-out 0.3s;
   text-decoration: none;
+  text-transform: uppercase;
   padding: ${(props) => props.mobile === true && `1rem 0`};
   &:hover {
     color: #94d600;
@@ -773,3 +767,57 @@ export const KeysIcon = styled(BsDash)`
   font-size: 14px;
 `;
 /************************* Experience *******************/
+
+/************************* Education *******************/
+export const EducationContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const EducationInfoContainer = styled("div")`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+`;
+
+export const EducationInfoCard = styled("div")`
+  display: flex;
+  flex-direction: column;
+  font-family: "Open sans", sans-serif;
+  padding: 1rem;
+  gap: 10px;
+`;
+
+export const Degreetitle = styled("span")`
+  color: #666666;
+  font-family: "Poppins", sans-serif;
+`;
+
+export const EducationInfoItem = styled("span")`
+  color: #666666;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+`;
+
+export const EduDuration = styled("span")`
+  font-size: 16px;
+  font-family: "Open sans", sans-serif;
+`;
+
+export const University = styled("span")`
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+`;
+
+export const DegreeIcon = styled(IoSchoolSharp)`
+  color: #666666;
+  font-size: 16px;
+`;
+/************************* Education *******************/

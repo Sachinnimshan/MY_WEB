@@ -6,6 +6,7 @@ import {
   getProjectReviewsReducer,
   postReviewReducer,
 } from "./reducers/projectReducer";
+import {getAllEducationReducer} from './reducers/educationReducer';
 
 export default combineReducers({
   projectList: getAllProjectsReducer,
@@ -13,4 +14,5 @@ export default combineReducers({
   projectReviews: getProjectReviewsReducer,
   reviewpost: postReviewReducer,
   experienceData: getAllExperienceReducer,
+  educationData: getAllEducationReducer
 });

@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useResponsive } from "../../hooks/useResponsive";
-import { getAllExperience } from "../../store/actions/experience";
+import { useResponsive } from "../../../hooks/useResponsive";
+import { getAllExperience } from "../../../store/actions/experience";
 import {
   ExperienceCardContainer,
   ExperienceContainer,
-  PageMessage,
-} from "../pages.styled";
-import LoadingBox from "../util/LoadingBox";
-import MessageBox from "../util/MessageBox";
+  SectionTitle,
+} from "../../pages.styled";
+import LoadingBox from "../../util/LoadingBox";
+import MessageBox from "../../util/MessageBox";
 import ExperienceInfo from "./ExperienceInfo";
 
 function Experience() {
@@ -23,9 +23,9 @@ function Experience() {
   }, [dispatch]);
   return (
     <ExperienceContainer>
-      <PageMessage mobile={mobile} marginBottom>
+      <SectionTitle mobile={mobile} marginBottom>
         My Experience
-      </PageMessage>
+      </SectionTitle>
       <ExperienceCardContainer>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}

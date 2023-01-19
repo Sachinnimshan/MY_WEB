@@ -8,8 +8,6 @@ import {
   GithubBtn,
   PageContainer,
   PageHeader,
-  PageMessage,
-  PageTitle,
   ProjectBanner,
   ProjectCard,
   ProjectLinkContainer,
@@ -17,6 +15,7 @@ import {
   ProjectSubtitle,
   ProjectThumbnail,
   ProjectTitle,
+  SectionTitle,
   YoutubeBtn,
 } from "../pages.styled";
 import { useResponsive } from "../../hooks/useResponsive";
@@ -34,10 +33,9 @@ function Projects() {
   return (
     <PageContainer>
       <PageHeader>
-        <PageTitle>Projects</PageTitle>
-        <PageMessage mobile={mobile} marginBottom>
+        <SectionTitle mobile={mobile} marginBottom>
           What i have done
-        </PageMessage>
+        </SectionTitle>
       </PageHeader>
       <ProjectsContainer>
         {loading && <LoadingBox />}
