@@ -7,8 +7,8 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEducation } from "../../../store/actions/education";
 import EducationInfo from "./EductionInfo";
-import LoadingBox from "../../util/LoadingBox";
-import MessageBox from "../../util/MessageBox";
+import LoadingBox from "../../common/LoadingBox";
+import MessageBox from "../../common/MessageBox";
 import { useResponsive } from "../../../hooks/useResponsive";
 
 

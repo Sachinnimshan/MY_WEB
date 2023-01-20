@@ -1,13 +1,13 @@
-import axios from "axios";
-import swal from "sweetalert";
-
-const BASE_API_URL = "https://sn-backend.onrender.com";
+import {
+  getAllProjectsInfo,
+  getProjectDetails,
+} from "../../helpers/api_helper";
 
 export const getAllProjects = () => async (dispatch) => {
   dispatch({ type: "ALL_PROJECTS_REQUEST" });
   try {
-    const { data } = await axios.get(`${BASE_API_URL}/api/projects`);
-    dispatch({ type: "ALL_PROJECTS_SUCCESS", payload: data });
+    const response = await getAllProjectsInfo();
+    dispatch({ type: "ALL_PROJECTS_SUCCESS", payload: response });
   } catch (error) {
     dispatch({
       type: "ALL_PROJECTS_FAIL",
@@ -22,10 +22,8 @@ export const getAllProjects = () => async (dispatch) => {
 export const getProjectInfo = (projectID) => async (dispatch) => {
   dispatch({ type: "PROJECT_INFO_REQUEST", payload: projectID });
   try {
-    const { data } = await axios.get(
-      `${BASE_API_URL}/api/projects/${projectID}`
-    );
-    dispatch({ type: "PROJECT_INFO_SUCCESS", payload: data });
+    const response = await getProjectDetails(projectID);
+    dispatch({ type: "PROJECT_INFO_SUCCESS", payload: response });
   } catch (error) {
     dispatch({
       type: "PROJECT_INFO_FAIL",
@@ -36,4 +34,3 @@ export const getProjectInfo = (projectID) => async (dispatch) => {
     });
   }
 };
-

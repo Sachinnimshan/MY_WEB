@@ -6,7 +6,7 @@ import {
   SocialIconContainer,
   SocialIcons,
 } from "../pages.styled";
-import { socialIcons } from "../util/social";
+import { socialIcons } from "../common/social";
 import moment from "moment";
 
 function Footer() {

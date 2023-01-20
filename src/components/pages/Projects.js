@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllProjects } from "../../store/actions/projects";
-import LoadingBox from "../util/LoadingBox";
-import MessageBox from "../util/MessageBox";
+import LoadingBox from "../common/LoadingBox";
+import MessageBox from "../common/MessageBox";
 import {
   DemoBtn,
   GithubBtn,

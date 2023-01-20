@@ -14,7 +14,7 @@ import {
 } from "../pages.styled";
 import { useResponsive } from "../../hooks/useResponsive";
 import { useEffect } from "react";
-import { socialIcons } from "../util/social";
+import { socialIcons } from "../common/social";
 
 function Header() {
   const { mobile } = useResponsive();

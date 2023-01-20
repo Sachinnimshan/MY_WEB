@@ -7,8 +7,8 @@ import {
   ExperienceContainer,
   SectionTitle,
 } from "../../pages.styled";
-import LoadingBox from "../../util/LoadingBox";
-import MessageBox from "../../util/MessageBox";
+import LoadingBox from "../../common/LoadingBox";
+import MessageBox from "../../common/MessageBox";
 import ExperienceInfo from "./ExperienceInfo";
 
 function Experience() {

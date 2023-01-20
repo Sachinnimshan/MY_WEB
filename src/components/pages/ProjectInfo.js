@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProjectInfo } from "../../store/actions/projects";
-import LoadingBox from "../util/LoadingBox";
-import MessageBox from "../util/MessageBox";
+import LoadingBox from "../common/LoadingBox";
+import MessageBox from "../common/MessageBox";
 import {
   CheckCircle,
   DemoBtn,
