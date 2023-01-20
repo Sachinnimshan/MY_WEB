@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./components/page.css";
 import "./App.css";
 import Home from "./components/pages/Home";
@@ -9,10 +8,8 @@ import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
 import { CgArrowUpR } from "react-icons/cg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ProjectInfo from "./components/pages/ProjectInfo";
 import Header from "./components/common/Header";
 import ScrollToTop from "./hooks/scrollToTop";
-import { useEffect } from "react";
 import Skills from "./components/pages/Skills";
 
 function App() {
@@ -48,7 +45,6 @@ function App() {
             <Route path="/skills" component={Skills} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
-            <Route path="/project/:id" component={ProjectInfo} />
             {/* <Route component={NotFound}/> */}
             <Footer />
           </ScrollToTop>

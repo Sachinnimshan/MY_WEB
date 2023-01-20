@@ -3,15 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProjectInfo } from "../../store/actions/projects";
 import LoadingBox from "../util/LoadingBox";
 import MessageBox from "../util/MessageBox";
-
 import {
   CheckCircle,
   DemoBtn,
   GithubBtn,
-  PageContainer,
   ProjectInfoBtnContainer,
   ProjectInfoChipContainer,
   ProjectInfoContainer,
+  ProjectInfoContent,
   ProjectInfoHeader,
   ProjectInfoImage,
   ProjectInfoStack,
@@ -20,28 +19,26 @@ import {
   ProjectInfoTop,
   YoutubeBtn,
 } from "../pages.styled";
-import Reviews from "../common/Reviews";
 
 function ProjectInfo(props) {
-  const projectID = props.match.params.id;
   const dispatch = useDispatch();
 
   const projectData = useSelector((state) => state.projectData);
   const { loading, errors, projectInfo } = projectData;
 
   useEffect(() => {
-    dispatch(getProjectInfo(projectID));
+    dispatch(getProjectInfo(props.projectID));
     console.log(projectInfo);
-  }, [dispatch, projectID]);
+  }, [dispatch, props.projectID]);
 
   return (
-    <PageContainer>
+    <ProjectInfoContainer>
       {loading ? (
         <LoadingBox />
       ) : errors ? (
         <MessageBox>{errors}</MessageBox>
       ) : (
-        <ProjectInfoContainer>
+        <ProjectInfoContent>
           <ProjectInfoTitle>{projectInfo.title}</ProjectInfoTitle>
           <ProjectInfoTop>
             <ProjectInfoImage src={projectInfo.image} alt={projectInfo.title} />
@@ -75,10 +72,9 @@ function ProjectInfo(props) {
               </ProjectInfoChipContainer>
             </ProjectInfoStack>
           </ProjectInfoTop>
-        </ProjectInfoContainer>
+        </ProjectInfoContent>
       )}
-      <Reviews projectID={projectID} />
-    </PageContainer>
+    </ProjectInfoContainer>
   );
 }
 

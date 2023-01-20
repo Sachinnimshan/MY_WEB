@@ -8,6 +8,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FaDownload } from "react-icons/fa";
 import { BsBriefcase, BsDash } from "react-icons/bs";
 import { IoSchoolSharp } from "react-icons/io5";
+import MuiDialog from "@material-ui/core/Dialog";
 
 /*************************page structure and elements*******************/
 export const PageContainer = styled("div")`
@@ -145,7 +146,7 @@ export const MenuIcon = styled(HiOutlineMenu)`
 `;
 
 export const CloseIcon = styled(VscClose)`
-  color: white;
+  color: red;
   font-size: 2rem;
   cursor: pointer;
   position: fixed;
@@ -418,17 +419,29 @@ export const ProjectBanner = styled("img")`
 /************************* Projects *******************/
 
 /************************* Project Info*******************/
-
-export const ProjectInfoContainer = styled("div")`
+export const ProjectInfoDialog = styled(MuiDialog)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: fit-content;
+`;
+
+export const ProjectInfoContainer = styled("div")`
+  padding: 2rem;
+`;
+
+export const ProjectInfoContent = styled("div")`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
 `;
 
 export const ProjectInfoTop = styled("div")`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 2rem;
   flex-wrap: wrap;
 `;
@@ -494,67 +507,6 @@ export const ProjectInfoStackChips = styled("div")`
 export const CheckCircle = styled(FiCheckCircle)`
   color: yellowgreen;
   font-size: 18px;
-`;
-
-export const ReviewMainContainer = styled("div")`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: auto;
-  border-radius: 5px;
-  margin-top: 3rem;
-`;
-
-export const ReviewFormContainer = styled("div")`
-  max-width: 500px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const ReviewFormHeader = styled("span")`
-  font-size: 20px;
-  color: #666666;
-  font-family: "Open sans", sans-serif;
-  font-weight: 600;
-  margin: 0 0 1rem 0;
-`;
-
-export const ReviewsContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 500px;
-  width: 100%;
-`;
-
-export const ReviewsHeader = styled("span")`
-  font-size: 20px;
-  color: #666666;
-  font-family: "Open sans", sans-serif;
-  font-weight: 600;
-`;
-
-export const ReviewItem = styled("div")`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  max-width: 400px;
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 10px;
-`;
-
-export const ReviewerName = styled("span")`
-  color: #666666;
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-`;
-
-export const ReviewMessage = styled("span")`
-  color: #666666;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
 `;
 
 /************************* Project Info*******************/

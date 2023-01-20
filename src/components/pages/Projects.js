@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllProjects } from "../../store/actions/projects";
 import LoadingBox from "../util/LoadingBox";
@@ -10,6 +10,7 @@ import {
   PageHeader,
   ProjectBanner,
   ProjectCard,
+  ProjectInfoDialog,
   ProjectLinkContainer,
   ProjectsContainer,
   ProjectSubtitle,
@@ -19,12 +20,24 @@ import {
   YoutubeBtn,
 } from "../pages.styled";
 import { useResponsive } from "../../hooks/useResponsive";
+import ProjectInfo from "./ProjectInfo";
 
 function Projects() {
   const dispatch = useDispatch();
   const { mobile } = useResponsive();
   const projectList = useSelector((state) => state.projectList);
   const { loading, errors, projects } = projectList;
+  const [showInfo, setShowInfo] = useState(false);
+  const [selectedID, setSelectedID] = useState(null);
+
+  const openInfoDialog = (id) => {
+    setShowInfo(!showInfo);
+    setSelectedID(id);
+  };
+
+  const closeInfoDialog = () => {
+    setShowInfo(false);
+  };
 
   useEffect(() => {
     dispatch(getAllProjects());
@@ -41,11 +54,9 @@ function Projects() {
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
         {projects?.map((item) => (
-          <ProjectCard key={item.id}>
+          <ProjectCard key={item.id} onClick={() => openInfoDialog(item._id)}>
             <ProjectThumbnail src={item.image} alt={item.title} />
-            <ProjectTitle to={`/project/${item._id}`}>
-              {item.title}
-            </ProjectTitle>
+            <ProjectTitle>{item.title}</ProjectTitle>
             <ProjectSubtitle>{item.description}</ProjectSubtitle>
             <ProjectLinkContainer>
               {item.demo && (
@@ -71,6 +82,9 @@ function Projects() {
           alt="Projects"
         />
       </ProjectsContainer>
+      <ProjectInfoDialog open={showInfo} onClose={closeInfoDialog} fullWidth>
+        <ProjectInfo projectID={selectedID} />
+      </ProjectInfoDialog>
     </PageContainer>
   );
 }
