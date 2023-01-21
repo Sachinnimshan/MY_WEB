@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Button } from "@material-ui/core";
+import styled from "@emotion/styled";
+import Button from "@mui/material/Button";
 
 export const StyledButton = styled(Button)`
   &.MuiButton-root {
@@ -11,7 +11,7 @@ export const StyledButton = styled(Button)`
     color: #fff;
     padding: 10px 20px;
     background: linear-gradient(to left bottom, #94d600, #1b262c);
-    margin-top: ${((props)=> props.marginTop && "1rem")};
+    margin-top: ${(props) => props.marginTop && "1rem"};
   }
 
   &.MuiButton-outlined {

@@ -1,4 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 import { HiOutlineLocationMarker, HiOutlineMenu } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { VscClose } from "react-icons/vsc";
@@ -8,7 +9,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FaDownload } from "react-icons/fa";
 import { BsBriefcase, BsDash } from "react-icons/bs";
 import { IoSchoolSharp } from "react-icons/io5";
-import MuiDialog from "@material-ui/core/Dialog";
+import MuiDialog from "@mui/material/Dialog";
 
 /*************************page structure and elements*******************/
 export const PageContainer = styled("div")`
@@ -26,7 +27,6 @@ export const PageHeader = styled("div")`
 
 export const SectionTitle = styled("h1")`
   background: linear-gradient(#94d600, #1b262c);
-  background-clip: text;
   color: #ffffff;
   padding: 8px 20px;
   border-radius: 5px;

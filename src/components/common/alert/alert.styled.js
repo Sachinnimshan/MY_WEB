@@ -1,6 +1,5 @@
-import MuiDialog from "@material-ui/core/Dialog";
-import styled from "styled-components";
-import Typography from "@material-ui/core/Typography";
+import MuiDialog from "@mui/material/Dialog";
+import styled from "@emotion/styled";
 
 export const Dialog = styled(MuiDialog)`
   padding: 1rem;

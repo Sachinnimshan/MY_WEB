@@ -1,4 +1,4 @@
-import { OutlinedInput } from "@material-ui/core";
+import OutlinedInput from "@mui/material/OutlinedInput";
 import React from "react";
 import { ErrorLabel, InputContainer, InputLabel } from "./input.styled";
 import styles from "./input.module.scss";
