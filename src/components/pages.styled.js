@@ -105,11 +105,7 @@ to {
 }
 `;
 
-export const HeaderContainer = styled("div")`
-  position: sticky;
-  top: 0;
-  z-index: 6777;
-`;
+export const HeaderContainer = styled("div")``;
 
 export const DesktopHeader = styled("div")`
   display: flex;
@@ -646,7 +642,6 @@ export const ExperienceContainer = styled("div")`
 
 export const ExperienceCardContainer = styled("div")`
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
 `;
 
