@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getAllProjects } from "../../store/actions/projects";
-import LoadingBox from "../common/LoadingBox";
-import MessageBox from "../common/MessageBox";
+import { getAllProjects } from "../../../store/actions/projects";
+import LoadingBox from "../LoadingBox";
+import MessageBox from "../MessageBox";
 import {
   DemoBtn,
   GithubBtn,
-  PageContainer,
-  PageHeader,
-  ProjectBanner,
   ProjectCard,
   ProjectInfoDialog,
   ProjectLinkContainer,
+  ProjectsCardContainer,
   ProjectsContainer,
   ProjectSubtitle,
   ProjectThumbnail,
   ProjectTitle,
   SectionTitle,
   YoutubeBtn,
-} from "../pages.styled";
-import { useResponsive } from "../../hooks/useResponsive";
+} from "../../pages.styled";
+import { useResponsive } from "../../../hooks/useResponsive";
 import ProjectInfo from "./ProjectInfo";
 
 function Projects() {
@@ -44,13 +42,11 @@ function Projects() {
   }, [dispatch]);
 
   return (
-    <PageContainer>
-      <PageHeader>
-        <SectionTitle mobile={mobile} marginBottom>
-          What i have done
-        </SectionTitle>
-      </PageHeader>
-      <ProjectsContainer>
+    <ProjectsContainer>
+      <SectionTitle mobile={mobile} marginBottom>
+        PROJECTS
+      </SectionTitle>
+      <ProjectsCardContainer>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
         {projects?.map((item) => (
@@ -77,15 +73,11 @@ function Projects() {
             </ProjectLinkContainer>
           </ProjectCard>
         ))}
-        <ProjectBanner
-          src="https://ik.imagekit.io/ni26jldfa/pageImages/projects.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673925466720"
-          alt="Projects"
-        />
-      </ProjectsContainer>
+      </ProjectsCardContainer>
       <ProjectInfoDialog open={showInfo} onClose={closeInfoDialog} fullWidth>
         <ProjectInfo projectID={selectedID} />
       </ProjectInfoDialog>
-    </PageContainer>
+    </ProjectsContainer>
   );
 }
 

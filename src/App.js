@@ -5,12 +5,12 @@ import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";
 import Footer from "./components/common/Footer";
 import About from "./components/pages/About";
-import Projects from "./components/pages/Projects";
 import { CgArrowUpR } from "react-icons/cg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/common/Header";
 import ScrollToTop from "./hooks/scrollToTop";
-import Skills from "./components/pages/Skills";
+import Technology from "./components/common/Tech";
+import Portfolio from "./components/pages/Portfolio";
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -30,7 +30,7 @@ function App() {
   window.addEventListener("scroll", checkScrollTop);
 
   return (
-    <div className="app">
+    <div>
       <Router>
         <Switch>
           <ScrollToTop>
@@ -42,10 +42,9 @@ function App() {
             />
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/projects" component={Projects} />
+            <Route path="/tech" component={Technology} />
+            <Route path="/portfolio" component={Portfolio} />
             <Route path="/contact" component={Contact} />
-            {/* <Route component={NotFound}/> */}
             <Footer />
           </ScrollToTop>
         </Switch>

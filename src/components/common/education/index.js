@@ -25,7 +25,7 @@ function Education() {
 
   return (
     <EducationContainer>
-      <SectionTitle mobile={mobile}>Education</SectionTitle>
+      <SectionTitle mobile={mobile}>EDUCATION</SectionTitle>
       <EducationInfoContainer>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}

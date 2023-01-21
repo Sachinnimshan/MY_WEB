@@ -61,7 +61,7 @@ function Contact() {
     <PageContainer>
       <PageHeader>
         <SectionTitle mobile={mobile} marginBottom>
-          Leave me a message
+          LEAVE ME A MESSAGE
         </SectionTitle>
       </PageHeader>
       <ContactContainer>

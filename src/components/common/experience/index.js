@@ -24,7 +24,7 @@ function Experience() {
   return (
     <ExperienceContainer>
       <SectionTitle mobile={mobile} marginBottom>
-        My Experience
+        MY EXPERIENCE
       </SectionTitle>
       <ExperienceCardContainer>
         {loading && <LoadingBox />}

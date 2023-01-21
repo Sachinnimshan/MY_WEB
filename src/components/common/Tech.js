@@ -4,14 +4,12 @@ import {
   LanguageCard,
   LanguageContainer,
   LanguageImage,
-  PageContainer,
-  PageHeader,
   SectionTitle,
   SkillContainer,
   SkillDescription,
 } from "../pages.styled";
 
-function Skills() {
+function Technology() {
   const { mobile } = useResponsive();
 
   const languages = [
@@ -62,28 +60,24 @@ function Skills() {
     },
   ];
   return (
-    <PageContainer>
-      <PageHeader>
-        <SectionTitle mobile={mobile} marginBottom>
-          Programming
-        </SectionTitle>
-      </PageHeader>
-      <SkillContainer>
-        <SkillDescription>
-          I have more than 5+ years' experience building softwares in different
-          programming languages since 2016. Below is a quick overview of my main
-          technical skill sets and technologies I use.
-        </SkillDescription>
-        <LanguageContainer>
-          {languages.map((item) => (
-            <LanguageCard key={item.id}>
-              <LanguageImage src={item.image} alt={item.text} />
-            </LanguageCard>
-          ))}
-        </LanguageContainer>
-      </SkillContainer>
-    </PageContainer>
+    <SkillContainer>
+      <SectionTitle mobile={mobile} marginBottom>
+        TECHNOLOGIES
+      </SectionTitle>
+      <SkillDescription>
+        I have more than 5+ years' experience building softwares in different
+        programming languages since 2016. Below is a quick overview of my main
+        technical skill sets and technologies I use.
+      </SkillDescription>
+      <LanguageContainer>
+        {languages.map((item) => (
+          <LanguageCard key={item.id}>
+            <LanguageImage src={item.image} alt={item.text} />
+          </LanguageCard>
+        ))}
+      </LanguageContainer>
+    </SkillContainer>
   );
 }
 
-export default Skills;
+export default Technology;

@@ -30,10 +30,10 @@ export const SectionTitle = styled("h1")`
   color: #ffffff;
   padding: 8px 20px;
   border-radius: 5px;
-  font-size: ${(props) => (props.mobile === true ? "20px" : "28px")};
-  font-weight: 700;
+  font-size: ${(props) => (props.mobile === true ? "18px" : "22px")};
+  font-weight: 500;
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: ${(props) => props.marginBottom === true && "1.5rem"};
   border-bottom: 2px solid #e0e0e0;
 `;
@@ -78,7 +78,14 @@ export const DownloadIcon = styled(FaDownload)`
 /************************* Buttons *******************/
 
 /************************* Header *******************/
-const sideMenuAnimation = keyframes({});
+const sideMenuAnimation = keyframes`
+from {
+    right: -100%;
+  }
+  to {
+    right: 0%;
+  }
+`;
 
 const headerAnimation = keyframes`
  from {
@@ -98,7 +105,11 @@ to {
 }
 `;
 
-export const HeaderContainer = styled("div")``;
+export const HeaderContainer = styled("div")`
+  position: sticky;
+  top: 0;
+  z-index: 6777;
+`;
 
 export const DesktopHeader = styled("div")`
   display: flex;
@@ -146,7 +157,7 @@ export const MenuIcon = styled(HiOutlineMenu)`
 `;
 
 export const CloseIcon = styled(VscClose)`
-  color: red;
+  color: #fff;
   font-size: 2rem;
   cursor: pointer;
   position: fixed;
@@ -166,7 +177,7 @@ export const MenuItem = styled(Link)`
   color: lightgray;
   transition: all ease-in-out 0.3s;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding: ${(props) => props.mobile === true && `1rem 0`};
   &:hover {
     color: #94d600;
@@ -203,7 +214,7 @@ export const SideMenuContainer = styled("div")`
   z-index: 2500;
   opacity: 0.98;
   animation-name: ${sideMenuAnimation};
-  animation-duration: 0.5s;
+  animation-duration: 0.75s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
@@ -320,6 +331,14 @@ export const LanguageImage = styled("img")`
 
 export const ProjectsContainer = styled("div")`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+`;
+
+export const ProjectsCardContainer = styled("div")`
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
@@ -332,6 +351,7 @@ export const ProjectCard = styled("div")`
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 `;
 
 export const ProjectThumbnail = styled("img")`
@@ -342,28 +362,19 @@ export const ProjectThumbnail = styled("img")`
 
 export const ProjectTitle = styled(Link)`
   font-size: 22px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open sans", sans-serif;
   color: #666666;
   font-weight: 600;
   text-decoration: none;
   transition: all ease-in-out 0.3s;
   margin-top: 1rem;
-  &:hover {
-    background-image: -webkit-linear-gradient(#94d600, #1b262c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all ease-in-out 0.3s;
-  }
 `;
 
 export const ProjectSubtitle = styled("span")`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  background-image: -webkit-linear-gradient(#94d600, #1b262c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
+  color: #666666;
+  font-family: "Poppins", sans-serif;
 `;
 
 export const ProjectLinkContainer = styled("div")`
@@ -424,11 +435,10 @@ export const ProjectInfoDialog = styled(MuiDialog)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: fit-content;
 `;
 
 export const ProjectInfoContainer = styled("div")`
-  padding: 2rem;
+  padding: 1.25rem;
 `;
 
 export const ProjectInfoContent = styled("div")`
@@ -732,7 +742,7 @@ export const EducationInfoContainer = styled("div")`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1rem 0 2rem;
+  margin: 2rem 0;
   flex-wrap: wrap;
   gap: 2rem;
 `;
@@ -741,7 +751,6 @@ export const EducationInfoCard = styled("div")`
   display: flex;
   flex-direction: column;
   font-family: "Open sans", sans-serif;
-  padding: 1rem;
   gap: 10px;
 `;
 

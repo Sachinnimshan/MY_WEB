@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProjectInfo } from "../../store/actions/projects";
-import LoadingBox from "../common/LoadingBox";
-import MessageBox from "../common/MessageBox";
+import { getProjectInfo } from "../../../store/actions/projects";
+import LoadingBox from "../LoadingBox";
+import MessageBox from "../MessageBox";
 import {
   CheckCircle,
   DemoBtn,
@@ -15,14 +15,15 @@ import {
   ProjectInfoImage,
   ProjectInfoStack,
   ProjectInfoStackChips,
-  ProjectInfoTitle,
   ProjectInfoTop,
+  SectionTitle,
   YoutubeBtn,
-} from "../pages.styled";
+} from "../../pages.styled";
+import { useResponsive } from "../../../hooks/useResponsive";
 
 function ProjectInfo(props) {
   const dispatch = useDispatch();
-
+  const { mobile } = useResponsive();
   const projectData = useSelector((state) => state.projectData);
   const { loading, errors, projectInfo } = projectData;
 
@@ -39,7 +40,7 @@ function ProjectInfo(props) {
         <MessageBox>{errors}</MessageBox>
       ) : (
         <ProjectInfoContent>
-          <ProjectInfoTitle>{projectInfo.title}</ProjectInfoTitle>
+          <SectionTitle mobile={mobile} marginBottom>{projectInfo.title}</SectionTitle>
           <ProjectInfoTop>
             <ProjectInfoImage src={projectInfo.image} alt={projectInfo.title} />
             <ProjectInfoStack>
