@@ -10,20 +10,20 @@ import {
   University,
 } from "../../pages.styled";
 
-function EducationInfo(props) {
+function EducationInfo({data}) {
   return (
     <EducationInfoCard>
       <EducationInfoItem>
         <DegreeIcon/>
-        <Degreetitle>{props.title}</Degreetitle>
+        <Degreetitle>{data.title}</Degreetitle>
       </EducationInfoItem>
       <EducationInfoItem>
         <CalendarIcon/>
-        <EduDuration>{props.years}</EduDuration>
+        <EduDuration>{data.years}</EduDuration>
       </EducationInfoItem>
       <EducationInfoItem>
         <LocationIcon/>
-        <University>{props.university}</University>
+        <University>{data.university}</University>
       </EducationInfoItem>
     </EducationInfoCard>
   );

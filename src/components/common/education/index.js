@@ -29,11 +29,8 @@ function Education() {
       <EducationContainer>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
-        {educationInfo?.map((item) => (
-          <EducationInfo
-            title={item.title}
-            years={item.years}
-            university={item.university}
+        {educationInfo?.map((data) => (
+          <EducationInfo data={data}
           />
         ))}
       </EducationContainer>

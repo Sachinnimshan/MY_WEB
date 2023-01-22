@@ -13,24 +13,36 @@ import {
   LocationIcon,
   WorkIcon,
 } from "../../pages.styled";
+import moment from "moment";
 
-function ExperienceInfo(props) {
+function ExperienceInfo({ data }) {
+  const getJobDuration = (data) => {
+    const start = data.start;
+    const end = new Date(data?.ends);
+    if (!data?.ends) {
+      return `${moment(start).format("YYYY MMMM")} - Present`;
+    }
+    return `${moment(start).format("YYYY MMMM")} - ${moment(end).format(
+      "YYYY MMMM"
+    )}`;
+  };
+
   return (
     <ExperienceCard>
       <ExperienceItem>
         <WorkIcon />
-        <JobTitle>{props.jobTitle}</JobTitle>
+        <JobTitle>{data.jobTitle}</JobTitle>
       </ExperienceItem>
       <ExperienceItem>
         <CalendarIcon />
-        <JobDuration>{props.jobDuration}</JobDuration>
+        <JobDuration>{getJobDuration(data)}</JobDuration>
       </ExperienceItem>
       <ExperienceItem>
         <LocationIcon />
-        <CompanyName>{props.companyName}</CompanyName>
+        <CompanyName>{data.companyName}</CompanyName>
       </ExperienceItem>
       <JobKeysContainer>
-        {props.keyroles?.map((key) => (
+        {data.keyroles?.map((key) => (
           <JobKeyItem>
             <KeysIcon />
             <JobKeys>{key}</JobKeys>

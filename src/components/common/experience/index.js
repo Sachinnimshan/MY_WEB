@@ -29,13 +29,8 @@ function Experience() {
       <ExperienceContainer>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
-        {experiences?.map((exp) => (
-          <ExperienceInfo
-            key={exp}
-            jobDuration={exp.jobDuration}
-            keyroles={exp.keyroles}
-            companyName={exp.companyName}
-            jobTitle={exp.jobTitle}
+        {experiences?.map((data) => (
+          <ExperienceInfo data={data}
           />
         ))}
       </ExperienceContainer>
