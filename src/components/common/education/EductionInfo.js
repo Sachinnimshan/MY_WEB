@@ -9,20 +9,29 @@ import {
   LocationIcon,
   University,
 } from "../../pages.styled";
+import moment from "moment";
 
-function EducationInfo({data}) {
+function EducationInfo({ data }) {
+  const getEduDuration = (data) => {
+    const start = data.start;
+    const end = new Date(data?.ends);
+    if (!data?.ends) {
+      return `${moment(start).format("YYYY")} - Present`;
+    }
+    return `${moment(start).format("YYYY")} - ${moment(end).format("YYYY")}`;
+  };
   return (
     <EducationInfoCard>
       <EducationInfoItem>
-        <DegreeIcon/>
+        <DegreeIcon />
         <Degreetitle>{data.title}</Degreetitle>
       </EducationInfoItem>
       <EducationInfoItem>
-        <CalendarIcon/>
-        <EduDuration>{data.years}</EduDuration>
+        <CalendarIcon />
+        <EduDuration>{getEduDuration(data)}</EduDuration>
       </EducationInfoItem>
       <EducationInfoItem>
-        <LocationIcon/>
+        <LocationIcon />
         <University>{data.university}</University>
       </EducationInfoItem>
     </EducationInfoCard>

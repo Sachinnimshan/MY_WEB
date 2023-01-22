@@ -482,7 +482,7 @@ export const ProjectInfoImage = styled("img")`
 export const ProjectInfoBtnContainer = styled("div")`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
 
 export const ProjectInfoStack = styled("div")`
@@ -595,7 +595,7 @@ export const FooterContainer = styled("div")`
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  font-size: 12.5px;
+  font-size: 12px;
   color: lightgray;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -604,21 +604,6 @@ export const FooterContainer = styled("div")`
 `;
 
 export const CopyRightItems = styled("span")``;
-
-export const MyNameLink = styled("a")`
-  font-family: "Poppins", sans-serif;
-  font-family: 13px;
-  font-weight: 400;
-  color: lightgray;
-  transition: all ease-in-out 0.3s;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-    color: #94d600;
-    cursor: pointer;
-    transition: all ease-in-out 0.3s;
-  }
-`;
 
 /************************* Footer *******************/
 /************************* 404 Not found *******************/
