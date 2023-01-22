@@ -37,3 +37,7 @@ export const getEducationInfo = async () => {
 export const getExperienceInfo = async () => {
   return await performRequest("GET", "/experience", {});
 };
+
+export const postContactMessage = async (data) => {
+  return await performRequest("POST", "/contact", data);
+};

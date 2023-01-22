@@ -17,18 +17,21 @@ import { useForm, Controller } from "react-hook-form";
 import Input from "../common/Input/input";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { contactSchema } from "../schemas/contactSchema";
-import axios from "axios";
-import swal from "sweetalert";
 import { useResponsive } from "../../hooks/useResponsive";
 import Button from "../common/button/button";
+import { useDispatch } from "react-redux";
+import { postMessage } from "../../store/actions/contact";
 
 function Contact() {
   const { mobile } = useResponsive();
+  const dispatch = useDispatch();
   const {
     control,
     formState: { errors, touchedFields, isValid },
     getValues,
     handleSubmit,
+    clearErrors,
+    setValue,
   } = useForm({
     mode: "all",
     resolver: yupResolver(contactSchema),
@@ -39,6 +42,13 @@ function Contact() {
     },
   });
 
+  const handleClearFields = () => {
+    clearErrors();
+    setValue("name", "");
+    setValue("email", "");
+    setValue("message", "");
+  };
+
   const handleSubmitButton = async () => {
     const payload = {
       name: getValues("name"),
@@ -46,15 +56,7 @@ function Contact() {
       message: getValues("message"),
     };
 
-    const response = await axios.post(
-      "https://sn-backend.onrender.com/email/sendemail",
-      payload
-    );
-    if (response.success) {
-      swal("Good job!", "Thank You For Your Support", "success");
-    } else {
-      swal("Oops", "Someting Went Wrong", "error");
-    }
+    dispatch(postMessage(payload, handleClearFields));
   };
 
   return (
