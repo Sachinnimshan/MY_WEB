@@ -25,6 +25,15 @@ export const PageHeader = styled("div")`
   flex-direction: column;
 `;
 
+export const SectionContainer = styled("div")`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 45;
+  margin-bottom: ${(props) => props.marginBottom && "2rem"};
+`;
+
 export const SectionTitle = styled("h1")`
   background: linear-gradient(#94d600, #1b262c);
   color: #ffffff;
@@ -290,12 +299,6 @@ export const HomeBanner = styled("img")`
 /************************* Home *******************/
 
 /************************* About *******************/
-export const SkillContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
 export const SkillDescription = styled("p")`
   color: #666666;
@@ -308,16 +311,27 @@ export const SkillDescription = styled("p")`
 
 export const LanguageContainer = styled("div")`
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  gap: 1rem;
+  object-fit: contain;
+  width: 90%;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 0.5rem;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background-color: #dbdbdb;
+    cursor: pointer;
+  }
 `;
 
 export const LanguageCard = styled("div")``;
 export const LanguageImage = styled("img")`
-  width: 10rem;
+  width: 12rem;
   transition: all ease-in-out 0.2s;
 `;
 
@@ -326,14 +340,6 @@ export const LanguageImage = styled("img")`
 /************************* Projects *******************/
 
 export const ProjectsContainer = styled("div")`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 3rem;
-`;
-
-export const ProjectsCardContainer = styled("div")`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -631,16 +637,8 @@ export const NotFoundBanner = styled("img")`
 /************************* 404 Not found *******************/
 
 /************************* Experience *******************/
-export const ExperienceContainer = styled("div")`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 45;
-  margin-bottom: 2rem;
-`;
 
-export const ExperienceCardContainer = styled("div")`
+export const ExperienceContainer = styled("div")`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -727,14 +725,8 @@ export const KeysIcon = styled(BsDash)`
 /************************* Experience *******************/
 
 /************************* Education *******************/
-export const EducationContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
-export const EducationInfoContainer = styled("div")`
+export const EducationContainer = styled("div")`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -779,3 +771,11 @@ export const DegreeIcon = styled(IoSchoolSharp)`
 `;
 
 /************************* Education *******************/
+
+/************************* Library *******************/
+
+export const LibraryContainer = styled("div")`
+  display: flex;
+`;
+
+/************************* Library *******************/

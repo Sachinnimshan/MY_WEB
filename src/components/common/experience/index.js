@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useResponsive } from "../../../hooks/useResponsive";
 import { getAllExperience } from "../../../store/actions/experience";
 import {
-  ExperienceCardContainer,
   ExperienceContainer,
+  SectionContainer,
   SectionTitle,
 } from "../../pages.styled";
 import LoadingBox from "../../common/LoadingBox";
@@ -22,11 +22,11 @@ function Experience() {
     dispatch(getAllExperience());
   }, [dispatch]);
   return (
-    <ExperienceContainer>
+    <SectionContainer marginBottom>
       <SectionTitle mobile={mobile} marginBottom>
         MY EXPERIENCE
       </SectionTitle>
-      <ExperienceCardContainer>
+      <ExperienceContainer>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
         {experiences?.map((exp) => (
@@ -38,8 +38,8 @@ function Experience() {
             jobTitle={exp.jobTitle}
           />
         ))}
-      </ExperienceCardContainer>
-    </ExperienceContainer>
+      </ExperienceContainer>
+    </SectionContainer>
   );
 }
 

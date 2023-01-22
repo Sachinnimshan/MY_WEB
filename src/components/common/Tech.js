@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useResponsive } from "../../hooks/useResponsive";
 import {
   LanguageCard,
   LanguageContainer,
   LanguageImage,
+  SectionContainer,
   SectionTitle,
-  SkillContainer,
   SkillDescription,
 } from "../pages.styled";
 
 function Technology() {
   const { mobile } = useResponsive();
+  const [selectedIndex, setSelectedIndex] = useState(1);
 
   const languages = [
     {
@@ -50,19 +51,15 @@ function Technology() {
     },
     {
       id: 8,
-      image: "/tech/reactnative.png",
-      text: "React Native",
-    },
-    {
-      id: 9,
-      image: "/tech/mern.png",
-      text: "MERN Stack",
+      image: "/tech/mui.png",
+      text: "Material UI",
     },
   ];
+  
   return (
-    <SkillContainer>
+    <SectionContainer>
       <SectionTitle mobile={mobile} marginBottom>
-        TECHNOLOGIES
+        TECHNOLOGIES & LIBRARIES
       </SectionTitle>
       <SkillDescription>
         I have more than 5+ years' experience building softwares in different
@@ -72,11 +69,11 @@ function Technology() {
       <LanguageContainer>
         {languages.map((item) => (
           <LanguageCard key={item.id}>
-            <LanguageImage src={item.image} alt={item.text} />
+            <LanguageImage src={item.image} alt={item.text}/>
           </LanguageCard>
         ))}
       </LanguageContainer>
-    </SkillContainer>
+    </SectionContainer>
   );
 }
 

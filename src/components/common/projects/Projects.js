@@ -9,11 +9,11 @@ import {
   ProjectCard,
   ProjectInfoDialog,
   ProjectLinkContainer,
-  ProjectsCardContainer,
   ProjectsContainer,
   ProjectSubtitle,
   ProjectThumbnail,
   ProjectTitle,
+  SectionContainer,
   SectionTitle,
   YoutubeBtn,
 } from "../../pages.styled";
@@ -42,11 +42,11 @@ function Projects() {
   }, [dispatch]);
 
   return (
-    <ProjectsContainer>
+    <SectionContainer marginBottom>
       <SectionTitle mobile={mobile} marginBottom>
         PROJECTS
       </SectionTitle>
-      <ProjectsCardContainer>
+      <ProjectsContainer>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
         {projects?.map((item) => (
@@ -73,11 +73,11 @@ function Projects() {
             </ProjectLinkContainer>
           </ProjectCard>
         ))}
-      </ProjectsCardContainer>
+      </ProjectsContainer>
       <ProjectInfoDialog open={showInfo} onClose={closeInfoDialog} fullWidth>
         <ProjectInfo projectID={selectedID} />
       </ProjectInfoDialog>
-    </ProjectsContainer>
+    </SectionContainer>
   );
 }
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import {
   EducationContainer,
-  EducationInfoContainer,
+  SectionContainer,
   SectionTitle,
 } from "../../pages.styled";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,9 +24,9 @@ function Education() {
   }, [dispatch]);
 
   return (
-    <EducationContainer>
+    <SectionContainer>
       <SectionTitle mobile={mobile}>EDUCATION</SectionTitle>
-      <EducationInfoContainer>
+      <EducationContainer>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
         {educationInfo?.map((item) => (
@@ -36,8 +36,8 @@ function Education() {
             university={item.university}
           />
         ))}
-      </EducationInfoContainer>
-    </EducationContainer>
+      </EducationContainer>
+    </SectionContainer>
   );
 }
 
