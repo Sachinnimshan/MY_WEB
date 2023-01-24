@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import {
   CalendarIcon,
   CompanyName,
@@ -12,11 +12,14 @@ import {
   JobTitle,
   KeysIcon,
   LocationIcon,
+  SeeMoreText,
   WorkIcon,
 } from "../../pages.styled";
 import moment from "moment";
 
 function ExperienceInfo({ data }) {
+  const [expLength, setExpLength] = useState(4);
+  const [keysExpand, setKeysExpand] = useState(false);
   const getJobDuration = (data) => {
     const start = data.start;
     const end = new Date(data?.ends);
@@ -26,6 +29,16 @@ function ExperienceInfo({ data }) {
     return `${moment(start).format("YYYY MMMM")} - ${moment(end).format(
       "YYYY MMMM"
     )}`;
+  };
+
+  const handleSeeMore = () => {
+    setExpLength(expLength + data.keyroles?.length);
+    setKeysExpand(!keysExpand);
+  };
+
+  const handleSeeLess = () => {
+    setExpLength(4);
+    setKeysExpand(false);
   };
 
   return (
@@ -46,12 +59,17 @@ function ExperienceInfo({ data }) {
         <CompanyName>{data.companyName}</CompanyName>
       </ExperienceItem>
       <JobKeysContainer>
-        {data.keyroles?.map((key) => (
+        {data.keyroles?.slice(0, expLength).map((key) => (
           <JobKeyItem>
             <KeysIcon />
             <JobKeys>{key}</JobKeys>
           </JobKeyItem>
         ))}
+        {data.keyroles?.length > 4 && (
+          <SeeMoreText onClick={keysExpand ? handleSeeLess : handleSeeMore}>
+            {keysExpand ? "See less" : "See more"}
+          </SeeMoreText>
+        )}
       </JobKeysContainer>
     </ExperienceCard>
   );

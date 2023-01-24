@@ -710,8 +710,15 @@ export const JobActiveness = styled("div")`
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  background-color: ${(props) => (props.active && "#94d600")};
+  background-color: ${(props) => props.active && "#94d600"};
 `;
+
+export const SeeMoreText = styled("span")`
+  font-size: 14px;
+  color: #94d600;
+  cursor: pointer;
+`;
+
 /************************* Experience *******************/
 
 /************************* Education *******************/
