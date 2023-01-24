@@ -710,7 +710,7 @@ export const JobActiveness = styled("div")`
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  background-color: ${(props) => (props.active ? "#94d600" : "lightgray")};
+  background-color: ${(props) => (props.active && "#94d600")};
 `;
 /************************* Experience *******************/
 
