@@ -135,6 +135,7 @@ export const MenuContainer = styled("div")`
   justify-content: space-between;
   width: 100%;
   margin-left: 5rem;
+  gap: 1rem;
 `;
 
 export const SiteLogo = styled(Link)`
@@ -144,6 +145,7 @@ export const SiteLogo = styled(Link)`
   font-family: "Kaushan Script", cursive;
   min-width: max-content;
   text-decoration: none;
+  display: flex;
   &:hover {
     color: #94d600;
   }
@@ -175,7 +177,7 @@ export const CloseIcon = styled(VscClose)`
 
 export const NavMenuContainer = styled("div")`
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
 `;
 
 export const MenuItem = styled(Link)`
@@ -183,7 +185,7 @@ export const MenuItem = styled(Link)`
   transition: all ease-in-out 0.3s;
   text-decoration: none;
   text-transform: capitalize;
-  padding: ${(props) => props.mobile === true && `1rem 0`};
+  padding: ${(props) => props.mobile && `1rem 0`};
   &:hover {
     color: #94d600;
     cursor: pointer;
@@ -199,6 +201,7 @@ export const SocialIconContainer = styled("div")`
 export const SocialIcons = styled("a")`
   color: lightgray;
   font-size: 24px;
+  display: flex;
   cursor: pointer;
   &:hover {
     color: #94d600;
@@ -710,7 +713,7 @@ export const JobActiveness = styled("div")`
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  background-color: ${(props) => props.active && "#94d600"};
+  background-color: ${(props) => props.active ? "#94d600" : "lightgray"};
 `;
 
 export const SeeMoreText = styled("span")`

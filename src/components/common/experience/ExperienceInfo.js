@@ -18,7 +18,7 @@ import {
 import moment from "moment";
 
 function ExperienceInfo({ data }) {
-  const [expLength, setExpLength] = useState(4);
+  const [expLength, setExpLength] = useState(3);
   const [keysExpand, setKeysExpand] = useState(false);
   const getJobDuration = (data) => {
     const start = data.start;
@@ -37,7 +37,7 @@ function ExperienceInfo({ data }) {
   };
 
   const handleSeeLess = () => {
-    setExpLength(4);
+    setExpLength(3);
     setKeysExpand(false);
   };
 

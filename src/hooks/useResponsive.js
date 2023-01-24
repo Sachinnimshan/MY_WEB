@@ -3,7 +3,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const useResponsive = () => {
   const theme = useTheme();
-  const mobile = useMediaQuery(theme.breakpoints.down("sm"), { noSsr: true });
+  const mobile = useMediaQuery(theme.breakpoints.down("md"), { noSsr: true });
 
   return {
     mobile,
