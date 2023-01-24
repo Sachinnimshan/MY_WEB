@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   CalendarIcon,
   CompanyName,
   ExperienceCard,
   ExperienceItem,
+  JobActiveness,
   JobDuration,
   JobKeyItem,
   JobKeys,
@@ -19,7 +20,7 @@ function ExperienceInfo({ data }) {
   const getJobDuration = (data) => {
     const start = data.start;
     const end = new Date(data?.ends);
-    if (!data?.ends) {
+    if (data?.current) {
       return `${moment(start).format("YYYY MMMM")} - Present`;
     }
     return `${moment(start).format("YYYY MMMM")} - ${moment(end).format(
@@ -31,7 +32,10 @@ function ExperienceInfo({ data }) {
     <ExperienceCard>
       <ExperienceItem>
         <WorkIcon />
-        <JobTitle>{data.jobTitle}</JobTitle>
+        <JobTitle>
+          <Fragment>{data.jobTitle}</Fragment>
+          <JobActiveness active={data.current} />
+        </JobTitle>
       </ExperienceItem>
       <ExperienceItem>
         <CalendarIcon />

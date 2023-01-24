@@ -376,7 +376,8 @@ export const ProjectSubtitle = styled("span")`
   font-size: 14px;
   font-weight: 400;
   color: #666666;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open sans", sans-serif;
+  margin-top: 5px;
 `;
 
 export const ProjectLinkContainer = styled("div")`
@@ -421,12 +422,6 @@ export const GithubBtn = styled("a")`
   &:hover {
     color: white;
   }
-`;
-
-export const ProjectBanner = styled("img")`
-  max-width: 700px;
-  width: 100%;
-  display: flex;
 `;
 
 /************************* Projects *******************/
@@ -665,6 +660,9 @@ export const JobTitle = styled("span")`
   color: #666666;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 `;
 
 export const JobKeysContainer = styled("div")`
@@ -706,6 +704,13 @@ export const WorkIcon = styled(BsBriefcase)`
 export const KeysIcon = styled(BsDash)`
   color: #666666;
   font-size: 14px;
+`;
+
+export const JobActiveness = styled("div")`
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: ${(props) => (props.active ? "#94d600" : "lightgray")};
 `;
 /************************* Experience *******************/
 

@@ -30,8 +30,7 @@ function Contact() {
     formState: { errors, touchedFields, isValid },
     getValues,
     handleSubmit,
-    clearErrors,
-    setValue,
+    reset,
   } = useForm({
     mode: "all",
     resolver: yupResolver(contactSchema),
@@ -43,10 +42,7 @@ function Contact() {
   });
 
   const handleClearFields = () => {
-    clearErrors();
-    setValue("name", "");
-    setValue("email", "");
-    setValue("message", "");
+    reset();
   };
 
   const handleSubmitButton = async () => {
@@ -123,6 +119,7 @@ function Contact() {
 
           <Button
             size="large"
+            variant="contained"
             disabled={!isValid}
             marginTop
             onClick={handleSubmit(handleSubmitButton)}
