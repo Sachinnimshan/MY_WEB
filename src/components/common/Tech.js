@@ -62,9 +62,10 @@ function Technology() {
         TECHNOLOGIES & LIBRARIES
       </SectionTitle>
       <SkillDescription>
-        I have more than 5+ years' experience building softwares in different
-        programming languages since 2016. Below is a quick overview of my main
+        I have more than 3 years of experience building softwares in different
+        programming languages since 2020. Below is a quick overview of my main
         technical skill sets and technologies I use.
+        <br/>My main programming tech stack is Javascript.
       </SkillDescription>
       <LanguageContainer>
         {languages.map((item) => (
