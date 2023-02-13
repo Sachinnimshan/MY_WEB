@@ -654,7 +654,7 @@ export const JobDuration = styled("span")`
 export const CompanyName = styled("span")`
   font-size: 16px;
   color: #666666;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 `;
 
@@ -683,8 +683,8 @@ export const JobKeyItem = styled("div")`
 
 export const JobKeys = styled("span")`
   color: #666666;
-  font-weight: 400;
-  font-family: "Open sans", sans-serif;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif;
   font-size: 15px;
   line-height: 24px;
 `;
