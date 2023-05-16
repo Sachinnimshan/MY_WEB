@@ -73,7 +73,7 @@ function Header() {
           ))}
           <SocialIconContainer>
             {socialIcons.map((item) => (
-              <SocialIcons key={item} href={item.url}>
+              <SocialIcons key={item} href={item.url} aria-label={item.name}>
                 {item.icon}
               </SocialIcons>
             ))}
