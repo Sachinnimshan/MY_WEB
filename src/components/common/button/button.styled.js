@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import Button from "@mui/material/Button";
+import { PRIMARY_COLOR, SECONDARY_COLOR } from "../../../styled";
 
 export const StyledButton = styled(Button)`
   &.MuiButton-root {
@@ -10,12 +11,12 @@ export const StyledButton = styled(Button)`
     line-height: 20px;
     color: #fff;
     padding: 10px 20px;
-    background: linear-gradient(to left bottom, #94d600, #1b262c);
+    background-color: ${SECONDARY_COLOR};
     margin-top: ${(props) => props.marginTop && "1rem"};
   }
 
   &.MuiButton-outlined {
-    background: linear-gradient(to left bottom, #94d600, #1b262c);
+    background-color: ${SECONDARY_COLOR};
     border: 2px solid #ffbfc2;
     color: #ffffff !important;
 

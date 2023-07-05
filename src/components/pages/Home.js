@@ -22,7 +22,7 @@ function Home() {
         <Hellotext>Hello,</Hellotext>
         <MyName mobile={mobile}>I'm Sachin</MyName>
         <MyJob mobile={mobile}>Software Engineer | Free Lancer</MyJob>
-        <MyDescription>High Level Experience in Web Design</MyDescription>
+
         <DownloadLinkBtn
           href="https://sn-backend.onrender.com/api/resume"
           margin

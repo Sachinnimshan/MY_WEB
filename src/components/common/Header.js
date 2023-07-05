@@ -63,24 +63,22 @@ function Header() {
           )}
         </DesktopHeader>
       )}
-      {menu && (
-        <SideMenuContainer mobile={mobile}>
-          <CloseIcon onClick={closeMenu} />
-          {navData.map((item) => (
-            <MenuItem to={item.route} onClick={closeMenu} mobile={mobile}>
-              {item.name}
-            </MenuItem>
+      <SideMenuContainer mobile={mobile} showMenu={menu}>
+        {menu && <CloseIcon onClick={closeMenu} />}
+        {navData.map((item) => (
+          <MenuItem to={item.route} onClick={closeMenu} mobile={mobile}>
+            {item.name}
+          </MenuItem>
+        ))}
+        <SocialIconContainer>
+          {socialIcons.map((item) => (
+            <SocialIcons key={item} href={item.url} aria-label={item.name}>
+              {item.icon}
+            </SocialIcons>
           ))}
-          <SocialIconContainer>
-            {socialIcons.map((item) => (
-              <SocialIcons key={item} href={item.url} aria-label={item.name}>
-                {item.icon}
-              </SocialIcons>
-            ))}
-          </SocialIconContainer>
-          <SiteLogo to="/">Sachin Nimshan</SiteLogo>
-        </SideMenuContainer>
-      )}
+        </SocialIconContainer>
+        <SiteLogo to="/">Sachin Nimshan</SiteLogo>
+      </SideMenuContainer>
     </HeaderContainer>
   );
 }
