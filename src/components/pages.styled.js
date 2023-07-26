@@ -125,8 +125,7 @@ export const HeaderContainer = styled("div")``;
 
 export const DesktopHeader = styled("div")`
   display: flex;
-  padding: ${(props) =>
-    props.mobile === true ? "0.5rem 1.75rem" : "0.5rem 3rem"};
+  padding: ${(props) => (props.mobile === true ? "1rem 1.75rem" : "1rem 3rem")};
   align-items: center;
   background-color: ${PRIMARY_COLOR};
   justify-content: space-between;
@@ -568,7 +567,7 @@ export const ContactFormContainer = styled("div")`
 
 export const EmailIcon = styled(HiOutlineMail)`
   color: ${SECONDARY_COLOR};
-  font-size: ${(props) => (props.mobile  ? "1.5rem" : "2.5rem")};
+  font-size: ${(props) => (props.mobile ? "1.5rem" : "2.5rem")};
 `;
 
 export const AvailableHoursIcon = styled(AiOutlineClockCircle)`
@@ -706,7 +705,7 @@ export const JobActiveness = styled("div")`
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  background-color: ${(props) => (props.active && SECONDARY_COLOR)};
+  background-color: ${(props) => props.active && SECONDARY_COLOR};
 `;
 
 export const SeeMoreText = styled("span")`
