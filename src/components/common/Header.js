@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import {
   CloseIcon,
-  DesktopHeader,
-  HeaderContainer,
-  MenuContainer,
   MenuIcon,
   MenuItem,
-  NavMenuContainer,
   SideMenuContainer,
   SiteLogo,
   SocialIconContainer,
@@ -15,6 +11,14 @@ import {
 import { useResponsive } from "../../hooks/useResponsive";
 import { useEffect } from "react";
 import { socialIcons } from "../common/social";
+import {
+  BG_GRAY,
+  FlexContainer,
+  PADDING_DESKTOP,
+  PADDING_MOBILE,
+} from "../../styled";
+import Button from "./button/button";
+import { Backdrop } from "@mui/material";
 
 function Header() {
   const { mobile } = useResponsive();
@@ -27,6 +31,7 @@ function Header() {
     { name: "Home", route: "/" },
     { name: "About", route: "/about" },
     { name: "Portfolio", route: "/portfolio" },
+    { name: "Skills", route: "/skills" },
     { name: "Contact", route: "/contact" },
   ];
 
@@ -37,36 +42,42 @@ function Header() {
   }, [mobile, menu]);
 
   return (
-    <HeaderContainer>
+    <FlexContainer>
       {!menu && (
-        <DesktopHeader mobile={mobile}>
+        <FlexContainer
+          alignX="space-between"
+          padding={mobile ? PADDING_MOBILE : PADDING_DESKTOP}
+          bgrColor={BG_GRAY}
+          flex
+          gap={4}
+        >
           <SiteLogo to="/" mobile={mobile}>
             Sachin Nimshan
           </SiteLogo>
           {mobile ? (
             <MenuIcon onClick={showMenu} />
           ) : (
-            <MenuContainer>
-              <NavMenuContainer>
+            <FlexContainer alignX="space-between" alignY="center" gap={1} flex>
+              <FlexContainer gap={2} overflowX>
                 {navData.map((item) => (
                   <MenuItem to={item.route}>{item.name}</MenuItem>
                 ))}
-              </NavMenuContainer>
-              <SocialIconContainer>
-                {socialIcons.map((item) => (
-                  <SocialIcons key={item} href={item.url}>
-                    {item.icon}
-                  </SocialIcons>
-                ))}
-              </SocialIconContainer>
-            </MenuContainer>
+              </FlexContainer>
+
+              <Button text="Start Now" padding="0.75rem 2rem" flex="0" />
+            </FlexContainer>
           )}
-        </DesktopHeader>
+        </FlexContainer>
       )}
       <SideMenuContainer mobile={mobile} showMenu={menu}>
         {menu && <CloseIcon onClick={closeMenu} />}
         {navData.map((item) => (
-          <MenuItem to={item.route} onClick={closeMenu} mobile={mobile}>
+          <MenuItem
+            to={item.route}
+            onClick={closeMenu}
+            mobile={mobile}
+            sideMenu
+          >
             {item.name}
           </MenuItem>
         ))}
@@ -79,7 +90,7 @@ function Header() {
         </SocialIconContainer>
         <SiteLogo to="/">Sachin Nimshan</SiteLogo>
       </SideMenuContainer>
-    </HeaderContainer>
+    </FlexContainer>
   );
 }
 

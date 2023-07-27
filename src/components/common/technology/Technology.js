@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { useResponsive } from "../../hooks/useResponsive";
+import { useResponsive } from "../../../hooks/useResponsive";
 import {
   LanguageCard,
-  LanguageContainer,
   LanguageImage,
-  SectionContainer,
   SectionTitle,
   SkillDescription,
-} from "../pages.styled";
+} from "../../pages.styled";
+import {
+  FlexContainer,
+  PADDING_DESKTOP,
+  PADDING_MOBILE,
+} from "../../../styled";
 
 function Technology() {
   const { mobile } = useResponsive();
@@ -26,8 +29,8 @@ function Technology() {
     },
     {
       id: 3,
-      image: "/tech/redux.png",
-      text: "Redux",
+      image: "/tech/next.png",
+      text: "Next JS",
     },
     {
       id: 4,
@@ -41,40 +44,53 @@ function Technology() {
     },
     {
       id: 6,
+      image: "/tech/redux.png",
+      text: "Redux",
+    },
+    {
+      id: 7,
       image: "/tech/mongo.png",
       text: "Mongo DB",
     },
     {
-      id: 7,
-      image: "/tech/next.png",
-      text: "Next JS",
+      id: 8,
+      image: "/tech/css.png",
+      text: "Css",
     },
     {
-      id: 8,
+      id: 9,
       image: "/tech/mui.png",
       text: "Material UI",
     },
+    {
+      id: 10,
+      image: "/tech/git.png",
+      text: "Git",
+    },
   ];
-  
+
   return (
-    <SectionContainer>
-      <SectionTitle mobile={mobile} marginBottom>
-        TECHNOLOGIES & LIBRARIES
-      </SectionTitle>
+    <FlexContainer
+      column
+      gap={2}
+      alignX="center"
+      padding={mobile ? PADDING_MOBILE : PADDING_DESKTOP}
+    >
+      <SectionTitle>TECHNOLOGIES & LIBRARIES</SectionTitle>
       <SkillDescription>
         I have more than 3 years of experience building softwares in different
         programming languages since 2020. Below is a quick overview of my main
-        technical skill sets and technologies I use.
-        <br/>My main programming tech stack is Javascript.
+        technical skill sets and technologies I use. My main programming tech
+        stack is Javascript.
       </SkillDescription>
-      <LanguageContainer>
+      <FlexContainer flexwrap gap={2} alignY='center'>
         {languages.map((item) => (
           <LanguageCard key={item.id}>
-            <LanguageImage src={item.image} alt={item.text}/>
+            <LanguageImage src={item.image} alt={item.text} />
           </LanguageCard>
         ))}
-      </LanguageContainer>
-    </SectionContainer>
+      </FlexContainer>
+    </FlexContainer>
   );
 }
 

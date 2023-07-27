@@ -1,17 +1,8 @@
 import React from "react";
 import { StyledButton } from "./button.styled";
 
-const Button = (props) => {
-  return (
-    <StyledButton
-      variant="contained"
-      color="primary"
-      disableElevation
-      fullWidth
-      size="large"
-      {...props}
-    />
-  );
+const Button = ({ text, ...props }) => {
+  return <StyledButton {...props}>{text}</StyledButton>;
 };
 
 export default Button;

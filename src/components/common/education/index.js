@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import {
-  EducationContainer,
-  SectionContainer,
   SectionTitle,
 } from "../../pages.styled";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,11 +8,11 @@ import EducationInfo from "./EductionInfo";
 import LoadingBox from "../../common/LoadingBox";
 import MessageBox from "../../common/MessageBox";
 import { useResponsive } from "../../../hooks/useResponsive";
-
+import { FlexContainer } from "../../../styled";
 
 function Education() {
   const dispatch = useDispatch();
-  const {mobile}  =useResponsive();
+  const { mobile } = useResponsive();
   const { loading, errors, educationInfo } = useSelector(
     (state) => state.educationData
   );
@@ -24,17 +22,16 @@ function Education() {
   }, [dispatch]);
 
   return (
-    <SectionContainer>
+    <FlexContainer column gap={2} >
       <SectionTitle mobile={mobile}>EDUCATION</SectionTitle>
-      <EducationContainer>
+      <FlexContainer gap={2} flexwrap>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
         {educationInfo?.map((data) => (
-          <EducationInfo data={data}
-          />
+          <EducationInfo data={data} />
         ))}
-      </EducationContainer>
-    </SectionContainer>
+      </FlexContainer>
+    </FlexContainer>
   );
 }
 

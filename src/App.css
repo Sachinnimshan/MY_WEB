@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -10,11 +11,6 @@ html {
   font-size: 16px;
 }
 
-button {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 button:hover {
   opacity: 0.9;
 }
-

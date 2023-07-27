@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
-import { HiOutlineLocationMarker, HiOutlineMenu } from "react-icons/hi";
+import { HiOutlineLocationMarker, HiMenu } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { VscClose } from "react-icons/vsc";
 import { FiCheckCircle } from "react-icons/fi";
@@ -8,100 +8,84 @@ import { AiOutlineCalendar, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaDownload } from "react-icons/fa";
 import { BsBriefcase, BsDash } from "react-icons/bs";
-import { IoSchoolSharp } from "react-icons/io5";
+import { IoSchoolOutline } from "react-icons/io5";
 import MuiDialog from "@mui/material/Dialog";
 import {
   BG_GRAY,
+  BORDER_RADIUS,
   DARK_GRAY,
-  FONT_WHITE,
   LIGHT_GRAY,
   PRIMARY_COLOR,
-  SECONDARY_COLOR,
+  SECONDARY_THEME_COLOR,
+  THEME_COLOR,
+  TRANSITION,
+  WEIGHT_400,
+  WEIGHT_500,
+  WEIGHT_600,
+  WEIGHT_700,
   WHITE_COLOR,
+  YELLOW_COLOR,
 } from "../styled";
 
 /*************************page structure and elements*******************/
-export const PageContainer = styled("div")`
-  padding: 1.5rem 2rem 2rem 2rem;
-  min-height: 95vh;
-`;
-
-export const PageHeader = styled("div")`
-  text-align: center;
-  margin-bottom: ${(props) => props.mobile === true && "1.5rem"};
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`;
-
-export const SectionContainer = styled("div")`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 45;
-  margin-bottom: ${(props) => props.marginBottom && "2rem"};
-`;
 
 export const SectionTitle = styled("h1")`
-  color: ${SECONDARY_COLOR};
-  border: 2px solid ${SECONDARY_COLOR};
-  padding: 8px 20px;
-  border-radius: 5px;
-  font-size: calc(1rem + 0.2vw);
-  font-weight: 500;
+  color: ${LIGHT_GRAY};
+  font-size: calc(1rem + 0.5vw);
+  width: fit-content;
+  font-weight: ${WEIGHT_700};
+  padding: 0 1rem;
   text-transform: capitalize;
-  font-family: "Poppins", sans-serif;
-  margin: ${(props) => props.marginBottom && "1rem 0 3rem 0 "};
+  border-left: 1rem solid ${YELLOW_COLOR};
+`;
+
+export const IconWrapper = styled("div")`
+  color: ${(props) => props.color};
+  font-size: ${(props) => `${props.size}rem` || "1.25rem"};
+  cursor: pointer;
+  background-color: ${(props) => props.bgrColor};
+  padding: ${(props) => props.padding && "0.5rem"};
+  display: flex;
+  align-items: center;
+  border-radius: ${(props) => props.radius && "50%"};
+  position: ${(props) => props.position};
+  transition: all ease-in-out 0.3s;
+  z-index: 4000;
+  box-shadow: ${(props) =>
+    props.shadow &&
+    "0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05)"};
+  &:hover {
+    color: ${(props) => props.hoverColor};
+    background-color: ${(props) => props.hoverBgrColor};
+    transition: all ease-in-out 0.3s;
+  }
 `;
 
 /*************************page structure and elements*******************/
 
 /************************* Buttons *******************/
-export const Button = styled("button")`
-  background-image: linear-gradient(to left bottom, #94d600, #1b262c);
-  padding: 15px 25px;
-  border: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-  margin-top: ${(props) => props.margin && "1.5rem"};
-`;
-
-export const ButtonText = styled("span")`
-  color: ${SECONDARY_COLOR};
-  font-size: 16px;
-`;
 
 export const DownloadLinkBtn = styled("a")`
-  border: 2px solid ${SECONDARY_COLOR};
-  padding: 15px 25px;
-  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  border-radius: ${BORDER_RADIUS};
   display: flex;
+  flex: 1;
   align-items: center;
   gap: 10px;
   justify-content: center;
+  background-image: ${`linear-gradient(to right, ${SECONDARY_THEME_COLOR} 0%, ${THEME_COLOR} 100%)`};
   margin-top: ${(props) => props.margin && "1.5rem"};
   text-decoration: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const DownloadIcon = styled(FaDownload)`
-  color: ${SECONDARY_COLOR};
+  color: ${WHITE_COLOR};
   font-size: 1rem;
 `;
 /************************* Buttons *******************/
 
 /************************* Header *******************/
-const sideMenuAnimation = keyframes`
-from {
-    right: -100%;
-  }
-  to {
-    right: 0%;
-  }
-`;
 
 const headerAnimation = keyframes`
  from {
@@ -111,17 +95,6 @@ const headerAnimation = keyframes`
     left: 0%;
   }
 `;
-
-const BannerAnimation = keyframes`
-from {
-  transform: translateY(0px);
-}
-to {
-  transform: translateY(20px);
-}
-`;
-
-export const HeaderContainer = styled("div")``;
 
 export const DesktopHeader = styled("div")`
   display: flex;
@@ -145,35 +118,34 @@ export const MenuContainer = styled("div")`
 `;
 
 export const SiteLogo = styled(Link)`
-  color: ${FONT_WHITE};
-  font-size: ${(props) => (props.mobile === true ? "24px" : "2rem")};
+  color: ${DARK_GRAY};
+  font-size: ${(props) => (props.mobile ? "24px" : "2rem")};
   cursor: pointer;
   font-family: "Kaushan Script", cursive;
   min-width: max-content;
   text-decoration: none;
   display: flex;
-  &:hover {
-    color: ${WHITE_COLOR};
-  }
+  font-weight: ${WEIGHT_600};
+  //background: ${`linear-gradient(to bottom, transparent 50%, ${YELLOW_COLOR} 100%)`};
 `;
 
-export const MenuIcon = styled(HiOutlineMenu)`
-  color: ${SECONDARY_COLOR};
+export const MenuIcon = styled(HiMenu)`
+  color: ${DARK_GRAY};
   font-size: 2rem;
   cursor: pointer;
   position: fixed;
   right: 0;
   z-index: 8000;
   margin-right: 1.5rem;
-  border-radius: 2px;
 `;
 
 export const CloseIcon = styled(VscClose)`
-  color: ${WHITE_COLOR};
+  color: ${DARK_GRAY};
   font-size: 2rem;
   cursor: pointer;
   position: fixed;
   right: 0;
+  top: 2%;
   z-index: 8000;
   margin-right: 1.5rem;
 `;
@@ -184,14 +156,16 @@ export const NavMenuContainer = styled("div")`
 `;
 
 export const MenuItem = styled(Link)`
-  color: ${WHITE_COLOR};
+  color: ${DARK_GRAY};
+  font-weight: ${WEIGHT_600};
   transition: all ease-in-out 0.3s;
   text-decoration: none;
-  font-size: 16px;
-  text-transform: capitalize;
-  padding: ${(props) => props.mobile && `1rem 0`};
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: ${(props) => props.sideMenu && `1rem 0`};
   &:hover {
-    color: ${FONT_WHITE};
+    color: ${THEME_COLOR};
     cursor: pointer;
     transition: all ease-in-out 0.3s;
   }
@@ -203,12 +177,14 @@ export const SocialIconContainer = styled("div")`
   gap: 8px;
 `;
 export const SocialIcons = styled("a")`
-  color: ${WHITE_COLOR};
-  font-size: 24px;
+  color: ${LIGHT_GRAY};
+  font-size: 1.25rem;
   display: flex;
+  transition: ${TRANSITION};
   cursor: pointer;
   &:hover {
-    color: ${FONT_WHITE};
+    transition: ${TRANSITION};
+    color: ${SECONDARY_THEME_COLOR};
   }
 `;
 
@@ -217,89 +193,47 @@ export const SideMenuContainer = styled("div")`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
   position: fixed;
   top: 0;
   right: ${(props) => (props.showMenu ? "0" : "-100%")};
-  background-color: ${PRIMARY_COLOR};
+  background-color: ${BG_GRAY};
   height: 100vh;
   padding: 1rem 3rem;
-  z-index: 2500;
-  opacity: 0.98;
+  z-index: 55000;
   transition: all 0.5s ease;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
 /************************* Header *******************/
 
-/************************* Home *******************/
-export const HomeContainer = styled("div")`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: ${PRIMARY_COLOR};
-  gap: 2rem;
-  flex-wrap: wrap;
-  min-height: 90vh;
+const BannerAnimation = keyframes`
+from {
+  transform: translateY(0px);
+}
+to {
+  transform: translateY(20px);
+}
 `;
 
-export const HomeLeftContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 1rem;
-  gap: 5px;
-  @media (max-width: 1300px) {
-    padding-top: 4rem;
-  }
-`;
-
-export const Hellotext = styled("span")`
-  font-weight: 400;
-  font-size: 18px;
-  color: ${LIGHT_GRAY};
-`;
-
-export const MyName = styled("h1")`
-  font-size: ${(props) => (props.mobile === true ? "2em" : "80px")};
-  font-weight: 600;
-  color: ${WHITE_COLOR};
-`;
-
-export const MyJob = styled("span")`
-  color: ${LIGHT_GRAY};
-  font-size: ${(props) => (props.mobile === true ? "18px" : "32px")};
-  font-weight: 500;
-`;
-
-export const MyDescription = styled("p")`
-  font-size: 15px;
-  font-weight: 500;
-  color: ${LIGHT_GRAY};
-`;
-
-export const HomeRightContainer = styled("div")``;
-
-export const HomeBanner = styled("img")`
-  width: ${(props) => (props.mobile === true ? "100%" : "600px")};
-  height: ${(props) => (props.mobile === true ? "auto" : "600px")};
-  max-width: 100%;
+export const BannerImage = styled("img")`
+  width: 60%;
   animation-name: ${BannerAnimation};
   animation-iteration-count: infinite;
   animation-duration: 3s;
+  display: flex;
+  z-index: 400000;
+  flex: 1;
   animation-direction: alternate;
 `;
-
-/************************* Home *******************/
 
 /************************* About *******************/
 
 export const SkillDescription = styled("p")`
-  color: #666666;
-  text-align: center;
+  color: ${LIGHT_GRAY};
+  text-align: justify;
   font-size: 16px;
-  font-family: "Open Sans", cursive;
-  font-weight: 500;
+  font-weight: ${WEIGHT_400};
   line-height: 2rem;
 `;
 
@@ -323,9 +257,10 @@ export const LanguageContainer = styled("div")`
   }
 `;
 
-export const LanguageCard = styled("div")``;
+export const LanguageCard = styled("div")`
+`;
 export const LanguageImage = styled("img")`
-  width: 12rem;
+  max-width: 10rem;
   transition: all ease-in-out 0.2s;
 `;
 
@@ -343,36 +278,30 @@ export const ProjectsContainer = styled("div")`
 export const ProjectCard = styled("div")`
   display: flex;
   flex-direction: column;
-  flex: 1;
-  max-width: 30rem;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-  cursor: pointer;
+  flex: 1 1 200px;
+  background-color: ${BG_GRAY};
+  border-radius: ${BORDER_RADIUS};
+  overflow: hidden;
 `;
 
 export const ProjectThumbnail = styled("img")`
   width: 100%;
-  max-height: 170px;
   border-radius: 5px 5px 0 0;
+  height: 100%;
 `;
 
 export const ProjectTitle = styled(Link)`
-  font-size: 22px;
-  font-family: "Open sans", sans-serif;
-  color: #666666;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: ${WEIGHT_600};
+  color: ${DARK_GRAY};
   text-decoration: none;
-  transition: all ease-in-out 0.3s;
-  margin-top: 1rem;
 `;
 
 export const ProjectSubtitle = styled("span")`
   font-size: 14px;
-  font-weight: 400;
-  color: #666666;
-  font-family: "Open sans", sans-serif;
+  font-weight: ${WEIGHT_400};
   margin-top: 5px;
+  color: ${LIGHT_GRAY};
 `;
 
 export const ProjectLinkContainer = styled("div")`
@@ -384,15 +313,15 @@ export const ProjectLinkContainer = styled("div")`
 `;
 
 export const DemoBtn = styled("a")`
-  background-color: #0c6efd;
-  border-radius: 5px;
-  color: white;
+  background-color: ${(props) => props.bgrColor}; //#0c6efd
+  border-radius: ${BORDER_RADIUS};
+  color: ${WHITE_COLOR};
+  flex: 1;
   border: none;
+  font-weight: ${WEIGHT_500};
+  text-align: center;
   padding: 5px 10px;
   text-decoration: none;
-  &:hover {
-    color: white;
-  }
 `;
 
 export const YoutubeBtn = styled("a")`
@@ -532,48 +461,26 @@ export const ContactBanner = styled("img")`
   animation-direction: alternate;
 `;
 
-export const ContactInfoContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-`;
-
 export const ContactInfo = styled("div")`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.5rem;
 `;
 
 export const ContactInfoTitle = styled("span")`
-  font-size: 18px;
+  font-size: 16px;
   color: ${DARK_GRAY};
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: ${WEIGHT_600};
 `;
 
 export const ContactInfoSubtitle = styled("span")`
-  font-size: 16px;
-  color: ${DARK_GRAY};
-  font-family: "Open sans", sans-serif;
-  font-weight: 400;
+  font-size: 15px;
+  color: ${LIGHT_GRAY};
+  font-weight: ${WEIGHT_400};
 `;
 
-export const ContactFormContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  width: 100%;
-`;
-
-export const EmailIcon = styled(HiOutlineMail)`
-  color: ${SECONDARY_COLOR};
-  font-size: ${(props) => (props.mobile ? "1.5rem" : "2.5rem")};
-`;
-
-export const AvailableHoursIcon = styled(AiOutlineClockCircle)`
-  color: ${SECONDARY_COLOR};
-  font-size: ${(props) => (props.mobile ? "1.5rem" : "2.5rem")};
-`;
+export const EmailIcon = styled(HiOutlineMail)``;
+export const AvailableHoursIcon = styled(AiOutlineClockCircle)``;
 
 /************************* Contact *******************/
 
@@ -587,7 +494,6 @@ export const FooterContainer = styled("div")`
   flex-wrap: wrap;
   font-size: 12px;
   color: ${LIGHT_GRAY};
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
   justify-content: center;
   letter-spacing: 0.5px;
@@ -624,7 +530,7 @@ export const ExperienceCard = styled("div")`
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
-  max-width: 400px;
+  flex: 1 1 300px;
 `;
 
 export const ExperienceItem = styled("div")`
@@ -637,24 +543,21 @@ export const ExperienceItem = styled("div")`
 export const JobDuration = styled("span")`
   font-weight: 500;
   color: ${DARK_GRAY};
-  font-size: 16px;
-  font-family: "Open sans", sans-serif;
+  font-size: 15px;
   display: flex;
   align-items: center;
 `;
 
 export const CompanyName = styled("span")`
-  font-size: 16px;
+  font-size: 15px;
   color: ${DARK_GRAY};
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: ${WEIGHT_500};
 `;
 
 export const JobTitle = styled("span")`
-  font-size: 18px;
+  font-size: 16px;
   color: ${DARK_GRAY};
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: ${WEIGHT_600};
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -674,10 +577,9 @@ export const JobKeyItem = styled("div")`
 `;
 
 export const JobKeys = styled("span")`
-  color: ${DARK_GRAY};
-  font-weight: 500;
-  font-family: "Nunito", sans-serif;
-  font-size: 15px;
+  color: ${LIGHT_GRAY};
+  font-weight: ${WEIGHT_400};
+  font-size: 14px;
   line-height: 24px;
 `;
 
@@ -705,12 +607,12 @@ export const JobActiveness = styled("div")`
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  background-color: ${(props) => props.active && SECONDARY_COLOR};
+  background-color: ${(props) => props.active && YELLOW_COLOR};
 `;
 
 export const SeeMoreText = styled("span")`
   font-size: 14px;
-  color: ${SECONDARY_COLOR};
+  color: ${YELLOW_COLOR};
   cursor: pointer;
 `;
 
@@ -730,13 +632,12 @@ export const EducationContainer = styled("div")`
 export const EducationInfoCard = styled("div")`
   display: flex;
   flex-direction: column;
-  font-family: "Open sans", sans-serif;
   gap: 10px;
 `;
 
 export const Degreetitle = styled("span")`
   color: ${DARK_GRAY};
-  font-family: "Poppins", sans-serif;
+  font-weight: ${WEIGHT_600};
 `;
 
 export const EducationInfoItem = styled("span")`
@@ -748,16 +649,14 @@ export const EducationInfoItem = styled("span")`
 `;
 
 export const EduDuration = styled("span")`
-  font-size: 16px;
-  font-family: "Open sans", sans-serif;
+  font-size: 15px;
 `;
 
 export const University = styled("span")`
-  font-size: 16px;
-  font-family: "Nunito", sans-serif;
+  font-size: 15px;
 `;
 
-export const DegreeIcon = styled(IoSchoolSharp)`
+export const DegreeIcon = styled(IoSchoolOutline)`
   color: ${DARK_GRAY};
   font-size: 16px;
 `;

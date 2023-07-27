@@ -1,10 +1,5 @@
 import React from "react";
 import {
-  PageContainer,
-  PageHeader,
-  ContactFormContainer,
-  ContactContainer,
-  ContactInfoContainer,
   ContactInfo,
   ContactInfoTitle,
   ContactInfoSubtitle,
@@ -12,6 +7,7 @@ import {
   AvailableHoursIcon,
   ContactBanner,
   SectionTitle,
+  IconWrapper,
 } from "../pages.styled";
 import { useForm, Controller } from "react-hook-form";
 import Input from "../common/Input/input";
@@ -21,6 +17,13 @@ import { useResponsive } from "../../hooks/useResponsive";
 import Button from "../common/button/button";
 import { useDispatch } from "react-redux";
 import { postMessage } from "../../store/actions/contact";
+import {
+  FlexContainer,
+  PADDING_DESKTOP,
+  PADDING_MOBILE,
+  SECONDARY_THEME_COLOR,
+  YELLOW_COLOR,
+} from "../../styled";
 
 function Contact() {
   const { mobile } = useResponsive();
@@ -56,31 +59,33 @@ function Contact() {
   };
 
   return (
-    <PageContainer>
-      <PageHeader>
-        <SectionTitle mobile={mobile} marginBottom>
-          LEAVE ME A MESSAGE
-        </SectionTitle>
-      </PageHeader>
-      <ContactContainer>
-        <ContactInfoContainer>
+    <FlexContainer
+      column
+      padding={mobile ? PADDING_MOBILE : PADDING_DESKTOP}
+      gap={2}
+    >
+      <SectionTitle>LEAVE ME A MESSAGE</SectionTitle>
+      <FlexContainer gap={2} flexwrap flex>
+        <ContactBanner src="/images/contact.svg" />
+        <FlexContainer gap={2} flex column>
           <ContactInfo>
-            <EmailIcon />
+            <IconWrapper size={2} color={YELLOW_COLOR}>
+              <EmailIcon />
+            </IconWrapper>
             <ContactInfoTitle>Email</ContactInfoTitle>
             <ContactInfoSubtitle>sachinnimshan@gmail.com</ContactInfoSubtitle>
           </ContactInfo>
           <ContactInfo>
-            <AvailableHoursIcon />
+            <IconWrapper size={2} color={YELLOW_COLOR}>
+              <AvailableHoursIcon />
+            </IconWrapper>
             <ContactInfoTitle>Available hours</ContactInfoTitle>
             <ContactInfoSubtitle>Monday - Friday</ContactInfoSubtitle>
             <ContactInfoSubtitle>9:00 AM - 05:00 PM</ContactInfoSubtitle>
           </ContactInfo>
-        </ContactInfoContainer>
-        <ContactBanner
-          src="https://ik.imagekit.io/ni26jldfa/pageImages/contact.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673925469388"
-          alt="Contact"
-        />
-        <ContactFormContainer>
+        </FlexContainer>
+
+        <FlexContainer column flex>
           <Controller
             control={control}
             name="name"
@@ -118,17 +123,16 @@ function Contact() {
           />
 
           <Button
-            size="large"
-            variant="contained"
+            padding="1rem"
+            size={16}
+            text="Send Message"
             disabled={!isValid}
-            marginTop
+            flex="0"
             onClick={handleSubmit(handleSubmitButton)}
-          >
-            Send Message
-          </Button>
-        </ContactFormContainer>
-      </ContactContainer>
-    </PageContainer>
+          />
+        </FlexContainer>
+      </FlexContainer>
+    </FlexContainer>
   );
 }
 

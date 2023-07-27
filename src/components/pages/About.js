@@ -1,14 +1,16 @@
 import React from "react";
-import { PageContainer } from "../pages.styled";
 import Experience from "../common/experience/index";
 import Education from "../common/education";
+import { FlexContainer, PADDING_DESKTOP, PADDING_MOBILE } from "../../styled";
+import { useResponsive } from "../../hooks/useResponsive";
 
 function About() {
+  const { mobile } = useResponsive();
   return (
-    <PageContainer>
+    <FlexContainer column padding={mobile ? PADDING_MOBILE : PADDING_DESKTOP} gap={2}>
       <Experience />
       <Education />
-    </PageContainer>
+    </FlexContainer>
   );
 }
 

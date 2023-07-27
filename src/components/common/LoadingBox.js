@@ -1,12 +1,12 @@
 import React from "react";
-import CircularProgress from "@mui/material/CircularProgress";
-import { SECONDARY_COLOR } from "../../styled";
+import { CircularProgress, Backdrop } from "@mui/material";
+import { YELLOW_COLOR } from "../../styled";
 
 function LoadingBox(props) {
   return (
-    <div>
-      <CircularProgress size="3rem" style={{ color: SECONDARY_COLOR }} />
-    </div>
+    <Backdrop open>
+      <CircularProgress size="3rem" style={{ color: YELLOW_COLOR }} />
+    </Backdrop>
   );
 }
 

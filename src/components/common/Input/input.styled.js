@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { LIGHT_GRAY } from "../../../styled";
 
 export const InputContainer = styled("div")`
   display: flex;
@@ -8,16 +9,14 @@ export const InputContainer = styled("div")`
 `;
 
 export const InputLabel = styled("span")`
-  font-size: 15px;
-  color: #999999;
-  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: ${LIGHT_GRAY};
   margin-bottom: 10px;
 `;
 
 export const ErrorLabel = styled("span")`
   font-size: 14px;
   color: #f93232;
-  font-family: "Poppins", sans-serif;
   margin-top: 5px;
   font-weight: 500;
 `;
