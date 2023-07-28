@@ -1,2 +1,2 @@
-const baseURL = `${process.env.REACT_APP_API_URL}/api`;
+const baseURL = `https://sn-backend.onrender.com/api`;
 export default baseURL;
