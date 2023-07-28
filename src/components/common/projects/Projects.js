@@ -10,6 +10,7 @@ import {
   ProjectSubtitle,
   ProjectThumbnail,
   ProjectTitle,
+  ProjectsContainer,
   SectionTitle,
 } from "../../pages.styled";
 import { useResponsive } from "../../../hooks/useResponsive";
@@ -38,9 +39,9 @@ function Projects() {
   }, [dispatch]);
 
   return (
-    <FlexContainer column gap={2} >
+    <FlexContainer column gap={2}>
       <SectionTitle mobile={mobile}>PROJECTS</SectionTitle>
-      <FlexContainer gap={1} flexwrap>
+      <ProjectsContainer>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
         {projects?.map((item) => (
@@ -77,7 +78,7 @@ function Projects() {
             </FlexContainer>
           </ProjectCard>
         ))}
-      </FlexContainer>
+      </ProjectsContainer>
       <ProjectInfoDialog open={showInfo} onClose={closeInfoDialog} fullWidth>
         <ProjectInfo projectID={selectedID} />
       </ProjectInfoDialog>

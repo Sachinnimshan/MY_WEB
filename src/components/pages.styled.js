@@ -273,18 +273,17 @@ export const LanguageImage = styled("img")`
 
 /************************* Projects *******************/
 
-export const ProjectsContainer = styled("div")`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+export const ProjectsContainer = styled("grid")`
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 `;
 
 export const ProjectCard = styled("div")`
   display: flex;
   flex-direction: column;
-  flex: 1 1 200px;
-  padding: 1rem;
+  flex: 1 1 350px;
+  padding: 0.75rem;
   background-color: ${BG_GRAY};
   border-radius: ${BORDER_RADIUS};
   overflow: hidden;
