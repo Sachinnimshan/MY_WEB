@@ -31,7 +31,7 @@ import {
 
 export const SectionTitle = styled("h1")`
   color: ${LIGHT_GRAY};
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.875rem + 1vw);
   width: fit-content;
   font-weight: ${WEIGHT_700};
   padding: 0 1rem;
@@ -122,11 +122,10 @@ export const SiteLogo = styled(Link)`
   font-size: ${(props) => (props.mobile ? "24px" : "2rem")};
   cursor: pointer;
   font-family: "Kaushan Script", cursive;
-  min-width: max-content;
   text-decoration: none;
+  white-space: nowrap;
   display: flex;
   font-weight: ${WEIGHT_600};
-  //background: ${`linear-gradient(to bottom, transparent 50%, ${YELLOW_COLOR} 100%)`};
 `;
 
 export const MenuIcon = styled(HiMenu)`
@@ -222,7 +221,7 @@ export const BannerImage = styled("img")`
   animation-iteration-count: infinite;
   animation-duration: 3s;
   display: flex;
-  z-index: 400000;
+  z-index: 1;
   flex: 1;
   animation-direction: alternate;
 `;
@@ -257,10 +256,16 @@ export const LanguageContainer = styled("div")`
   }
 `;
 
-export const LanguageCard = styled("div")`
+export const LanguageCard = styled("div")``;
+
+export const TechGridContainer = styled("div")`
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  align-items: center;
 `;
 export const LanguageImage = styled("img")`
-  max-width: 10rem;
+  max-width: 6rem;
   transition: all ease-in-out 0.2s;
 `;
 
@@ -279,6 +284,7 @@ export const ProjectCard = styled("div")`
   display: flex;
   flex-direction: column;
   flex: 1 1 200px;
+  padding: 1rem;
   background-color: ${BG_GRAY};
   border-radius: ${BORDER_RADIUS};
   overflow: hidden;
@@ -530,7 +536,7 @@ export const ExperienceCard = styled("div")`
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
-  flex: 1 1 300px;
+  flex: 1 1 250px;
 `;
 
 export const ExperienceItem = styled("div")`
@@ -541,21 +547,21 @@ export const ExperienceItem = styled("div")`
 `;
 
 export const JobDuration = styled("span")`
-  font-weight: 500;
+  font-weight: ${WEIGHT_500};
   color: ${DARK_GRAY};
-  font-size: 15px;
+  font-size: 14px;
   display: flex;
   align-items: center;
 `;
 
 export const CompanyName = styled("span")`
-  font-size: 15px;
+  font-size: 14px;
   color: ${DARK_GRAY};
   font-weight: ${WEIGHT_500};
 `;
 
 export const JobTitle = styled("span")`
-  font-size: 16px;
+  font-size: 15px;
   color: ${DARK_GRAY};
   font-weight: ${WEIGHT_600};
   display: flex;
@@ -637,6 +643,7 @@ export const EducationInfoCard = styled("div")`
 
 export const Degreetitle = styled("span")`
   color: ${DARK_GRAY};
+  font-size: 15px;
   font-weight: ${WEIGHT_600};
 `;
 
@@ -649,11 +656,11 @@ export const EducationInfoItem = styled("span")`
 `;
 
 export const EduDuration = styled("span")`
-  font-size: 15px;
+  font-size: 14px;
 `;
 
 export const University = styled("span")`
-  font-size: 15px;
+  font-size: 14px;
 `;
 
 export const DegreeIcon = styled(IoSchoolOutline)`

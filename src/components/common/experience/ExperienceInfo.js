@@ -26,7 +26,7 @@ function ExperienceInfo({ data }) {
     if (data?.current) {
       return `${moment(start).format("YYYY MMMM")} - Present`;
     }
-    return `${moment(start).format("YYYY MMMM")} - ${moment(end).format(
+    return `${moment(end).format("YYYY MMMM")} - ${moment(start).format(
       "YYYY MMMM"
     )}`;
   };

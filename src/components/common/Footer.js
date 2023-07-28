@@ -7,7 +7,9 @@ import {
   FlexContainer,
   LIGHT_GRAY,
   PADDING_DESKTOP,
+  PADDING_DESKTOP_HEADER,
   PADDING_MOBILE,
+  PADDING_MOBILE_HEADER,
   SmallText,
 } from "../../styled";
 import { useResponsive } from "../../hooks/useResponsive";
@@ -17,7 +19,7 @@ function Footer() {
   return (
     <FlexContainer
       
-      padding={mobile ? PADDING_MOBILE : PADDING_DESKTOP}
+      padding={mobile ? PADDING_MOBILE_HEADER : PADDING_DESKTOP_HEADER}
       bgrColor={BG_GRAY}
       alignX="center"
       gap={2}

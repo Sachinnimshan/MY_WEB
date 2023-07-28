@@ -5,9 +5,11 @@ import {
   LanguageImage,
   SectionTitle,
   SkillDescription,
+  TechGridContainer,
 } from "../../pages.styled";
 import {
   FlexContainer,
+  GridContainer,
   PADDING_DESKTOP,
   PADDING_MOBILE,
 } from "../../../styled";
@@ -83,13 +85,13 @@ function Technology() {
         technical skill sets and technologies I use. My main programming tech
         stack is Javascript.
       </SkillDescription>
-      <FlexContainer flexwrap gap={2} alignY='center'>
+      <TechGridContainer>
         {languages.map((item) => (
           <LanguageCard key={item.id}>
             <LanguageImage src={item.image} alt={item.text} />
           </LanguageCard>
         ))}
-      </FlexContainer>
+      </TechGridContainer>
     </FlexContainer>
   );
 }

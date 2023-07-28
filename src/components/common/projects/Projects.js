@@ -46,7 +46,7 @@ function Projects() {
         {projects?.map((item) => (
           <ProjectCard key={item.id} onClick={() => openInfoDialog(item._id)}>
             <ProjectThumbnail src={item.image} alt={item.title} />
-            <FlexContainer column padding="1rem" gap={0.5}>
+            <FlexContainer column padding="1rem 0" gap={0.5}>
               <ProjectTitle>{item.title}</ProjectTitle>
               <ProjectSubtitle>{item.description}</ProjectSubtitle>
               <FlexContainer gap={0.5} flexwrap>

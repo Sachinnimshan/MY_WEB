@@ -23,7 +23,7 @@ function Experience() {
   return (
     <FlexContainer column gap={2} >
       <SectionTitle mobile={mobile}>MY EXPERIENCE</SectionTitle>
-      <FlexContainer flexwrap gap={1}>
+      <FlexContainer flexwrap gap={1} column>
         {loading && <LoadingBox />}
         {errors && <MessageBox>{errors}</MessageBox>}
         {experiences?.map((data) => (

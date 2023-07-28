@@ -7,7 +7,7 @@ export const BLACK_COLOR = "#000000";
 export const DARK_GRAY = "#444444";
 export const LIGHT_GRAY = "#555555";
 export const FONT_WHITE = "#eeeeee";
-export const BG_GRAY = "#F9F9F9";
+export const BG_GRAY = "#F8F8F8";
 
 export const THEME_COLOR = "#6272C7";
 export const SECONDARY_THEME_COLOR = "#9AA6FF";
@@ -20,8 +20,10 @@ export const WEIGHT_600 = 600;
 export const WEIGHT_700 = 700;
 export const WEIGHT_800 = 800;
 
+export const PADDING_MOBILE_HEADER = "1rem";
+export const PADDING_DESKTOP_HEADER = "1rem 5rem";
 export const PADDING_MOBILE = "1rem 1.25rem";
-export const PADDING_DESKTOP = "1.5rem 5rem";
+export const PADDING_DESKTOP = "3rem 5rem";
 
 export const BORDER_RADIUS = "0.25rem";
 
@@ -113,4 +115,10 @@ export const TestText = styled("span")`
   background: linear-gradient(to bottom, transparent 50%, red 50%);
   font-size: 16px;
   padding: 1rem;
+`;
+
+export const GridContainer = styled("div")`
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
 `;
