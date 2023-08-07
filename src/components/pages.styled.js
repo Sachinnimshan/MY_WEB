@@ -277,14 +277,13 @@ export const LanguageImage = styled("img")`
 export const ProjectsContainer = styled("grid")`
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `;
 
 export const ProjectCard = styled("div")`
   display: flex;
   flex-direction: column;
   flex: 1 1 350px;
-  padding: 0.75rem;
   background-color: ${BG_GRAY};
   border-radius: ${BORDER_RADIUS};
   overflow: hidden;
@@ -297,7 +296,7 @@ export const ProjectThumbnail = styled("img")`
 `;
 
 export const ProjectTitle = styled(Link)`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: ${WEIGHT_600};
   color: ${DARK_GRAY};
   text-decoration: none;
