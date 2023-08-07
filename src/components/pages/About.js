@@ -7,7 +7,12 @@ import { useResponsive } from "../../hooks/useResponsive";
 function About() {
   const { mobile } = useResponsive();
   return (
-    <FlexContainer  padding={mobile ? PADDING_MOBILE : PADDING_DESKTOP} gap={3} flexwrap={mobile}>
+    <FlexContainer
+      padding={mobile ? PADDING_MOBILE : PADDING_DESKTOP}
+      gap={3}
+      flexwrap={mobile}
+      minHeight
+    >
       <Experience />
       <Education />
     </FlexContainer>

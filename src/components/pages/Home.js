@@ -28,37 +28,35 @@ function Home() {
       flex
       alignY="center"
       alignX={mobile ? "center" : "space-between"}
-      
     >
       <FlexContainer column alignY={mobile && "center"} flex>
         <SmallText size={16} weight={WEIGHT_500} color={LIGHT_GRAY}>
           Hello,
         </SmallText>
-        <TextView weight={WEIGHT_600} size={4}>
-          I'm Sachin
-        </TextView>
+        <FlexContainer gap={1}>
+          <TextView weight={WEIGHT_600} size={4}>
+            I'm
+          </TextView>
+          <TextView weight={WEIGHT_600} size={4} color={THEME_COLOR}>
+            Sachin
+          </TextView>
+        </FlexContainer>
         <TextView
-          color={THEME_COLOR}
           size={0.5}
-          weight={WEIGHT_600}
+          weight={WEIGHT_500}
           transform="uppercase"
+          color={LIGHT_GRAY}
         >
           Software Engineer | Free Lancer
         </TextView>
 
         <FlexContainer gap={0.5} flexwrap margin="1.5rem 0" flex>
           <DownloadLinkBtn href="https://sn-backend.onrender.com/api/resume">
-            <SmallText color={WHITE_COLOR} size={14}>
+            <SmallText color={WHITE_COLOR} size={16} weight={WEIGHT_600}>
               Download My CV
             </SmallText>
             <DownloadIcon />
           </DownloadLinkBtn>
-          <Button
-            text="Contact me"
-            padding="0.8rem 1rem"
-            bgrColor1={SECONDARY_YELLOW}
-            bgrColor2={YELLOW_COLOR}
-          />
         </FlexContainer>
       </FlexContainer>
       <BannerImage mobile={mobile} src="/images/home.jpg" alt="Home" />

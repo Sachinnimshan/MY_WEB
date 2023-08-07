@@ -4,7 +4,7 @@ import { YELLOW_COLOR } from "../../styled";
 
 function LoadingBox(props) {
   return (
-    <Backdrop open>
+    <Backdrop open style={{ minHeight: "100vh" }}>
       <CircularProgress size="3rem" style={{ color: YELLOW_COLOR }} />
     </Backdrop>
   );

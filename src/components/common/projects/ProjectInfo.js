@@ -6,24 +6,17 @@ import MessageBox from "../MessageBox";
 import {
   CheckCircle,
   DemoBtn,
-  GithubBtn,
-  ProjectInfoBtnContainer,
   ProjectInfoChipContainer,
-  ProjectInfoContainer,
-  ProjectInfoContent,
   ProjectInfoHeader,
   ProjectInfoImage,
-  ProjectInfoStack,
   ProjectInfoStackChips,
-  ProjectInfoTop,
   SectionTitle,
-  YoutubeBtn,
 } from "../../pages.styled";
 import { useResponsive } from "../../../hooks/useResponsive";
+import { FlexContainer } from "../../../styled";
 
 function ProjectInfo(props) {
   const dispatch = useDispatch();
-  const { mobile } = useResponsive();
   const projectData = useSelector((state) => state.projectData);
   const { loading, errors, projectInfo } = projectData;
 
@@ -33,49 +26,61 @@ function ProjectInfo(props) {
   }, [dispatch, props.projectID]);
 
   return (
-    <ProjectInfoContainer>
+    <FlexContainer padding="1.5rem 1rem">
       {loading ? (
         <LoadingBox />
       ) : errors ? (
         <MessageBox>{errors}</MessageBox>
       ) : (
-        <ProjectInfoContent>
-          <SectionTitle mobile={mobile} marginBottom>{projectInfo.title}</SectionTitle>
-          <ProjectInfoTop>
+        <FlexContainer column gap={1}>
+          <SectionTitle>{projectInfo.title}</SectionTitle>
+          <FlexContainer column gap={1}>
             <ProjectInfoImage src={projectInfo.image} alt={projectInfo.title} />
-            <ProjectInfoStack>
+            <FlexContainer column gap={1}>
               <ProjectInfoHeader>Check my work</ProjectInfoHeader>
-              <ProjectInfoBtnContainer>
+              <FlexContainer gap={1}>
                 {projectInfo.demo && (
-                  <DemoBtn href={projectInfo.demo} target="_blank">
+                  <DemoBtn
+                    href={projectInfo.demo}
+                    target="_blank"
+                    bgrColor="#0c6efd"
+                  >
                     Demo
                   </DemoBtn>
                 )}
                 {projectInfo.youtube && (
-                  <YoutubeBtn href={projectInfo.youtube} target="_blank">
+                  <DemoBtn
+                    href={projectInfo.youtube}
+                    target="_blank"
+                    bgrColor="#ff0000"
+                  >
                     Youtube
-                  </YoutubeBtn>
+                  </DemoBtn>
                 )}
                 {projectInfo.github && (
-                  <GithubBtn href={projectInfo.github} target="_blank">
+                  <DemoBtn
+                    href={projectInfo.github}
+                    target="_blank"
+                    bgrColor="#347d39"
+                  >
                     Github
-                  </GithubBtn>
+                  </DemoBtn>
                 )}
-              </ProjectInfoBtnContainer>
+              </FlexContainer>
               <ProjectInfoHeader>Tech Stack</ProjectInfoHeader>
-              <ProjectInfoChipContainer>
+              <FlexContainer gap={0.75} flexwrap>
                 {projectInfo.languages.map((lang) => (
                   <ProjectInfoStackChips>
                     <CheckCircle />
                     {lang}
                   </ProjectInfoStackChips>
                 ))}
-              </ProjectInfoChipContainer>
-            </ProjectInfoStack>
-          </ProjectInfoTop>
-        </ProjectInfoContent>
+              </FlexContainer>
+            </FlexContainer>
+          </FlexContainer>
+        </FlexContainer>
       )}
-    </ProjectInfoContainer>
+    </FlexContainer>
   );
 }
 

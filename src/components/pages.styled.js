@@ -31,7 +31,7 @@ import {
 
 export const SectionTitle = styled("h1")`
   color: ${LIGHT_GRAY};
-  font-size: calc(0.875rem + 1vw);
+  font-size: calc(0.875rem + 0.5vw);
   width: fit-content;
   font-weight: ${WEIGHT_700};
   padding: 0 1rem;
@@ -66,7 +66,7 @@ export const IconWrapper = styled("div")`
 /************************* Buttons *******************/
 
 export const DownloadLinkBtn = styled("a")`
-  padding: 0.8rem 1rem;
+  padding: 0.85rem 1rem;
   border-radius: ${BORDER_RADIUS};
   display: flex;
   flex: 1;
@@ -231,7 +231,7 @@ export const BannerImage = styled("img")`
 export const SkillDescription = styled("p")`
   color: ${LIGHT_GRAY};
   text-align: justify;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: ${WEIGHT_400};
   line-height: 2rem;
 `;
@@ -263,9 +263,10 @@ export const TechGridContainer = styled("div")`
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
   align-items: center;
+  justify-items: center;
 `;
 export const LanguageImage = styled("img")`
-  max-width: 6rem;
+  max-width: calc(5rem + 2vw);
   transition: all ease-in-out 0.2s;
 `;
 
@@ -363,39 +364,6 @@ export const ProjectInfoDialog = styled(MuiDialog)`
   align-items: center;
 `;
 
-export const ProjectInfoContainer = styled("div")`
-  padding: 1.25rem;
-`;
-
-export const ProjectInfoContent = styled("div")`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
-`;
-
-export const ProjectInfoTop = styled("div")`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  flex-wrap: wrap;
-`;
-
-export const ProjectInfoTitle = styled("span")`
-  background-image: linear-gradient(#94d600, #1b262c);
-  background-clip: text;
-  color: white;
-  font-size: 24px;
-  font-family: "Open sans", sans-serif;
-  font-weight: 600;
-  text-align: center;
-  margin: 0 0 2rem 0;
-  max-width: fit-content;
-  padding: 5px 20px;
-  border-radius: 5px;
-`;
-
 export const ProjectInfoImage = styled("img")`
   border-radius: 5px;
   max-height: 250px;
@@ -403,31 +371,10 @@ export const ProjectInfoImage = styled("img")`
   max-width: 100%;
 `;
 
-export const ProjectInfoBtnContainer = styled("div")`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-`;
-
-export const ProjectInfoStack = styled("div")`
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 1rem;
-`;
-
 export const ProjectInfoHeader = styled("span")`
-  font-size: 18px;
+  font-size: 16px;
   color: ${DARK_GRAY};
-  font-family: "Open sans", sans-serif;
-  font-weight: 600;
-`;
-
-export const ProjectInfoChipContainer = styled("div")`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 400px;
+  font-weight: ${WEIGHT_600};
 `;
 
 export const ProjectInfoStackChips = styled("div")`
@@ -435,9 +382,8 @@ export const ProjectInfoStackChips = styled("div")`
   align-items: center;
   gap: 10px;
   color: ${DARK_GRAY};
-  font-size: 16px;
-  font-weight: 500;
-  font-family: "Open sans", sans-serif;
+  font-size: 14px;
+  font-weight: ${WEIGHT_400};
 `;
 
 export const CheckCircle = styled(FiCheckCircle)`
@@ -564,6 +510,7 @@ export const JobTitle = styled("span")`
   color: ${DARK_GRAY};
   font-weight: ${WEIGHT_600};
   display: flex;
+  text-transform: uppercase;
   align-items: center;
   gap: 0.75rem;
 `;

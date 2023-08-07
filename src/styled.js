@@ -109,6 +109,8 @@ export const SmallText = styled("span")`
   font-weight: ${(props) => props.weight};
   text-align: ${(props) => props.align || "justify"};
   white-space: ${(props) => props.nowrap || "nowrap"};
+   position: ${(props) => props.position};
+   display: flex;
 `;
 
 export const TestText = styled("span")`

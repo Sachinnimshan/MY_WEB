@@ -12,7 +12,10 @@ import {
   GridContainer,
   PADDING_DESKTOP,
   PADDING_MOBILE,
+  THEME_COLOR,
+  WHITE_COLOR,
 } from "../../../styled";
+import ProgressCircle from "../progresscircle";
 
 function Technology() {
   const { mobile } = useResponsive();
@@ -75,8 +78,8 @@ function Technology() {
     <FlexContainer
       column
       gap={2}
-      alignX="center"
       padding={mobile ? PADDING_MOBILE : PADDING_DESKTOP}
+      minHeight
     >
       <SectionTitle>TECHNOLOGIES & LIBRARIES</SectionTitle>
       <SkillDescription>
@@ -92,6 +95,7 @@ function Technology() {
           </LanguageCard>
         ))}
       </TechGridContainer>
+      {/* <ProgressCircle size={10} title="React" /> */}
     </FlexContainer>
   );
 }

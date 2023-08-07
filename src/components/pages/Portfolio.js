@@ -11,6 +11,7 @@ function Portfolio() {
       column
       padding={mobile ? PADDING_MOBILE : PADDING_DESKTOP}
       gap={2}
+      minHeight
     >
       <Projects />
     </FlexContainer>
