@@ -67,7 +67,7 @@ function ExperienceInfo({ data }) {
         ))}
         {data.keyroles?.length > 4 && (
           <SeeMoreText onClick={keysExpand ? handleSeeLess : handleSeeMore}>
-            {keysExpand ? "See less" : "See more"}
+            {keysExpand ? "See  less" : "See  more"}
           </SeeMoreText>
         )}
       </JobKeysContainer>
